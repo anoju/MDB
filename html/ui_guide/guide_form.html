@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<meta name="title" content="DB 손해보험 모바일">
+<meta name="keywords" content="자동차보험, 운전자보험, 조합보험, 연금, 여행보험, 레저보험, 건강보험, 자녀보험, 화재보험, 재해보험, 펫보험, 치아보험">
+<meta name="description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+<meta property="og:title" content="DB 손해보험 모바일">
+<meta property="og:url" content="https://m.idbins.com">
+<!-- <meta property="og:image" content="https://m.idbins.com/MDB/images/logo_1200x1200.png"> -->
+<meta property="og:image" content="http://localhost:8080/MDB/images/logo_1200x1200.png">
+<meta property="og:description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+
+<meta name="apple-mobile-web-app-title" content="DB 손해보험 모바일">
+<link rel="apple-touch-startup-image" href="../../images/icons/touch-icon-iphone-retina.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>DB 손해보험</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png"><!-- 196x196-->
+<link rel="apple-touch-icon" href="../../images/icons/touch-icon-iphone.png"><!-- 120x120-->
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="../../images/icons/touch-icon-ipad-retina.png">
+<link rel="manifest" href="../../manifest.json">
+
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/contents.css">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery-ui-1.12.1.min.js"></script>
+<script src="../../js/ui_plugins.js"></script>
+<script src="../../js/ui_common.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div data-include-html="../inc/top.html"></div>
+	<div data-include-html="../inc/gnb.html"></div>
+	<div id="container">
+		<div id="content">
+			<div class="tab_swipe_wrap">
+				<div class="tab_track">
+					<ul class="tab_nav tab_swiper">
+						<li class="tab"><a href="guide.html"><span>텍스트,아이콘</span></a></li>
+						<li class="tab"><a href="guide_btn.html"><span>버튼</span></a></li>
+						<li class="tab"><a href="guide_list.html"><span>리스트, item</span></a></li>
+						<li class="tab active"><a href="guide_form.html"><span>form 요소</span></a></li>
+						<li class="tab"><a href="guide_box.html"><span>box 요소</span></a></li>
+						<li class="tab"><a href="guide_tbl.html"><span>테이블</span></a></li>
+						<li class="tab"><a href="guide_popup.html"><span>팝업</span></a></li>
+						<li class="tab"><a href="guide_map.html"><span>맵</span></a></li>
+						<li class="tab"><a href="guide_agree.html"><span>약관샘플</span></a></li>
+						<li class="tab"><a href="guide_service.html"><span>서비스안내</span></a></li>
+						<li class="tab"><a href="guide_process.html"><span>이용안내</span></a></li>
+						<li class="tab"><a href="guide_animation.html"><span>애니메이션</span></a></li>
+						<li class="tab"><a href="guide_address.html"><span>우편번호</span></a></li>
+						<li class="tab"><a href="guide_etc.html"><span>기타</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<h2 class="gd__h1">form 태그</h2>
+				<h3 class="gd__h2">checkbox</h3>
+				<h4 class="gd__h3">일반</h4>
+				<span class="checkbox">
+					<input id="chk1" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk1">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox">
+					<input id="chk2" type="checkbox" checked><i aria-hidden="true"></i>
+					<label for="chk2">체크박스 checked</label>
+				</span>
+				<br>
+				<span class="checkbox">
+					<input id="chk3" type="checkbox" disabled><i aria-hidden="true"></i>
+					<label for="chk3">체크박스 disabled</label>
+				</span>
+				<br>
+				<span class="checkbox">
+					<input id="chk4" type="checkbox" disabled checked><i aria-hidden="true"></i>
+					<label for="chk4">체크박스 disabled checked</label>
+				</span>
+
+				<h4 class="gd__h3">다른컬러</h4>
+				<span class="checkbox c2">
+					<input id="chk5" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk5">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox c3">
+					<input id="chk5_1" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk5_1">체크박스</label>
+				</span>
+
+				<h4 class="gd__h3">다른형태</h4>
+				<span class="checkbox t2">
+					<input id="chk6" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk6">네모 체크박스</label>
+				</span>
+
+				<h4 class="gd__h3">사이즈</h4>
+				<h5 class="gd__h4">small</h5>
+				<span class="checkbox small">
+					<input id="chk7" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk7">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox small t2">
+					<input id="chk7_1" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk7_1">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox small c2">
+					<input id="chk7_2" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk7_2">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox small c2 t2">
+					<input id="chk7_3" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk7_3">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox small c3">
+					<input id="chk7_4" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk7_4">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox small c3 t2">
+					<input id="chk7_5" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk7_5">체크박스</label>
+				</span>
+				<h5 class="gd__h4">large <span class="fc4">(아직 미사용)</span></h5>
+				<span class="checkbox large">
+					<input id="chk8" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk8">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox large t2">
+					<input id="chk8_1" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk8_1">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox large c2">
+					<input id="chk8_2" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk8_2">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox large t2 c2">
+					<input id="chk8_3" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk8_3">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox large c3">
+					<input id="chk8_4" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk8_4">체크박스</label>
+				</span>
+				<br>
+				<span class="checkbox large t2 c3">
+					<input id="chk8_5" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk8_5">체크박스</label>
+				</span>
+				<h4 class="gd__h3">버튼타입</h4>
+				<h5 class="gd__h4">기본</h5>
+				<span class="checkbox btn_type">
+					<input id="chk9" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk9">전체선택</label>
+				</span>
+				<br>
+				<span class="checkbox btn_type c2">
+					<input id="chk9_1" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk9_1">전체선택</label>
+				</span>
+				<br>
+				<span class="checkbox btn_type c3">
+					<input id="chk9_2" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk9_2">전체선택</label>
+				</span>
+				<h5 class="gd__h4">large</h5>
+				<span class="checkbox btn_type large">
+					<input id="chk10" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk10">전체동의</label>
+					<!-- <a href="#" class="bt pop_all_agree"><span class="offscreen">약관상세 팝업으로 보기</span></a> -->
+				</span>
+				<br>
+				<span class="checkbox btn_type large c2">
+					<input id="chk10_1" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk10_1">전체동의</label>
+					<!-- <a href="#" class="bt pop_all_agree"><span class="offscreen">약관상세 팝업으로 보기</span></a> -->
+				</span>
+				<br>
+				<span class="checkbox btn_type large c3">
+					<input id="chk10_2" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk10_2">전체동의</label>
+					<!-- <a href="#" class="bt pop_all_agree"><span class="offscreen">약관상세 팝업으로 보기</span></a> -->
+				</span>
+				<h5 class="gd__h4">small</h5>
+				<span class="checkbox btn_type small">
+					<input id="chk11" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk11">전체선택</label>
+				</span>
+				<br>
+				<span class="checkbox btn_type small c2">
+					<input id="chk11_1" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk11_1">전체선택</label>
+				</span>
+				<br>
+				<span class="checkbox btn_type small c3">
+					<input id="chk11_2" type="checkbox"><i aria-hidden="true"></i>
+					<label for="chk11_2">전체선택</label>
+				</span>
+
+				<h3 class="gd__h2">radio</h3>
+				<h4 class="gd__h3">일반</h4>
+				<span class="radio">
+					<input id="rdo1" type="radio" name="rdo1"><i aria-hidden="true"></i>
+					<label for="rdo1">라디오</label>
+				</span>
+				<br>
+				<span class="radio">
+					<input id="rdo2" type="radio" name="rdo1" checked><i aria-hidden="true"></i>
+					<label for="rdo2">라디오 checked</label>
+				</span>
+				<br>
+				<span class="radio">
+					<input id="rdo3" type="radio" name="rdo3" disabled><i aria-hidden="true"></i>
+					<label for="rdo3">라디오 disabled</label>
+				</span>
+				<br>
+				<span class="radio">
+					<input id="rdo4" type="radio" name="rdo3" disabled checked><i aria-hidden="true"></i>
+					<label for="rdo4">라디오 disabled checked</label>
+				</span>
+
+				<h4 class="gd__h3">컬러</h4>
+				<span class="radio c2">
+					<input id="rdo5_1" type="radio" name="rdo5"><i aria-hidden="true"></i>
+					<label for="rdo5_1">라디오</label>
+				</span>
+				<br>
+				<span class="radio c3">
+					<input id="rdo5_2" type="radio" name="rdo5"><i aria-hidden="true"></i>
+					<label for="rdo5_2">라디오</label>
+				</span>
+
+				<h4 class="gd__h3">사이즈</h4>
+				<h5 class="gd__h4">small</h5>
+				<span class="radio small">
+					<input id="rdo6_1" type="radio" name="rdo6"><i aria-hidden="true"></i>
+					<label for="rdo6_1">라디오</label>
+				</span>
+				<br>
+				<span class="radio small c2">
+					<input id="rdo6_2" type="radio" name="rdo6"><i aria-hidden="true"></i>
+					<label for="rdo6_2">라디오</label>
+				</span>
+				<br>
+				<span class="radio small c3">
+					<input id="rdo6_3" type="radio" name="rdo6"><i aria-hidden="true"></i>
+					<label for="rdo6_3">라디오</label>
+				</span>
+				<h5 class="gd__h4">large <span class="fc4">(아직 미사용)</span></h5>
+				<span class="radio large">
+					<input id="rdo7_1" type="radio" name="rdo7"><i aria-hidden="true"></i>
+					<label for="rdo7_1">라디오</label>
+				</span>
+				<br>
+				<span class="radio large c2">
+					<input id="rdo7_2" type="radio" name="rdo7"><i aria-hidden="true"></i>
+					<label for="rdo7_2">라디오</label>
+				</span>
+				<br>
+				<span class="radio large c3">
+					<input id="rdo7_3" type="radio" name="rdo7"><i aria-hidden="true"></i>
+					<label for="rdo7_3">라디오</label>
+				</span>
+
+
+				<h2 class="gd__h1">토글 라디오</h2>
+				<h3 class="gd__h2">기본</h3>
+				<ul class="btn_toggle grid s2">
+					<li>
+						<input id="settleType1" type="radio" name="settleType" checked="">
+						<label for="settleType1">실시간 출금</label>
+					</li>
+					<li>
+						<input id="settleType2" type="radio" name="settleType">
+						<label for="settleType2">신용카드</label>
+					</li>
+				</ul>
+				<br>
+				<ul class="btn_toggle grid s3">
+					<li>
+						<input id="issued1" type="radio" name="issued" value="2">
+						<label for="issued1">모바일증권</label>
+					</li>
+					<li>
+						<input id="issued2" type="radio" name="issued" value="3">
+						<label for="issued2">이메일</label>
+					</li>
+					<li>
+						<input id="issued3" type="radio" name="issued" value="4">
+						<label for="issued3">팩스</label>
+					</li> 
+				</ul>
+				<br>
+				<ul class="btn_toggle grid s3">
+					<li>
+						<input id="accidentInType1" type="radio" name="accidentInTypeGroup">
+						<label for="accidentInType1">질병사고</label>
+					</li>
+					<li>
+						<input id="accidentInType2" type="radio" name="accidentInTypeGroup">
+						<label for="accidentInType2"><span>일반상해<br>사고</span></label>
+					</li>
+					<li>
+						<input id="accidentInType3" type="radio" name="accidentInTypeGroup">
+						<label for="accidentInType3">교통사고</label>
+					</li>
+				</ul>
+				<br>
+				<ul class="btn_toggle grid s3">
+					<li>
+						<input id="statementRdo1" type="radio" name="statementRdo" value="1">
+						<label for="statementRdo1">예</label>
+					</li>
+					<li>
+						<input id="statementRdo2" type="radio" name="statementRdo" value="2">
+						<label for="statementRdo2">아니오</label>
+					</li>
+					<li>
+						<input id="statementRdo3" type="radio" name="statementRdo" value="3">
+						<label for="statementRdo3"><span>비급여<br>없음</span></label>
+					</li>
+				</ul>
+				<br>
+				<ul class="btn_toggle t2">
+					<li>
+						<input id="btTog1" type="radio" name="payGroup" value="00" checked>
+						<label for="btTog1"><span>납입계좌,납입일 변경</span></label>
+					</li>
+					<li>
+						<input id="btTog2" type="radio" name="payGroup" value="01">
+						<label for="btTog2"><span>납입계좌만 변경</span></label>
+					</li>
+					<li>
+						<input id="btTog3" type="radio" name="payGroup" value="02">
+						<label for="btTog3"><span>납입일만 변경</span></label>
+					</li>
+				</ul>
+				<ul class="btn_toggle grid s2 js_tab_rdo">
+					<li>
+						<input id="rad_inte_pym_acc_info_01" name="rad_inte_pym_acc_info_group" type="radio" value="01" checked="checked" data-target="#accountInType01">
+						<label for="rad_inte_pym_acc_info_01"><span>대출금입금계좌<br>동일</span></label>
+					</li>
+					<li>
+						<input id="rad_inte_pym_acc_info_02" name="rad_inte_pym_acc_info_group" type="radio" value="02" data-target="#accountInType02">
+						<label for="rad_inte_pym_acc_info_02">직접입력</label>
+					</li>
+				</ul>
+				<br />
+				<ul class="btn_toggle grid s2 ln_yes_data">
+					<li>
+						<input id="ln_pcpit_all" type="radio" name="allGroup" value="00">
+						<label for="ln_pcpit_all">전체 전액 상환</label>
+					</li>
+					<li>
+						<input id="npt_inte_all" type="radio" name="allGroup" value="01">
+						<label for="npt_inte_all">전체 이자 상환</label>
+					</li>
+				</ul>
+				<ul class="btn_toggle t2">
+						<li>
+							<input id="subType1" name="istr_snd_mean_cd" type="radio" value="2">
+							<label for="subType1"><span>이메일 안내문만 수신</span></label>
+						</li>
+						<li>
+							<input id="subType2" name="istr_snd_mean_cd" type="radio" value="3" />
+							<label for="subType2"><span>우편물/이메일안내문 동시 수신</span></label>
+						</li>
+					</ul>
+				<ul class="btn_toggle grid s2">
+					<li>
+						<input id="radio3_1" type="radio" name="trmt_rs_cd" value="204" onchange="termRadio(1)">
+						<label for="radio3_1">차량 양도</label>
+					</li>
+					<li>
+						<input id="radio3_2" type="radio" name="trmt_rs_cd" value="203" onchange="termRadio(2)">
+						<label for="radio3_2">차량말소(폐차)</label>
+					</li>
+				</ul>
+				<h3 class="gd__h2">다른컬러</h3>
+				<ul class="btn_toggle grid s2 c2">
+					<li>
+						<input id="settleType3_1" type="radio" name="settleType3" checked="">
+						<label for="settleType3_1">실시간 출금</label>
+					</li>
+					<li>
+						<input id="settleType3_2" type="radio" name="settleType3">
+						<label for="settleType3_2">신용카드</label>
+					</li>
+				</ul>
+				<br>
+				<ul class="btn_toggle grid s2 c3">
+					<li>
+						<input id="settleType3_3_1" type="radio" name="settleType3_3" checked="">
+						<label for="settleType3_3_1">실시간 출금</label>
+					</li>
+					<li>
+						<input id="settleType3_3_2" type="radio" name="settleType3_3">
+						<label for="settleType3_3_2">신용카드</label>
+					</li>
+				</ul>
+				<br>
+				<ul class="btn_toggle c3 grid s5 no_ico">
+					<li class="active"><a href="#">1일</a></li>
+					<li><a href="#">1개월</a></li>
+					<li><a href="#">3개월</a></li>
+					<li><a href="#">6개월</a></li>
+					<li><a href="#">1년</a></li>
+				</ul>
+				<br>
+				<ul class="btn_toggle grid s2 c4">
+					<li>
+						<input id="settleType3_4_1" type="radio" name="settleType3_4" checked="">
+						<label for="settleType3_4_1">실시간 출금</label>
+					</li>
+					<li>
+						<input id="settleType3_4_2" type="radio" name="settleType3_4">
+						<label for="settleType3_4_2">신용카드</label>
+					</li>
+				</ul>
+				<h3 class="gd__h2">2줄일때</h3>
+				<ul class="btn_toggle grid s2 h70">
+					<li>
+						<input id="radio3_1" type="radio" name="radio3_1" checked="">
+						<label for="radio3_1"><span>장기주택 저당차<br>입금 이자 상환증명서</span></label>
+					</li>
+					<li>
+						<input id="radio3_2" type="radio" name="radio3_1">
+						<label for="radio3_2"><span>주택임차차 입금원리금<br>상환액 증명서</span></label>
+					</li>
+				</ul>
+				<p>1줄형태로 변경</p>
+				<ul class="btn_toggle t2">
+					<li>
+						<input id="radio2_1" type="radio" name="radio2_1" checked="">
+						<label for="radio2_1">장기주택 저당차 입금 이자 상환증명서</label>
+					</li>
+					<li>
+						<input id="radio2_2" type="radio" name="radio2_1">
+						<label for="radio2_2">주택임차차 입금원리금 상환액 증명서</label>
+					</li>
+				</ul>
+
+				<h3 class="gd__h2">check_list_line</h3>
+				<div class="check_list_line">
+					<ul>
+						<li>
+							<div class="chk_info">
+								<span class="num roboto5">1</span>고객님 거주지 주소는 서울 금천구 남부순환로108길 20-36 DB금융센터 맞습니까?
+							</div>
+							<ul class="btn_toggle c1 btm grid s2">
+								<li>
+									<div class="btn_rdo">
+										<input id="yes0" name="yesNo0" type="radio" value="" checked="checked">
+										<label for="yes0"><span>예</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="btn_rdo">
+										<input id="no0" name="yesNo0" type="radio" value="">
+										<label for="no0"><span>아니오</span></label>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<br>
+				<div class="check_list_line">
+					<ul>
+						<li>
+							<div class="chk_info">
+								<span class="i_chk"></span>제3자(계약자 또는 친권자)이신 경우 보험금 청구에 관한 개인(신용)정보동의를 '피보험자'에게 위임 받으셨습니까?
+							</div>
+							<ul class="btn_toggle c1 btm grid s2">
+								<li>
+									<div class="btn_rdo">
+										<input id="yes1" name="yesNo1" type="radio" value="">
+										<label for="yes1"><span>예</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="btn_rdo">
+										<input id="no1" name="yesNo1" type="radio" value="">
+										<label for="no1"><span>아니오</span></label>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<br>
+				<div class="check_list_line">
+					<ul>
+						<li>
+							<div class="chk_info">
+								<span class="i_chk"></span>제3자(계약자 또는 친권자)이신 경우 보험금 청구에 관한 개인(신용)정보동의를 '피보험자'에게 위임 받으셨습니까?
+							</div>
+							<ul class="btn_toggle c1 btm grid s1">
+								<li>
+									<div class="btn_rdo">
+										<input id="yes1_2" name="yesNo1" type="checkbox" value="">
+										<label for="yes1_2"><span>예</span></label>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<br>
+				<div class="check_list_line t2">
+					<ul>
+						<li>
+							<div class="chk_info">
+								<span class="i_chk"></span>제3자(계약자 또는 친권자)이신 경우 보험금 청구에 관한 개인(신용)정보동의를 '피보험자'에게 위임 받으셨습니까?
+							</div>
+							<div class="chk">
+								<input id="myChk6" type="checkbox" value="">
+								<label for="myChk6"><span>예, 위임 받았습니다</span></label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<br>
+				<div class="check_list_line t3">
+					<ul>
+						<li>
+							<div class="chk_info">
+								제3자(계약자 또는 친권자)이신 경우 보험금 청구에 관한 개인(신용)정보동의를 '피보험자'에게 위임 받으셨습니까?
+							</div>
+							<ul class="btn_toggle c1 btm grid s2">
+								<li>
+									<div class="btn_rdo">
+										<input id="yes2" name="yesNo2" type="radio" value="" checked="checked">
+										<label for="yes2"><span>예</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="btn_rdo">
+										<input id="no2" name="yesNo2" type="radio" value="">
+										<label for="no2"><span>아니오</span></label>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<br>
+				<div class="check_list_line t3">
+					<ul>
+						<li>
+							<div class="chk_info fc4">
+								변경한 이후에는 변경 내용을<span class="fc2">취소할 수 없으므로</span> 세부 내용을 꼭 확인 후 변갱해주세요.<br>가입기간 종료 후 기존특약으로 전환됩니다.<!-- 2020-02-28 텍스트 수정 -->
+							</div>
+							<div class="chk_wrap">
+								<span class="checkbox c2">
+									<input id="myChk6_1" type="checkbox"><i aria-hidden="true"></i><!-- 2020-02-26 -->
+									<label for="myChk6_1">확인하였습니다.</label>
+								</span>
+							</div>
+							<label for="myChk6_1" class="chk_lbl" aria-hidden="true">확인하였습니다.</label>
+						</li>
+					</ul>
+				</div>
+				<br>		
+				<div class="check_list_line t4">
+					<ul>
+						<li>
+							<div class="chk_info">
+								<span class="num roboto5">1</span>고객님 거주지 주소는 서울 금천구 남부순환로108길 20-36 DB금융센터 맞습니까?
+							</div>
+							<ul class="btn_toggle t2 c1 grid s2">
+								<li>
+									<div class="btn_rdo">
+										<input id="yes4" name="yesNo4" type="radio" value="" checked="checked">
+										<label for="yes4"><span>예</span></label>
+									</div>
+								</li>
+								<li>
+									<div class="btn_rdo">
+										<input id="no4" name="yesNo4" type="radio" value="">
+										<label for="no4"><span>아니오</span></label>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+
+				<h3 class="gd__h2">js_tab_rdo</h3>
+				<ul class="btn_toggle grid s2 js_tab_rdo">
+					<li>
+						<input id="togWay1" type="radio" name="togWay" data-target="#mailToggleCont,#etcToggleCont">
+						<label for="togWay1">이메일</label>
+					</li>
+					<li>
+						<input id="togWay2" type="radio" name="togWay" data-target="#faxToggleCont,#etcToggleCont">
+						<label for="togWay2">팩스</label>
+					</li>
+				</ul>
+				<br>
+				<div id="mailToggleCont" class="tab_rdo_panel">메일입력</div>
+				<div id="faxToggleCont" class="tab_rdo_panel">FAX입력</div>
+				<div id="etcToggleCont" class="tab_rdo_panel">라디오 선택시 무조건 노출영역</div>
+
+				<h3 class="gd__h2">small 타입(박스 안에 들어갈때)</h3>
+				<ul class="btn_toggle small grid s3">
+					<li>
+						<input id="listRdo1_1" type="radio" name="listRdo1">
+						<label for="listRdo1_1">전액</label>
+					</li>
+					<li>
+						<input id="listRdo1_2" type="radio" name="listRdo1">
+						<label for="listRdo1_2">이자</label>
+					</li>
+					<li>
+						<input id="listRdo1_3" type="radio" name="listRdo1">
+						<label for="listRdo1_3">일부</label>
+					</li>
+				</ul>
+
+				<h3 class="gd__h2">2 * 2 일때</h3>
+				<ul class="btn_toggle grid s2 two_row">
+					<li>
+						<input id="b1_1" type="radio" name="b1">
+						<label for="b1_1">가계자금</label>
+					</li>
+					<li>
+						<input id="b1_2" type="radio" name="b1">
+						<label for="b1_2">주택구입</label>
+					</li>
+					<li>
+						<input id="b1_3" type="radio" name="b1">
+						<label for="b1_3">사업자금</label>
+					</li>
+					<li>
+						<input id="b1_4" type="radio" name="b1">
+						<label for="b1_4">기타</label>
+					</li>
+				</ul>
+				<br>
+				<ul class="btn_toggle grid s2 two_row">
+					<li>
+						<input id="c1_1" type="radio" name="c1">
+						<label for="c1_1">만65세 이상</label>
+					</li>
+					<li>
+						<input id="c1_2" type="radio" name="c1">
+						<label for="c1_2">은퇴자</label>
+					</li>
+					<li>
+						<input id="c1_3" type="radio" name="c1">
+						<label for="c1_3">주부</label>
+					</li>
+					<li>
+						<input id="c1_4" type="radio" name="c1">
+						<label for="c1_4">해당사항 없음</label>
+					</li>
+				</ul>
+				<h3 class="gd__h2">2줄, 1줄 혼합일때</h3>
+				<ul class="btn_toggle grid s3 h70">
+					<li>
+						<input id="btTog3_1" type="radio" name="btTog3">
+						<label for="btTog3_1"><span>보험료<br>자동이체 계좌</span></label>
+					</li>
+					<li>
+						<input id="btTog3_3" type="radio" name="btTog3">
+						<label for="btTog3_3"><span>최근<br>보험료<br>지급 계좌</span></label>
+					</li>
+					<li>
+						<input id="btTog3_2" type="radio" name="btTog3">
+						<label for="btTog3_2">직접입력</label>
+					</li>
+				</ul>
+				<br>
+				<p>1줄 형태로 변경</p>
+				<ul class="btn_toggle t2">
+					<li>
+						<input id="btTog3_2_1" type="radio" name="btTog3">
+						<label for="btTog3_2_1">보험료 자동이체 계좌</label>
+					</li>
+					<li>
+						<input id="btTog3_2_3" type="radio" name="btTog3">
+						<label for="btTog3_2_3">최근 보험료 지급 계좌</label>
+					</li>
+					<li>
+						<input id="btTog3_2_2" type="radio" name="btTog3">
+						<label for="btTog3_2_2">직접입력</label>
+					</li>
+				</ul>
+				<br>
+				<ul class="btn_toggle t2">
+					<li>
+						<input id="a1_1" type="radio" name="a1" checked="">
+						<label for="a1_1">원금균등상환</label><!-- 2020-02-04: 텍스트수정 -->
+					</li>
+				</ul>
+				
+				<h3 class="gd__h2">3 * 2 일때</h3>
+				<ul class="btn_toggle grid s3 two_row h70">
+					<li>
+						<input id="btTog3_4" type="radio" name="btTog3_2">
+						<label for="btTog3_4"><span>계약관리</span></label>
+					</li>
+					<li>
+						<input id="btTog3_5" type="radio" name="btTog3_2">
+						<label for="btTog3_5"><span>보험료<br>납입</span></label>
+					</li>
+					<li>
+						<input id="btTog3_6" type="radio" name="btTog3_2">
+						<label for="btTog3_6"><span>환급금<br>조회/신청</span></label>
+					</li>
+					<li>
+						<input id="btTog3_7" type="radio" name="btTog3_2">
+						<label for="btTog3_7">대출</label>
+					</li>
+					<li>
+						<input id="btTog3_8" type="radio" name="btTog3_2">
+						<label for="btTog3_8">보상</label>
+					</li>
+					<li>
+						<input id="btTog3_9" type="radio" name="btTog3_2">
+						<label for="btTog3_9"><span>증명서<br>발급</span></label>
+					</li>
+				</ul>
+				
+				<h2 class="gd__h1">이용약관 체크박스</h2>
+				<h3 class="gd__h2">agree_item</h3>
+				<div class="agree_item">
+					<div class="checkbox">
+						<input id="agree" type="checkbox"><i aria-hidden="true"></i>
+						<label for="agree" class="lbl">개인정보 이용에 대한 동의</label>
+						<a href="#" class="bt"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+					</div>
+				</div>
+
+				<h3 class="gd__h2">agree_list</h3>
+				<div class="agree_list">
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree1" type="checkbox" checked><i aria-hidden="true"></i>
+							<label for="agree1" class="lbl">'[필수] '는 글자 삭제. 표기하지 않음</label>
+							<a href="#" class="bt"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+						<div class="agree_child">
+							<div class="agree_item">
+								<div class="checkbox small">
+									<input id="agree1_1" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree1_1" class="lbl">팝업이 없는 약관</label>
+								</div>
+							</div>
+							<div class="agree_item">
+								<div class="checkbox small">
+									<input id="agree1_2" type="checkbox" checked><i aria-hidden="true"></i>
+									<label for="agree1_2" class="lbl">팝업이 있는 약관</label>
+									<a href="#" class="bt"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree2" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree2" class="lbl">팝업이 없는 약관(해당 뎁스는 거의 팝업이 있음)</label>
+						</div>
+						<div class="agree_child">
+							<p><strong>상품서비스 안내수단</strong></p>
+							<div class="chk_wrap">
+								<div class="checkbox small t2">
+									<input id="agree5_1" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree5_1">문자메세지</label>
+								</div>
+								<div class="checkbox small t2">
+									<input id="agree5_2" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree5_2">이메일</label>
+								</div>
+								<div class="checkbox small t2">
+									<input id="agree5_3" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree5_3">전화</label>
+								</div>
+								<div class="checkbox small t2">
+									<input id="agree5_4" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree5_4">우편</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree3" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree3" class="lbl">[선택] 선택 이용약관 선택은 '[선택] ' 글자 표기</label>
+							<a href="#" class="bt"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="agree_list">
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree10" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree10" class="lbl">개인(신용)정보 수집&middot;이용&middot;제공 및 조회 동의서 서비스 이용에 동의합니다.</label>
+						</div>
+						<div class="agree_child">개인정보보호법 시행으로 보험금청구/사고접수 서비스 이용을 위해 위의 내용에 동의하셔야 합니다.</div>
+					</div>
+				</div>
+				<div class="agree_guide">소비자권익보호에 관련 사항
+					<span class="tooltip_wrap">
+						<a href="#" class="tooltip_btn">자세한 내용 확인</a>
+						<span class="tooltip_cont">정보 동의시 보험금 지급 심사 및 보험사고 조사 등을 위해 최소한의 정보만 수집&middot;이용 및 제공 하며, 동의를 하시지 않을 경우에는 보험금 청구 및 지급 관련 정상적인 서비스 제공이 불가능할 수 있고 본 동의서에 의한 개인(신용) 정보 조회는 귀하의 신용등급에 영향을 주지 않습니다</span>
+					</span>
+				</div>
+
+				<h2 class="gd__h1">form_item</h2>
+				<div class="form_item">
+					<label for="startDate1" class="lb">시작일자</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="startDate1" class="i_txt i_datepicker" type="text" placeholder="예)20201101" title="예)20201101">
+						</span>
+						<span class="dv time">00시</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">시작일자를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+					<div class="input_guide">변경시작일은 내일부터 선택 가능합니다.</div>
+				</div>
+				<div class="form_item">
+					<label for="endDate1" class="lb">종료일자</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="endDate1" class="i_txt i_datepicker" type="text" placeholder="예)20201101" title="예)20201101">
+						</span>
+						<span class="dv time">24시</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">종료일자를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+					<div class="input_guide">변경시작일은 내일부터 선택 가능합니다.</div>
+				</div>
+				<div class="form_item">
+					<label for="crushDate1" class="lb">사고일시</label>
+					<div class="input datetime"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="crushDate1" class="i_txt i_datepicker" data-max="today" type="text" placeholder="예)20201101" title="예)20201101">
+						</span>
+						<span class="dv"><input class="i_txt no_del" type="text" title="시간의 시 입력"><span class="unit">시</span></span>
+						<span class="dv"><input class="i_txt no_del" type="text" title="시간의 분 입력"><span class="unit">분</span></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">사고일시를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="crushDate2" class="lb">사고일시</label>
+					<div class="input datetime"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="crushDate2" class="i_txt i_datepicker" data-max="today" type="text" placeholder="예)20201101" title="예)20201101">
+						</span>
+						<span class="dv "><input class="i_txt no_del" type="text" title="시간 입력"><span class="unit">시경</span></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">사고일시를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="requestDate" class="lb">요청일</label>
+					<div class="input datetime2"><!-- 에러날때 invalid 클래스 -->
+						<div class="row">
+							<span class="dv date">
+								<input id="requestDate" class="i_txt i_datepicker" type="text" placeholder="예)20201101" title="예)20201101">
+							</span>
+							<div class="dv">
+								<ul class="btn_toggle grid s2">
+									<li>
+										<input id="am" type="radio" name="datetime2">
+										<label for="am">오전</label>
+									</li>
+									<li>
+										<input id="pm" type="radio" name="datetime2">
+										<label for="pm">오후</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<strong class="invalid_txt" style="display:none">요청일을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+					<div class="input_guide">서비스를 원하시는 날 3일 전까지 신청하시면 됩니다.</div>
+				</div>
+				<div class="form_item">
+					<label for="inpDate1" class="lb">조회기간 (1개월 단위로 검색가능)</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="inpDate1" class="i_txt i_datepicker" type="text" placeholder="예)20201101" title="예)20201101">
+						</span>
+						<span class="nbsp"></span>
+						<span class="dv date">
+							<input id="inpDate2" class="i_txt i_datepicker" type="text" placeholder="예)20201101" title="예)20201101">
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">조회기간을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="textarea" class="lb">사고내용</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<div class="textarea">
+							<textarea id="textarea" maxlength="300"></textarea>
+							<div class="byte"><strong>0</strong>/300</div>
+						</div>
+					</div>
+					<strong class="invalid_txt" style="display:none">사고내용을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="textarea2" class="lb">내용</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<div class="textarea large">
+							<textarea id="textarea2" maxlength="5000" placeholder="로그인 후 접수하신 경우 [ 마이페이지 > 상담내역 ] 에서 접수내역을 확인하실 수 있습니다."></textarea>
+							<div class="byte"><strong>0</strong>/5,000</div>
+						</div>
+					</div>
+					<strong class="invalid_txt" style="display:none">사고내용을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<span class="lb">운전자 범위</span>
+					<span class="value">누구나 운전</span>
+				</div>
+				<div class="form_item">
+					<span class="lb">운전자 연령</span>
+					<span class="value">연령제한없이 운전</span>
+				</div>
+				<div class="form_item">
+					<div class="lb">결제방법</div>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<ul class="btn_toggle grid s2">
+							<li>
+								<input id="payRdo1" type="radio" name="payRdo">
+								<label for="payRdo1">실시간 출금</label>
+							</li>
+							<li>
+								<input id="payRdo2" type="radio" name="payRdo">
+								<label for="payRdo2">신용카드</label>
+							</li>
+						</ul>
+					</div>
+					<strong class="invalid_txt" style="display:none">결제방법을 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<div class="lb">증명서 유형</div>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<ul class="btn_toggle t2">
+							<li>
+								<input id="radio4_1" type="radio" name="radio4_1">
+								<label for="radio4_1">장기주택 저당차 입금 이자 상환증명서</label>
+							</li>
+							<li>
+								<input id="radio4_2" type="radio" name="radio4_1">
+								<label for="radio4_2">주택임차차 입금원리금 상환액 증명서</label>
+							</li>
+						</ul>
+					</div>
+					<strong class="invalid_txt" style="display:none">증명서 유형을 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="cardNum1" class="lb">카드번호</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv"><input id="cardNum1" class="i_txt" type="text" title="카드번호 첫번째 4자리 입력"></span>
+						<span class="nbsp"></span>
+						<span class="dv"><input id="cardNum2" class="i_txt" type="password" title="카드번호 두번째 4자리 입력"></span>
+						<span class="nbsp"></span>
+						<span class="dv"><input id="cardNum3" class="i_txt" type="text" title="카드번호 세번째 4자리 입력"></span>
+						<span class="nbsp"></span>
+						<span class="dv"><input id="cardNum4" class="i_txt" type="password" title="카드번호 네번째 4자리 입력"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">카드번호를 정확하게 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="phoneNum1_1" class="lb">휴대폰번호</label>
+					<div class="input phone"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<select id="phoneNum1_1" title="휴대폰번호 식별번호 선택">
+								<option value="010" selected="selected">010</option>
+							</select>
+						</span>
+						<span class="dv"><input id="phoneNum1_2" class="i_txt" type="tel" title="휴대폰번호 나머지 7~8자리 입력" placeholder="-없이 숫자만 입력"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">휴대폰번호를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="phoneNum2_1" class="lb">연락처</label>
+					<div class="input phone inp_btn"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<select id="phoneNum2_1" title="연락처 식별번호 선택">
+								<option value="010" selected="selected">010</option>
+							</select>
+						</span>
+						<span class="dv"><input id="phoneNum2_2" class="i_txt" type="tel" title="연락처 나머지 7~8자리 -없이 숫자만 입력" placeholder="-없이 숫자만 입력"></span>
+						<span class="dv">
+							<a href="#" class="btn bs3 line2">인증번호 발송</a>
+							<!-- <a href="#" class="btn bs3 line2">인증번호 재발송</a> -->
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">연락처를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="phoneCheck1" class="lb">인증번호 입력</label>
+					<div class="input inp_btn"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<input id="phoneCheck1" class="i_txt i_chk" type="tel" title="인증번호 입력" placeholder="인증번호 입력">
+							<span class="chk_timer">01:45</span>
+						</span>
+						<span class="dv">
+							<a href="#" class="btn bs3 bc2 bsr2_1 inblock">확인</a>
+							<a href="#" class="btn bs3 line2 inblock">시간연장</a>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">인증번호를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="frm1" class="lb">은행/계좌번호</label>
+					<div class="input bank"><!-- 에러날때 invalid 클래스 -->
+						<div class="dv">
+							<div class="select">
+								<select id="frm1" title="은행 선택" tabindex="-1" aria-hidden="true">
+									<option value="">은행선택</option>
+									<option value="038">강원은행</option>
+									<option value="039">경남은행</option>
+									<option value="034">광주은행</option>
+									<option value="004">국민은행</option>
+									<option value="003">기업은행</option>
+									<option value="011">중앙농협</option>
+									<option value="012">단위농협</option>
+									<option value="031">대구은행</option>
+									<option value="032">부산은행</option>
+									<option value="002">산업은행</option>
+									<option value="050">상호저축은행</option>
+									<option value="045">새마을금고</option>
+									<option value="007">수협</option>
+									<option value="026">신한은행(구)</option>
+									<option value="048">신협</option>
+									<option value="027">씨티은행(구.한미)</option>
+									<option value="005">KEB하나은행(구외환)</option>
+									<option value="020">우리은행</option>
+									<option value="071">우체국</option>
+									<option value="037">전북은행</option>
+									<option value="023">제일은행</option>
+									<option value="035">제주은행</option>
+									<option value="021">조흥은행</option>
+									<option value="081">KEB하나은행(구하나)</option>
+									<option value="088">신한은행</option>
+								</select>
+								<a href="#" class="select_btn ui_select_open" title="은행 팝업으로 선택하기">현재 선택한 은행은 <span>없습니다.</span></a>
+							</div>
+						</div>
+						<span class="dv"><input id="frm2" class="i_txt" type="tel" title="계좌번호 -없이 숫자만 입력" placeholder="-없이 숫자만 입력"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">계좌번호를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="validity1" class="lb">유효기간</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv"><input id="validity1" class="i_txt" type="text" placeholder="월2자리" title="유효기간 월2자리 입력"></span>
+						<span class="nbsp"></span>
+						<span class="dv"><input id="validity2" class="i_txt" type="text" placeholder="년4자리" title="유효기간 년4자리 입력"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">유효기간을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="validity3" class="lb">유효기간 (선택 ver.)</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<select id="validity3" title="월2자리 선택">
+								<option value="">월 2자리</option>
+								<option value="1">01</option>
+							</select>
+						</span>
+						<span class="nbsp"></span>
+						<span class="dv">
+							<select id="validity4" title="년2자리 선택">
+								<option value="">년 4자리</option>
+								<option value="22">22</option>
+							</select>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">유효기간을 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="cardPW" class="lb">카드 비밀번호</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv"><input id="cardPW" class="i_txt" type="text" placeholder="앞 2자리" title="카드 비밀번호 앞 2자리 입력"></span>
+						<span class="sp">**</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">비밀번호를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="jumin1" class="lb">주민등록번호</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv"><input id="jumin1" class="i_txt" type="text" title="주민등록번호 앞6자리 입력"></span>
+						<span class="dash"></span>
+						<span class="dv"><input id="jumin2" class="i_txt" type="text" title="주민등록번호 뒷7자리 입력" value="2●●●●●●"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">주민등록번호를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item" id="emailFormEdit1">
+					<label for="mail1" class="lb">이메일</label>
+					<div class="input email_form"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv"><input id="mail1" class="i_txt" type="text" title="이메일 아이디 입력"></span>
+						<span class="sp">@</span>
+						<span class="dv email_sel">
+							<select title="이메일 도메인 선택" id="mailSelect">
+								<option value="" selected="selected">이메일계정선택</option>
+								<option value="naver.com">naver.com</option>
+								<option value="hanmail.net">hanmail.net</option>
+								<option value="nate.com">nate.com</option>
+								<option value="gmail.com">gmail.com</option>
+								<option value="yahoo.com">yahoo.com</option>
+								<option value="empal.com">empal.com</option>
+								<option value="freechal.com">freechal.com</option>
+								<option value="chol.com">chol.com</option>
+								<option value="dreamwiz.com">dreamwiz.com</option>
+								<option value="hanmir.com">hanmir.com</option>
+								<option value="hotmail.com">hotmail.com</option>
+								<option value="korea.com">korea.com</option>
+								<option value="lycos.com">lycos.com</option>
+								<option value="msn.com">msn.com</option>
+								<option value="paran.com">paran.com</option>
+								<option value="me.com">me.com</option>
+								<option value="etc">직접입력</option>
+							</select>
+						</span>
+						<span class="dv email_inp" style="display:none;">
+							<input class="i_txt" type="text" title="이메일 도메인 직접입력" placeholder="직접입력">
+							<a href="#" class="btn_sel"><span class="offscreen">이메일 도메인 직접입력 취소</span></a>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">이메일를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="installmentPeriod" class="lb">할부기간</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<select id="installmentPeriod">
+								<option value="" selected="selected">할부기간 선택</option>
+							</select>
+						</span>
+					</div>
+					<div class="guide_txt">
+						<p>2개월~12개월 선택</p>
+					</div>
+					<strong class="invalid_txt" style="display:none">할부기간을 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item"><!-- 에러날때 invalid 클래스 -->
+					<label for="address" class="lb">주소</label>
+					<div class="input">
+						<span class="dv">
+							<select id="address">
+								<option value="home" selected="selected">자택</option>
+							</select>
+						</span>
+					</div>
+					<div class="input address">
+						<span class="dv"><input id="address2" class="i_txt" type="tel" title="우편번호 입력" placeholder="우편번호" readonly onclick="daumPostcode('postcode','baseAddress','detailAddress')"></span>
+						<span class="dv">
+							<a href="#" class="btn bs3 line2 fc7" onclick="daumPostcode('postcode','baseAddress','detailAddress')">주소찾기</a>
+						</span>
+					</div>
+					<div class="input">
+						<span class="dv"><input class="i_txt" type="text" title="기본주소 입력" placeholder="기본주소" readonly onclick="daumPostcode('postcode','baseAddress','detailAddress')"></span>
+					</div>
+					<div class="input">
+						<span class="dv"><input class="i_txt" type="text" title="상세주소 입력" placeholder="상세주소"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">주소를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+
+				<div class="form_item">
+					<label for="select" class="lb">구비서류</label>
+					<div class="input inp_btn"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<select id="select">
+								<option value="1">자동차등록원부</option>
+							</select>
+						</span>
+						<span class="dv">
+							<a href="#" class="btn bs3 line2">구비서류안내</a>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">구비서류를 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="labelName" class="lb">선납할 회차</label>
+					<div class="input inp_btn"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv price">
+							<input id="labelName" class="i_txt no_del" type="text" title="선납할 회차 입력">
+							<span class="unit">회차</span>
+						</span>
+						<span class="dv"><a href="#" class="btn bs3 line2"><span>선납보험료 확인</span></a></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">선납할 회차를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+					<div class="input_guide">1회차 ~ 2회차 신청 가능</div>
+				</div>
+				<div class="form_item">
+					<label for="carModel1" class="lb">차명/연식</label>
+					<div class="input car_model year"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<input id="carModel1" class="i_txt" type="text" title="차명 입력" value="다마스">
+						</span>
+						<span class="dv"><input class="i_txt" type="text" title="연식 입력"><span class="unit">년</span></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">차명을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<h3 class="gd__h2">계좌입력할때 (스크립트)</h3>
+				<div class="form_item">
+					<label for="bankChkSel2" class="lb">출금 계좌 확인 및 출금 동의</label>
+					<!-- 계좌선택 -->
+					<div class="bank_wrap">
+						<div class="input bank2"><!-- 에러날때 invalid 클래스 -->
+							<div class="dv">
+								<div class="select">
+									<select id="bankChkSel1" title="출금 계좌 선택" tabindex="-1" aria-hidden="true">
+										<option value="">계좌선택</option>
+										<option value="1" selected>KB국민은행 7137********</option>
+										<option value="2">카카오뱅크 / 2852002****</option>
+										<option value="3">기업은행 / 2852002****</option>
+									</select>
+									<a href="#" class="select_btn ui_select_open" title="계좌 팝업으로 선택하기">현재 선택한 계좌는 <span>없습니다.</span></a>
+								</div>
+							</div>
+							<span class="dv">
+								<a href="#" class="btn bs3 line2 btn_inp_change">직접입력</a>
+							</span>
+						</div>
+						<strong class="invalid_txt" style="display:none">계좌를 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+					</div>
+					<!-- 직접입력영역 -->
+					<div class="bank_wrap" style="display:none;">
+						<div class="input bank2"><!-- 에러날때 invalid 클래스 -->
+							<div class="dv sel">
+								<div class="select">
+									<select id="bankChkSel2" title="은행 선택" tabindex="-1" aria-hidden="true">
+										<option value="">은행선택</option>
+										<option value="1">국민은행</option>
+										<option value="2">우리은행</option>
+										<option value="3">기업은행</option>
+									</select>
+									<a href="#" class="select_btn ui_select_open" title="은행 팝업으로 선택하기">현재 선택한 은행은 <span>없습니다.</span></a>
+								</div>
+							</div>
+							<span class="dv"><input id="frm2" class="i_txt" type="tel" title="계좌번호 -없이 숫자만 입력" placeholder="-없이 숫자만 입력"></span>
+							<span class="dv">
+								<a href="#" class="btn bs3 line2 btn_inp_change">계좌선택</a>
+							</span>
+						</div>
+						<strong class="invalid_txt" style="display:none">계좌번호를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+					</div>
+				</div>
+
+				<div class="form_item">
+					<label for="local1" class="lb">상담지역</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<select id="local1" title="지역 시/도 선택">
+								<option value="">시/도</option>
+							</select>
+						</span>
+						<span class="sp t2" aria-hidden="true"></span>
+						<span class="dv">
+							<select title="지역 시/군 선택">
+								<option value="">시/군</option>
+							</select>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">상담지역을 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+
+				<h3 class="gd__h2">기간선택</h3>
+				<div class="form_item">
+					<div class="lb">대출기간선택</div>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<div class="range_slider">
+							<div class="slider" data-min="0" data-max="5" data-step="1" data-value="1" aria-hidden="true"></div>
+							<div class="list" title="대출기간을 선택해주세요" data-unit="년"></div>
+							<input type="hidden" title="선택한 대출기간">
+						</div>
+					</div>
+					<strong class="invalid_txt" style="display:none">대출기간을 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+
+				<h3 class="gd__h2">form_item의 하위 입력폼</h3>
+				<dl class="form_dl">
+					<dt>추가운전자 상세정보</dt>
+					<dd>
+						<div class="form_item">
+							<label for="inpConnect1" class="lb">피보험자 관계</label>
+							<div class="input"><!-- 에러날때 invalid 클래스 -->
+								<span class="dv">
+									<select id="inpConnect1">
+										<option value="">선택</option>
+										<option value="1">아들</option>
+									</select>
+								</span>
+							</div>
+							<strong class="invalid_txt" style="display:none">피보험자 관계를 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+						</div>
+						<div class="form_item">
+							<label for="inpName1" class="lb">운전자 이름</label>
+							<div class="input"><!-- 에러날때 invalid 클래스 -->
+								<span class="dv"><input id="inpName1" class="i_txt" type="text"></span>
+							</div>
+							<strong class="invalid_txt" style="display:none">이름을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+						</div>
+						<div class="form_item">
+							<label for="inpBirth1" class="lb">생년월일 <i class="require"><span class="offscreen">필수입력항목</span></i></label>
+							<div class="input"><!-- 에러날때 invalid 클래스 -->
+								<span class="dv date">
+									<input id="inpBirth1" class="i_txt i_datepicker" data-max="today" type="text" placeholder="예)19851101" title="예)19851101">
+								</span>
+							</div>
+							<strong class="invalid_txt" style="display:none">생년월일을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+						</div>
+						<div class="form_item">
+							<div class="lb">성별</div>
+							<div class="input"><!-- 에러날때 invalid 클래스 -->
+								<ul class="btn_toggle grid s2">
+									<li>
+										<input id="toggleGender1_1" type="radio" name="toggleGender1" checked="checked">
+										<label for="toggleGender1_1">남</label>
+									</li>
+									<li>
+										<input id="toggleGender1_2" type="radio" name="toggleGender1">
+										<label for="toggleGender1_2">여</label>
+									</li>
+								</ul>
+							</div>
+							<strong class="invalid_txt" style="display:none">성별을 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+						</div>
+						<div class="form_item">
+							<label for="inpBirth1_1" class="lb">생년월일/성별</label>
+							<div class="input datetime2"><!-- 에러날때 invalid 클래스 -->
+								<span class="dv date">
+									<input id="inpBirth1_1" class="i_txt i_datepicker" data-max="today" type="text" placeholder="예)19851101" title="예)19851101">
+								</span>
+								<div class="dv">
+									<ul class="btn_toggle grid s2">
+										<li>
+											<input id="am" type="radio" name="datetime2">
+											<label for="am">남</label>
+										</li>
+										<li>
+											<input id="pm" type="radio" name="datetime2">
+											<label for="pm">여</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<strong class="invalid_txt" style="display:none">생년월일을 입력해주세요.</strong>
+						</div>
+					</dd>
+					<dt>추가운전자 상세정보</dt>
+					<dd>
+						<div class="form_item">
+							<label for="inpConnect2" class="lb">피보험자 관계</label>
+							<div class="input"><!-- 에러날때 invalid 클래스 -->
+								<span class="dv">
+									<select id="inpConnect2">
+										<option value="">선택</option>
+										<option value="1">아들</option>
+									</select>
+								</span>
+							</div>
+							<strong class="invalid_txt" style="display:none">>피보험자 관계를 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+						</div>
+						<div class="form_item">
+							<label for="inpName2" class="lb">운전자 이름</label>
+							<div class="input"><!-- 에러날때 invalid 클래스 -->
+								<span class="dv"><input id="inpName2" class="i_txt" type="text"></span>
+							</div>
+							<strong class="invalid_txt" style="display:none">이름을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+							<div class="input">
+								<span class="checkbox">
+									<input id="chk1" type="checkbox"><i aria-hidden="true"></i>
+									<label for="chk1">추가운전자와 동일</label>
+								</span>
+							</div>
+							<div class="input">
+								<div class="checkbox">
+									<input id="chk1" type="checkbox"><i aria-hidden="true"></i>
+									<label for="chk1">지정인입력</label>
+									<span class="tooltip_wrap">
+										<a href="#" class="tooltip_btn">자세한 내용 확인</a>
+										<span class="tooltip_cont">내용무</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="form_item">
+							<label for="inpBirth2" class="lb">생년월일</label>
+							<div class="input"><!-- 에러날때 invalid 클래스 -->
+								<span class="dv date">
+									<input id="inpBirth2" class="i_txt i_datepicker" data-max="today" type="text" placeholder="예)19851101" title="예)19851101">
+								</span>
+							</div>
+							<strong class="invalid_txt" style="display:none">생년월일을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+						</div>
+						<div class="form_item">
+							<div class="lb">성별</div>
+							<div class="input"><!-- 에러날때 invalid 클래스 -->
+								<ul class="btn_toggle grid s2">
+									<li>
+										<input id="toggleGender2_1" type="radio" name="toggleGender2" checked="checked">
+										<label for="toggleGender2_1">남</label>
+									</li>
+									<li>
+										<input id="toggleGender2_2" type="radio" name="toggleGender2">
+										<label for="toggleGender2_2">여</label>
+									</li>
+								</ul>
+							</div>
+							<strong class="invalid_txt" style="display:none">에러메세지 영역입니다.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+						</div>
+						<div class="form_item">
+							<span class="lb">대출금입금 계좌</span>
+							<div class="input"><!-- 에러날때 invalid 클래스 -->
+								<div class="select">
+									<select id="" title="대출금입금 계좌선택" tabindex="-1" aria-hidden="true">
+										<option value="">계좌선택</option>
+										<option value="1" selected>KB국민은행 7137********</option>
+										<option value="2">기업은행 7137********</option>
+										<option value="3">제일은행 7137********</option>
+									</select>
+									<a href="#" class="select_btn ui_select_open" title="계좌 팝업으로 선택하기">현재 선택한 계좌는 <span>없습니다.</span></a>
+								</div>
+							</div>
+							<strong class="invalid_txt" style="display:none">계좌를 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+						</div>
+					</dd>
+				</dl>
+				<div class="form_item">
+					<div class="lb">파일첨부
+						<div class="tooltip_wrap">
+							<a href="#" class="tooltip_btn">자세한 내용 확인</a>
+							<div class="tooltip_cont">
+								<div class="guide_txt">
+									<ul>
+										<li class="dot">확인서, 녹취록, 관련 사진 등 입증자료를 첨부하실 수 있습니다.</li>
+										<li class="dot">HWP, DOC, DOCX, PDF, TXT, XLSX, XLS, PPT, PPTX, JPG, PNG, GIF, BMP, MP4, MOV, AVI, MP3, M4A, WAV 파일을 첨부할 수 있습니다.</li>
+										<li class="dot">파일 한 개당 10MB까지 첨부 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<div class="dv">
+							<div class="inp_file">
+								<input type="file" id="file1" title="첨부파일 선택">
+								<label for="file1"><span><i class="bt_ic_add"></i>파일을 선택해주세요</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="file_item_wrap">
+						<div class="file_item">
+							<input type="file" class="offscreen" title="첨부파일 경로" aria-hidden="true" tabindex="-1" readonly>
+							<strong>첨부파일1.jpg</strong>
+							<a href="#" class="item_del"><span class="offscreen">파일 삭제</span></a>
+						</div>
+						<div class="file_item">
+							<input type="file" class="offscreen" title="첨부파일 경로" aria-hidden="true" tabindex="-1" readonly>
+							<strong>첨부파일2.jpg</strong>
+							<a href="#" class="item_del"><span class="offscreen">파일 삭제</span></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="form_item">
+					<label for="inpJob1" class="lb">직업</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<select id="inpJob1" title="직업 분류 선택">
+								<option value="" selected="selected">선택하세요</option>
+								<option value="1">무직/일용직</option>
+								<option value="2">회사원</option>
+								<option value="3">교육관련종사자</option>
+								<option value="4">공무원(교사제외)</option>
+								<option value="5">인거래처종사자</option>
+								<option value="6">물거래처종사자</option>
+								<option value="7">공장(제조업)</option>
+								<option value="8">군인</option>
+								<option value="9">학생</option>
+								<option value="10">운동선수</option>
+								<option value="11">모집종사자</option>
+								<option value="12">유흥업소종사자</option>
+								<option value="13">운수업종사자</option>
+								<option value="14">기타일반자영업</option>
+								<option value="15">기타</option>
+							</select>
+						</span>
+						<span class="sp t2"></span>
+						<span class="dv"><input id="inpJob2" class="i_txt" type="tel" title="직업 상세정보"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">직업를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<div class="lb"><label for="inpName3">보험범죄혐의자 이름 <i class="require"><span class="offscreen">필수입력항목</span></i></label> / <label for="inpAge">나이</label></div>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv"><input id="inpName3" class="i_txt" type="tel" title="보험범죄혐의자 이름" placeholder="이름"></span>
+						<span class="sp t2"></span>
+						<span class="dv age w30"><span class="unit">약</span><input id="inpAge" class="i_txt no_del" type="tel" title="보험범죄혐의자나이"><span class="unit">세</span></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">직업를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="inpPrice" class="lb">추정손해액 <i class="require"><span class="offscreen">필수입력항목</span></i></label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv price">
+							<input id="inpPrice" class="i_txt no_del" type="text">
+							<span class="unit">만원</span>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">추정손해액을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<div class="form_item">
+					<label for="inpCompany1" class="lb">관련 보험사</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv w30">
+							<select id="inpCompany1">
+								<option value="">선택하세요</option>
+								<option value="1">손해보험</option>
+								<option value="2">생명보험</option>
+							</select>
+						</span>
+						<span class="sp t2" aria-hidden="true"></span>
+						<span class="dv">
+							<select id="inpCompany2">
+								<option value="">선택하세요</option>
+								<option value="1">회사1</option>
+								<option value="2">회사2</option>
+								<option value="3">회사3</option>
+							</select>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">관련 보험사를 선택해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+					<div class="btn_wrap">
+						<ul class="grid s1">
+							<li>
+								<a class="btn bs2 line3" href="#">관련 보험사 추가</a>
+							</li>
+						</ul>
+					</div>
+					<div class="input_guide">서비스를 원하시는 날 3일 전까지 신청하시면 됩니다.</div>
+					<div class="sel_item_wrap">
+						<div class="sel_item">DB손해보험<a href="#" class="del">삭제</a></div>
+						<div class="sel_item">한화손해보험<a href="#" class="del">삭제</a></div>
+						<div class="sel_item">교보라이프플래닛<a href="#" class="del">삭제</a></div>
+						<div class="sel_item">현대해상<a href="#" class="del">삭제</a></div>
+						<div class="sel_item">KB생명<a href="#" class="del">삭제</a></div>
+						<div class="sel_item">삼성생명<a href="#" class="del">삭제</a></div>
+					</div>
+				</div>
+
+				<div class="form_item">
+					<label class="sizePyeong">건물면적</label>
+					<div class="input inp_btn"><!-- 에러날때 invalid 클래스 -->
+						<div class="dv price">
+							<input id="sizePyeong" class="i_txt no_del" type="tel" title="건물면적 평으로 입력">
+							<span class="unit">평</span>
+						</div>
+						<div class="dv price">
+							<input id="sizeMeter" class="i_txt no_del" type="tel" title="건물면적 제곱미터로 입력">
+							<span class="unit">㎡</span>
+						</div>
+						<div class="dv">
+							<a href="#" class="btn bs3 line2 layer_select_open">선택</a>
+						</div>
+					</div>
+					<div class="layer_select_wrap" aria-hidden="true">
+						<div class="offscreen">건물면적선택</div>
+						<div class="layer_select">
+							<ul>
+								<li><a href="#" class="option"><span data-inpid="sizePyeong">5</span>평(<span data-inpid="sizeMeter">17</span>㎡)</a></li>
+								<li><a href="#" class="option"><span data-inpid="sizePyeong">6</span>평(<span data-inpid="sizeMeter">20</span>㎡)</a></li>
+								<li><a href="#" class="option"><span data-inpid="sizePyeong">7</span>평(<span data-inpid="sizeMeter">23</span>㎡)</a></li>
+								<li><a href="#" class="option"><span data-inpid="sizePyeong">8</span>평(<span data-inpid="sizeMeter">26</span>㎡)</a></li>
+								<li><a href="#" class="option"><span data-inpid="sizePyeong">148</span>평(<span data-inpid="sizeMeter">489</span>㎡)</a></li>
+								<li><a href="#" class="option"><span data-inpid="sizePyeong">149</span>평(<span data-inpid="sizeMeter">493</span>㎡)</a></li>
+								<li><a href="#" class="option"><span data-inpid="sizePyeong">150</span>평(<span data-inpid="sizeMeter">496</span>㎡)</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="gd__h1">검색</h3>
+				<div class="search_box">
+					<div class="form_item">
+						<div class="input">
+							<input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력" class="i_txt">
+							<button type="button" class="btn_search"><span class="offscreen">검색하기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="search_box type2">
+					<div class="form_item">
+						<div class="input">
+							<input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력" class="i_txt">
+							<button type="button" class="btn_search"><span class="offscreen">검색하기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="search_box type2">
+					<div class="form_item">
+						<div class="input">
+							<div class="select_wrap">
+								<select>
+									<option value="0">2014</option>
+								</select>
+							</div>
+							<!-- <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력" class="i_txt fz_18"> -->
+							<button type="button" class="btn_search"><span class="offscreen">검색하기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="search_box type2">
+					<div class="form_item">
+						<div class="input">
+							<div class="select_wrap flex">
+								<div>
+									<select title="해당연도를 선택하세요.">
+										<option value="2018">2018</option>
+										<option value="2017">2017</option>
+										<option value="2016">2016</option>
+										<option value="2015">2015</option>
+										<option value="2014">2014</option>
+										<option value="2013">2013</option>
+										<option value="2012">2012</option>
+										<option value="2011">2011</option>
+										<option value="2010">2010</option>
+										<option value="2009">2009</option>
+										<option value="2008">2008</option>
+										<option value="2007">2007</option>
+										<option value="2006">2006</option>
+										<option value="2005">2005</option>
+										<option value="2004">2004</option>
+										<option value="2003">2003</option>
+										<option value="2002">2002</option>
+										<option value="2001">2001</option>
+									</select>
+								</div>
+								<div>
+									<select title="해당연도를 선택하세요.">
+										<option value="4">4분기</option>
+										<option value="3">3분기</option>
+										<option value="2">2분기</option>
+										<option value="1">1분기</option>
+									</select>
+								</div>
+							</div>
+							<button type="button" class="btn_search"><span class="offscreen">검색하기</span></button>
+						</div>
+					</div>
+				</div>				
+				<h3 class="gd__h1">버튼 스위치</h3>
+				<div class="btn_switch">
+					<input type="checkbox" id="switchChk">
+					<label for="switchChk"><span class="offscreen">설정해제</span></label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-include-html="../inc/postcode.html"></div><!-- 우편번호팝업 -->
+	<div data-include-html="../inc/footer.html"></div>
+	<div data-include-html="../inc/footer_blog.html"></div>
+</div>
+</body>
+</html>

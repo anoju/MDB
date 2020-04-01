@@ -1,0 +1,114 @@
+
+<div class="section">
+	<div class="tit_h2">
+		<div><h2>결제방법을<br>선택해주세요.</h2></div>
+		<div class="v_top">
+			<div class="step">
+				<ol>
+					<li>1<span class="offscreen">단계</span></li>
+					<li>2<span class="offscreen">단계</span></li>
+					<li>3<span class="offscreen">단계</span></li>
+					<li>4<span class="offscreen">단계</span></li>
+					<li class="current">5<span class="offscreen">단계(현재단계)</span></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="accout_total_guide">
+		<div>
+			<div class="lb">납부하실 보험료</div>
+			<div class="accout"><strong>151,880</strong> 원</div>
+		</div>
+	</div>
+	<div class="value_list t3">
+		<ul>
+			<li>
+				<span class="lb">상품명</span>
+				<span class="value">자동차보험</span>
+			</li>
+			<li>
+				<span class="lb">예금주면</span>
+				<span class="value">김디비</span>
+			</li>
+			<li>
+				<span class="lb">결제금액</span>
+				<span class="value">151,880원</span>
+			</li>
+		</ul>
+	</div>
+	<div class="form_item">
+		<div class="lb">결제방법</div>
+		<div class="input"><!-- 에러날때 invalid 클래스 -->
+			<ul class="btn_toggle grid s2">
+				<li>
+					<input id="settleType1" type="radio" name="settleType" checked="">
+					<label for="settleType1">실시간 출금</label>
+				</li>
+				<li>
+					<input id="settleType2" type="radio" name="settleType">
+					<label for="settleType2">신용카드</label>
+				</li>
+			</ul>
+		</div>
+		<strong class="invalid_txt" style="display:none;">에러메세지</strong>
+	</div>
+	<div class="form_item">
+		<label for="cardNum1" class="lb">카드번호</label>
+		<div class="input"><!-- 에러날때 invalid 클래스 -->
+			<span class="dv"><input id="cardNum1" class="i_txt" name="" type="text" title="카드번호 첫번째 4자리 입력" /></span>
+			<span class="nbsp"></span>
+			<span class="dv"><input id="cardNum2" class="i_txt" name="" type="password" title="카드번호 두번째 4자리 입력" /></span>
+			<span class="nbsp"></span>
+			<span class="dv"><input id="cardNum3" class="i_txt" name="" type="text" title="카드번호 세번째 4자리 입력" /></span>
+			<span class="nbsp"></span>
+			<span class="dv"><input id="cardNum4" class="i_txt" name="" type="password" title="카드번호 네번째 4자리 입력" /></span>
+		</div>
+		<strong class="invalid_txt">본인카드만 결제 가능합니다.</strong>
+	</div>
+	<div class="form_item">
+		<label for="validity1" class="lb">유효기간</label>
+		<div class="input"><!-- 에러날때 invalid 클래스 -->
+			<span class="dv"><input id="validity1" class="i_txt" name="" type="text" placeholder="월2자리" title="유효기간 월2자리 입력" /></span>
+			<span class="nbsp"></span>
+			<span class="dv"><input id="validity2" class="i_txt" name="" type="text" placeholder="년4자리" title="유효기간 년4자리 입력" /></span>
+		</div>
+		<strong class="invalid_txt" style="display:none;">에러메세지</strong>
+	</div>
+	<div class="form_item">
+		<label for="cardPW" class="lb">비밀번호(앞 두자리만 입력)</label>
+		<div class="input"><!-- 에러날때 invalid 클래스 -->
+			<span class="dv"><input id="cardPW" class="i_txt" name="" type="password" placeholder="앞 2자리" title="비밀번호 앞 2자리 입력"></span>
+			<span class="sp">**</span>
+		</div>
+		<strong class="invalid_txt" style="display:none;">에러메세지</strong>
+	</div>
+	<div class="form_item">
+		<label for="validity1" class="lb">주민등록번호</label>
+		<div class="input"><!-- 에러날때 invalid 클래스 -->
+			<span class="dv"><input id="validity1" class="i_txt" name="" type="text" title="주민등록번호 앞6자리 입력" /></span>
+			<span class="nbsp"></span>
+			<span class="dv"><input id="validity2" class="i_txt" name="" type="password" title="주민등록번호 뒷7자리 입력" /></span>
+		</div>
+		<strong class="invalid_txt" style="display:none;">에러메세지</strong>
+	</div>
+	<div class="form_item">
+		<label for="installmentPeriod" class="lb">할부기간</label>
+		<div class="input"><!-- 에러날때 invalid 클래스 -->
+			<span class="dv">
+				<select id="installmentPeriod">
+					<option value="" selected="selected">할부기간 선택</option>
+				</select>
+			</span>
+		</div>
+		<div class="guide_txt">
+			<p>2개월~12개월 선택</p>
+		</div>
+		<strong class="invalid_txt" style="display:none;">에러메세지</strong>
+	</div>
+	<div class="fixed_bottom_button">
+		<ul class="grid s2_1">
+			<li><a href="#" class="btn bs1 bc4" onclick="$stepSwipe.slick('slickPrev');">이전</a></li>
+			<li><a href="#" class="btn bs1 bc1">결제하기</a></li>
+		</ul>
+	</div>
+</div>

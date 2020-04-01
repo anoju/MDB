@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<meta name="title" content="DB 손해보험 모바일">
+<meta name="keywords" content="자동차보험, 운전자보험, 조합보험, 연금, 여행보험, 레저보험, 건강보험, 자녀보험, 화재보험, 재해보험, 펫보험, 치아보험">
+<meta name="description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+<meta property="og:title" content="DB 손해보험 모바일">
+<meta property="og:url" content="https://m.idbins.com">
+<!-- <meta property="og:image" content="https://m.idbins.com/MDB/images/logo_1200x1200.png"> -->
+<meta property="og:image" content="http://localhost:8080/MDB/images/logo_1200x1200.png">
+<meta property="og:description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+
+<meta name="apple-mobile-web-app-title" content="DB 손해보험 모바일">
+<link rel="apple-touch-startup-image" href="../../images/icons/touch-icon-iphone-retina.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>DB 손해보험</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png"><!-- 196x196-->
+<link rel="apple-touch-icon" href="../../images/icons/touch-icon-iphone.png"><!-- 120x120-->
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="../../images/icons/touch-icon-ipad-retina.png">
+<link rel="manifest" href="../../manifest.json">
+
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/contents.css">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery-ui-1.12.1.min.js"></script>
+<script src="../../js/ui_plugins.js"></script>
+<script src="../../js/ui_common.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div data-include-html="../inc/top.html"></div>
+	<div data-include-html="../inc/gnb.html"></div>
+	<div id="container">
+		<div id="content">
+			<div class="tab_swipe_wrap">
+				<div class="tab_track">
+					<ul class="tab_nav tab_swiper">
+						<li class="tab"><a href="guide.html"><span>텍스트,아이콘</span></a></li>
+						<li class="tab"><a href="guide_btn.html"><span>버튼</span></a></li>
+						<li class="tab"><a href="guide_list.html"><span>리스트, item</span></a></li>
+						<li class="tab"><a href="guide_form.html"><span>form 요소</span></a></li>
+						<li class="tab"><a href="guide_box.html"><span>box 요소</span></a></li>
+						<li class="tab active"><a href="guide_tbl.html"><span>테이블</span></a></li>
+						<li class="tab"><a href="guide_popup.html"><span>팝업</span></a></li>
+						<li class="tab"><a href="guide_map.html"><span>맵</span></a></li>
+						<li class="tab"><a href="guide_agree.html"><span>약관샘플</span></a></li>
+						<li class="tab"><a href="guide_service.html"><span>서비스안내</span></a></li>
+						<li class="tab"><a href="guide_process.html"><span>이용안내</span></a></li>
+						<li class="tab"><a href="guide_animation.html"><span>애니메이션</span></a></li>
+						<li class="tab"><a href="guide_address.html"><span>우편번호</span></a></li>
+						<li class="tab"><a href="guide_etc.html"><span>기타</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<h2 class="gd__h1">테이블</h2>
+				<h2 class="gd__h2">테이블 기본</h2>
+				<div class="table">
+					<table>
+						<caption>테이블제목</caption>
+						<colgroup>
+							<col style="width:60px">
+							<col style="width:135px">
+							<col style="width:205px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="row">구분</th>
+								<th scope="col">폐차/수출말소</th>
+								<th scope="col">명의이전</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">개인</th>
+								<td>자동차등록증 초본 또는 신분증</td>
+								<td>자동차등록증(원본)<br>
+								인감증명서1부(매도용)<br>
+								양도증명서(인감 도장직인)</td>
+							</tr>
+							<tr>
+								<th scope="row">법인</th>
+								<td>자동차등록증<br>
+								법인인감증명서<br>
+								법인등기부등본<br>
+								사업자등록증</td>
+								<td>자동차등록증(원본)<br>
+								법인인감증명서1부(매도용)<br>
+								양도증명서(인감 도장직인)<br>
+								법인등기부등본, 사업자등록증<br>
+								차량매각 대금 세금계산서</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h2 class="gd__h2">테이블 라인타입(table t2)</h2>
+				<div class="table t2">
+					<table>
+						<caption>테이블제목</caption>
+						<colgroup>
+							<col style="width:30%">
+							<col>
+							<col style="width:35%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">보험상품</th>
+								<th scope="col">보상담보</th>
+								<th scope="col">지급보험금(원)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="t_left">컨버전스보험<br>(123456****)</td>
+								<td class="t_left">자보할증지원금<br>(대인1/대물/자손)</td>
+								<td class="t_right">100,000</td>
+							</tr>
+							<tr>
+								<td class="t_left">참좋은종합보험<br>(123456****)</td>
+								<td class="t_left">의료비일당</td>
+								<td class="t_right">50,000</td>
+							</tr>
+							<tr>
+								<td class="t_left">우리아이첫보험<br>(123456****)</td>
+								<td class="t_left">의료비일당</td>
+								<td class="t_right">50,000</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3 class="gd__h2">테이블 가로 스크롤</h3>
+				<div>
+					<h4 class="gd__h3">일반 <span class="fc4">(최우선 사용,복잡한 테이블이 너무 많음)</span></h4>
+					<div class="table tbl_scroll horizon max_height"><!-- horizon 클래스 -->
+						<table>
+							<caption>테이블제목</caption>
+							<colgroup>
+								<col style="width:60px">
+								<col style="width:135px">
+								<col style="width:205px">
+								<col style="width:135px">
+								<col style="width:205px">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="row">구분</th>
+									<th scope="col">폐차/수출말소</th>
+									<th scope="col">명의이전</th>
+									<th scope="col">폐차/수출말소</th>
+									<th scope="col">명의이전</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+								<tr>
+									<th scope="row">법인</th>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h4 class="gd__h3">헤더 고정 <span class="fc4">(현재 안씀)</span></h4>
+					<h3 class="gd__h2">테이블 가로 스크롤, </h3>
+					<div class="table tbl_fixed">
+						<table class="fixed_th" aria-hidden="true">
+							<thead>
+								<tr>
+									<th scope="row">구분</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">개인</th>
+								</tr>
+								<tr>
+									<th scope="row">법인</th>
+								</tr>
+							</tbody>
+						</table>
+						<div class="tbl_scroll horizon max_height"><!-- horizon 클래스 -->
+							<table>
+								<caption>테이블제목</caption>
+								<colgroup>
+									<col style="width:60px">
+									<col style="width:135px">
+									<col style="width:205px">
+									<col style="width:135px">
+									<col style="width:205px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="row">구분</th>
+										<th scope="col">폐차/수출말소</th>
+										<th scope="col">명의이전</th>
+										<th scope="col">폐차/수출말소</th>
+										<th scope="col">명의이전</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">개인</th>
+										<td>자동차등록증 초본 또는 신분증</td>
+										<td>자동차등록증(원본)<br>
+										인감증명서1부(매도용)<br>
+										양도증명서(인감 도장직인)</td>
+										<td>자동차등록증 초본 또는 신분증</td>
+										<td>자동차등록증(원본)<br>
+										인감증명서1부(매도용)<br>
+										양도증명서(인감 도장직인)</td>
+									</tr>
+									<tr>
+										<th scope="row">법인</th>
+										<td>자동차등록증<br>
+										법인인감증명서<br>
+										법인등기부등본<br>
+										사업자등록증</td>
+										<td>자동차등록증(원본)<br>
+										법인인감증명서1부(매도용)<br>
+										양도증명서(인감 도장직인)<br>
+										법인등기부등본, 사업자등록증<br>
+										차량매각 대금 세금계산서</td>
+										<td>자동차등록증<br>
+										법인인감증명서<br>
+										법인등기부등본<br>
+										사업자등록증</td>
+										<td>자동차등록증(원본)<br>
+										법인인감증명서1부(매도용)<br>
+										양도증명서(인감 도장직인)<br>
+										법인등기부등본, 사업자등록증<br>
+										차량매각 대금 세금계산서</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+
+				<h3 class="gd__h2">테이블 세로스크롤</h3>
+				<div>
+					<h4 class="gd__h3">일반 <span class="fc4">(현재 안씀)</span></h4>
+					<div class="table tbl_scroll max_height"><!-- 높이값 설정 -->
+						<table>
+							<caption>테이블제목</caption>
+							<colgroup>
+								<col style="width:60px">
+								<col style="width:135px">
+								<col style="width:205px">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="row">구분</th>
+									<th scope="col">폐차/수출말소</th>
+									<th scope="col">명의이전</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+								<tr>
+									<th scope="row">법인</th>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+								</tr>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+								<tr>
+									<th scope="row">법인</th>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h4 class="gd__h3">헤더 고정 <span class="fc4">(현재 안씀)</span></h4>
+					<div class="table tbl_fixed">
+						<table class="fixed_th" aria-hidden="true">
+							<thead>
+								<tr>
+									<th scope="row">구분</th>
+									<th scope="col">폐차/수출말소</th>
+									<th scope="col">명의이전</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="tbl_scroll max_height"><!-- 높이값 설정 -->
+							<table>
+								<caption>테이블제목</caption>
+								<colgroup>
+									<col style="width:60px">
+									<col style="width:135px">
+									<col style="width:205px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="row">구분</th>
+										<th scope="col">폐차/수출말소</th>
+										<th scope="col">명의이전</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">개인</th>
+										<td>자동차등록증 초본 또는 신분증</td>
+										<td>자동차등록증(원본)<br>
+										인감증명서1부(매도용)<br>
+										양도증명서(인감 도장직인)</td>
+									</tr>
+									<tr>
+										<th scope="row">법인</th>
+										<td>자동차등록증<br>
+										법인인감증명서<br>
+										법인등기부등본<br>
+										사업자등록증</td>
+										<td>자동차등록증(원본)<br>
+										법인인감증명서1부(매도용)<br>
+										양도증명서(인감 도장직인)<br>
+										법인등기부등본, 사업자등록증<br>
+										차량매각 대금 세금계산서</td>
+									</tr>
+									<tr>
+										<th scope="row">개인</th>
+										<td>자동차등록증 초본 또는 신분증</td>
+										<td>자동차등록증(원본)<br>
+										인감증명서1부(매도용)<br>
+										양도증명서(인감 도장직인)</td>
+									</tr>
+									<tr>
+										<th scope="row">법인</th>
+										<td>자동차등록증<br>
+										법인인감증명서<br>
+										법인등기부등본<br>
+										사업자등록증</td>
+										<td>자동차등록증(원본)<br>
+										법인인감증명서1부(매도용)<br>
+										양도증명서(인감 도장직인)<br>
+										법인등기부등본, 사업자등록증<br>
+										차량매각 대금 세금계산서</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="gd__h2">테이블 전체스크롤</h3>
+				<div>
+					<div class="table tbl_scroll horizon max_height"><!-- 높이값 설정 -->
+						<table>
+							<caption>테이블제목</caption>
+							<colgroup>
+								<col style="width:60px">
+								<col style="width:135px">
+								<col style="width:205px">
+								<col style="width:135px">
+								<col style="width:205px">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="row">구분</th>
+									<th scope="col">폐차/수출말소</th>
+									<th scope="col">명의이전</th>
+									<th scope="col">폐차/수출말소</th>
+									<th scope="col">명의이전</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+								<tr>
+									<th scope="row">법인</th>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+								</tr>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+								<tr>
+									<th scope="row">법인</th>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+								</tr>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-include-html="../inc/footer.html"></div>
+	<div data-include-html="../inc/footer_blog.html"></div>
+</div>
+</body>
+</html>

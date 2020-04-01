@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<meta name="title" content="DB 손해보험 모바일">
+<meta name="keywords" content="자동차보험, 운전자보험, 조합보험, 연금, 여행보험, 레저보험, 건강보험, 자녀보험, 화재보험, 재해보험, 펫보험, 치아보험">
+<meta name="description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+<meta property="og:title" content="DB 손해보험 모바일">
+<meta property="og:url" content="https://m.idbins.com">
+<!-- <meta property="og:image" content="https://m.idbins.com/MDB/images/logo_1200x1200.png"> -->
+<meta property="og:image" content="http://localhost:8080/MDB/images/logo_1200x1200.png">
+<meta property="og:description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+
+<meta name="apple-mobile-web-app-title" content="DB 손해보험 모바일">
+<link rel="apple-touch-startup-image" href="../../images/icons/touch-icon-iphone-retina.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>DB 손해보험</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png"><!-- 196x196-->
+<link rel="apple-touch-icon" href="../../images/icons/touch-icon-iphone.png"><!-- 120x120-->
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="../../images/icons/touch-icon-ipad-retina.png">
+<link rel="manifest" href="../../manifest.json">
+
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/contents.css">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery-ui-1.12.1.min.js"></script>
+<script src="../../js/ui_plugins.js"></script>
+<script src="../../js/ui_common.js"></script>
+<script src="../../js/mk-component.js"></script>
+<script src="../../js/mk-datepicker.js"></script>
+<script>
+$(function(){
+	chartUI('.ui_chart',2000);
+	$('#date1').change(function(){
+		console.log('change #date1');
+	});
+	$('#inpBirth3').change(function(){
+		console.log('change #inpBirth3');
+	});
+
+	formUI.mkCalendar('.datepicker');
+
+	$(document).on('keyup','input.ui_comma',function(){
+		var $val = onlyNumber($(this).val());
+		$(this).val(addComma($val));
+	});
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div data-include-html="../inc/top.html"></div>
+	<div data-include-html="../inc/gnb.html"></div>
+	<div id="container">
+		<div id="content">
+			<div class="tab_swipe_wrap">
+				<div class="tab_track">
+					<ul class="tab_nav tab_swiper">
+						<li class="tab"><a href="guide.html"><span>텍스트,아이콘</span></a></li>
+						<li class="tab"><a href="guide_btn.html"><span>버튼</span></a></li>
+						<li class="tab"><a href="guide_list.html"><span>리스트, item</span></a></li>
+						<li class="tab"><a href="guide_form.html"><span>form 요소</span></a></li>
+						<li class="tab"><a href="guide_box.html"><span>box 요소</span></a></li>
+						<li class="tab"><a href="guide_tbl.html"><span>테이블</span></a></li>
+						<li class="tab"><a href="guide_popup.html"><span>팝업</span></a></li>
+						<li class="tab"><a href="guide_map.html"><span>맵</span></a></li>
+						<li class="tab"><a href="guide_agree.html"><span>약관샘플</span></a></li>
+						<li class="tab"><a href="guide_service.html"><span>서비스안내</span></a></li>
+						<li class="tab"><a href="guide_process.html"><span>이용안내</span></a></li>
+						<li class="tab"><a href="guide_animation.html"><span>애니메이션</span></a></li>
+						<li class="tab"><a href="guide_address.html"><span>우편번호</span></a></li>
+						<li class="tab active"><a href="guide_etc.html"><span>기타</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<h2 class="gd__h1">이메일</h2>
+				<h3 class="gd__h2">현재버전</h3>
+				<div class="form_item">
+					<label for="mail1_1" class="lb">이메일</label>
+					<div class="input email_form"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv"><input id="mail1_1" class="i_txt" type="text" title="이메일 아이디 입력"></span>
+						<span class="sp">@</span>
+						<span class="dv email_sel">
+							<select title="이메일 도메인 선택">
+								<option value="0" selected="selected">이메일계정선택</option>
+								<option value="naver.com">naver.com</option>
+								<option value="nate.com">nate.com</option>
+								<option value="gmail.com">gmail.com</option>
+								<option value="etc">직접입력</option>
+							</select>
+						</span>
+						<span class="dv email_inp" style="display:none;">
+							<input class="i_txt" type="text" title="이메일 도메인 직접입력" placeholder="직접입력">
+							<a href="#" class="btn_sel"><span class="offscreen">이메일 도메인 직접입력 취소</span></a>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">에러메세지</strong>
+				</div>
+				<h1 class="gd__h1">달력</h1>
+				<h2 class="gd__h2">mk 달력 <span class="fc4">(바뀌기 전 버전)</span></h2>
+				<div class="form_item">
+					<label for="date1" class="lb">기본달력</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="date1" class="i_txt" type="tel" placeholder="예)20201101" title="예)20201101">
+							<a href="#" id="dateBtn1" class="datepicker" tabindex="-1" aria-hidden="true"><span class="offscreen">달력팝업열기</span></a>
+						</span>
+					</div>
+				</div>
+				<div class="form_item">
+					<label for="date2" class="lb">생년월일 (오늘 이전 선택)</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="date2" class="i_txt" type="text" placeholder="예)19851101" title="예)19851101">
+							<a href="#" id="dateBtn2" class="datepicker today-prev" tabindex="-1" aria-hidden="true"><span class="offscreen">달력팝업열기</span></a>
+						</span>
+					</div>
+				</div>
+				<div class="form_item">
+					<label for="inpDate3_1" class="lb">조회기간</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="inpDate3_1" class="i_txt i_date" type="text" placeholder="조회 시작일 입력">
+							<button type="button" id="datepicker1" class="datepicker" tabindex="-1" aria-hidden="true" data-max="#datepicker2"><span class="offscreen">달력팝업열기</span></button>
+						</span>
+						<span class="nbsp"></span>
+						<span class="dv date">
+							<input id="inpDate3_2" class="i_txt i_date" type="text" placeholder="조회 마지막일 입력">
+							<button type="button" id="datepicker2" class="datepicker" tabindex="-1" aria-hidden="true" data-min="#datepicker1"><span class="offscreen">달력팝업열기</span></button>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">조회기간을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+
+				<div class="form_item">
+					<label for="inpDate1" class="lb">조회기간 (1개월 단위로 검색가능)</label>
+					<div class="input date_range"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="inpDate1" class="i_txt i_date" type="text" placeholder="조회 시작일 자동입력" readonly>
+						</span>
+						<span class="nbsp"></span>
+						<span class="dv date">
+							<input id="inpDate2" class="i_txt i_date" type="text" data-range="1m" placeholder="조회 마지막일 선택" readonly onclick="$(this).next().click();">
+							<a href="#" class="datepicker today-prev" tabindex="-1" aria-hidden="true"><span class="offscreen">달력팝업열기</span></a>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">조회기간을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+					<div class="input_guide">조회 마지막 일을 선택하시면 시작일은 자동 입력됩니다.</div>
+				</div>
+
+				<h2 class="gd__h2">jq-ui 달력 <span class="fc4">(바뀐 버전)</span></h2>
+				<div class="form_item">
+					<label for="jqDate1" class="lb">기본달력</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="jqDate1" class="i_txt i_datepicker" type="text" placeholder="예)20201101" title="예)20201101">
+						</span>
+					</div>
+				</div>
+				<div class="form_item">
+					<label for="jqDate2" class="lb">생년월일</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="jqDate2" class="i_txt i_datepicker" data-max="today" type="text" placeholder="예)19851101" title="예)19851101">
+						</span>
+					</div>
+				</div>
+				<div class="form_item">
+					<label for="jqDate3" class="lb">조회기간</label>
+					<div class="input date_range"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="jqDate3" class="i_txt i_datepicker" type="text" data-range="1m" placeholder="예)20201101" title="예)20201101">
+						</span>
+						<span class="nbsp"></span>
+						<span class="dv date">
+							<input id="jqDate4" class="i_txt i_datepicker" type="text" data-range="1m" placeholder="예)20201101" title="예)20201101">
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">조회기간을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+
+				<div class="form_item">
+					<label for="jqDate5" class="lb">조회기간 (1개월 단위로 검색가능)</label>
+					<div class="input date_range"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="jqDate5" class="i_txt i_date" type="text" placeholder="조회 시작일 자동입력" readonly>
+						</span>
+						<span class="nbsp"></span>
+						<span class="dv date">
+							<input id="jqDate6" class="i_txt i_date i_datepicker" data-range="1m" data-max="today" type="text" placeholder="조회 마지막일 선택" readonly onclick="$(this).next().click();">
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">조회기간을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+
+				<div class="form_item">
+					<label for="jqDate5" class="lb">조회기간 (1개월 단위로 검색가능)</label>
+					<div class="input date_range"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="jqDate7" class="i_txt i_date i_datepicker" data-range="1m" data-max="-1m" type="text" placeholder="조회 시작일 선택" readonly onclick="$(this).next().click();">
+						</span>
+						<span class="nbsp"></span>
+						<span class="dv date">
+							<input id="jqDate8" class="i_txt i_date" type="text" placeholder="조회 마지막일 자동입력" readonly>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">조회기간을 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+
+				<h2 class="gd__h2">순수 모바일 컴포넌트 <span class="fc4">(안씀)</span></h2>
+				<div class="form_item">
+					<label for="inpBirth2" class="lb">생년월일</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input class="i_txt date" type="text" placeholder="예)19851101" title="예)19851101">
+							<input id="inpBirth2" class="i_txt" type="date" title="날짜선택" tabindex="-1">
+						</span>
+					</div>
+				</div>
+
+				<h2 class="gd__h2">스크롤 달력</h2>
+				<div class="form_item">
+					<label for="sclDate1" class="lb">기본달력</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<div class="dv date">
+							<input id="sclDate1" class="i_txt s_datepicker" type="text" placeholder="예)20201101" title="예)20201101">
+						</div>
+					</div>
+				</div>
+
+				<h1 class="gd__h1">차트</h1>
+				<h2 class="gd__h2">막대 차트</h2>
+				<div class="bar_chart ui_chart">
+					<div class="mark"><span class="offscreen">현재납부횟수</span> <strong class="roboto5">115</strong>회</div>
+					<div class="total">총<span class="offscreen">납부횟수</span> <strong class="roboto5">120</strong>회</div>
+					<div class="bar" aria-hidden="true">
+						<!-- <div class="mark"><span class="offscreen">납부회수</span> <strong class="roboto5">115</strong>회</div>
+						<div class="total">총<span class="offscreen">납부회수</span> <strong class="roboto5">120</strong>회</div> -->
+					</div>
+				</div>
+				<br>
+				<div class="bar_chart ui_chart">
+					<div class="mark"><span class="offscreen">현재납부개월</span> <strong class="roboto5">4</strong>개월</div>
+					<div class="total">총<span class="offscreen">납부개월</span> <strong class="roboto5">12</strong>개월</div>
+					<div class="bar bg2" aria-hidden="true">
+						<!-- <div class="mark"><span class="offscreen">납부개월</span> <strong class="roboto5">4</strong>개월</div>
+						<div class="total">총<span class="offscreen">납부개월</span> <strong class="roboto5">12</strong>개월</div> -->
+					</div>
+				</div>
+				<br>
+				<div class="state_detail_item">
+					<div class="state_detail_box">
+						<div class="cont">
+							<dl class="graph_list">
+								<dt>뇌혈관</dt>
+								<dd>
+									<div class="bar_chart ui_chart type2">
+										<div>
+											<div class="mark"><span class="offscreen">고객가입금액</span><strong class="roboto5">820</strong>만원</div>
+											<div class="total"><span class="offscreen">추천가입금액</span><strong class="roboto5">1,000</strong>만원</div>
+										</div>
+										<div class="bar_wrap" aria-hidden="true"><div class="bar"></div></div>
+									</div>
+								</dd>
+								<dt>허혈성심장질환</dt>
+								<dd>
+									<div class="bar_chart ui_chart type2">
+										<div>
+											<div class="mark"><span class="offscreen">고객가입금액</span><strong class="roboto5">270</strong>만원</div>
+											<div class="total"><span class="offscreen">추천가입금액</span><strong class="roboto5">1,000</strong>만원</div>
+										</div>
+										<div class="bar_wrap" aria-hidden="true"><div class="bar"></div></div>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+				<h2 class="gd__h2">도넛 차트</h2>
+				<div class="donut_chart ui_chart" data-type="donut">
+					<div class="bg" aria-hidden="true"><div></div></div>
+					<div class="bar_wrap" aria-hidden="true">
+						<div class="bar"><i></i></div>
+					</div>
+					<div class="mark">
+						<div><div class="offscreen">나의 대출금현황</div><strong class="roboto5">300</strong>만원</div>
+					</div>
+					<div class="info">
+						<div class="remain">
+							<span>현재 대출가능금액</span>
+							<strong><strong class="roboto5">1,500</strong>만원</strong>
+						</div>
+						<div class="total"><div>총 대출가능금액 <span class="Roboto4">1,800</span>만원</div></div>
+					</div>
+				</div>
+
+				<h1 class="gd__h1">파일첨부</h1>
+				<h2 class="gd__h2">유형1</h2>
+				<div class="form_item">
+					<div class="lb">파일첨부
+						<div class="tooltip_wrap">
+							<a href="#" class="tooltip_btn">자세한 내용 확인</a>
+							<div class="tooltip_cont">
+								<div class="guide_txt">
+									<ul>
+										<li class="dot">확인서, 녹취록, 관련 사진 등 입증자료를 첨부하실 수 있습니다.</li>
+										<li class="dot">HWP, DOC, DOCX, PDF, TXT, XLSX, XLS, PPT, PPTX, JPG, PNG, GIF, BMP, MP4, MOV, AVI, MP3, M4A, WAV 파일을 첨부할 수 있습니다.</li>
+										<li class="dot">파일 한 개당 10MB까지 첨부 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv">
+							<div class="ui_inp_file inp_file">
+								<input type="file" id="file1" title="첨부파일 선택">
+								<label for="file1"><span><i class="bt_ic_add"></i>파일을 선택해주세요</span></label>
+							</div>
+						</span>
+					</div>
+					<div class="file_item_wrap">
+						<!-- <div class="file_item">
+							<input type="file" class="offscreen" title="첨부파일 경로" aria-hidden="true" tabindex="-1">
+							<strong>첨부파일1.jpg</strong>
+							<a href="#" class="item_del"><span class="offscreen">파일 삭제</span></a>
+						</div> -->
+					</div>
+				</div>
+
+				<h2 class="gd__h2">유형2</h2>
+				<div class="form_item">
+					<div class="lb">사진첨부</div>
+
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<div class="dv">
+							<div class="ui_img_upload inp_file img">
+								<input type="file" id="file3" title="첨부파일 선택">
+								<label for="file3"><span><i class="bt_ic_add"></i>이미지를 선택해주세요</span></label>
+							</div>
+						</div>
+						<div class="sp t2"></div>
+						<div class="dv">
+							<div class="ui_img_upload inp_file img">
+								<input type="file" id="file4" title="첨부파일 선택">
+								<label for="file4"><span><i class="bt_ic_add"></i>이미지를 선택해주세요</span></label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h1 class="gd__h1">slick</h1>
+				<div class="ui_slick_wrap">
+					<div class="ui_slick">
+						<div class="item">
+							<div class="product_item bg_leaf">
+								<div class="inner">
+									<div class="mypage_main_info">
+										<div>
+											<div class="icon_info_item">
+												<div class="ic"><i class="i_icon i29"><span class="offscreen">연락처</span></i></div>
+												<div class="txt"><strong>010-****-4298</strong></div>
+											</div>
+											<div class="icon_info_item">
+												<div class="ic"><i class="i_icon i31"><span class="offscreen">이메일</span></i></div>
+												<div class="txt"><strong>dbins****@dbins.co.kr</strong></div>
+											</div>
+											<div class="icon_info_item">
+												<div class="ic"><i class="i_icon i36"><span class="offscreen">주소</span></i></div>
+												<div class="txt">서울시 은평구 진관 2로 90 은평뉴타운 마고정 3단지 아파트 101-1008</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul class="grid s1">
+									<li><a href="#" class="btn bs1_2 fc1">정보변경</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="item">
+							<div class="product_item bg_leaf">
+								<div class="inner">
+									<div class="mypage_main_info">
+										<div>
+											<div class="mypage_bn_item">
+												<div class="tit">유병자 전용 보험</div>
+												<div class="txt">유병자도, 고령자도 쉽게 가입하고 만기에 재가입할 수 있습니다.</div>
+												<div class="img" aria-hidden="true" style="background-image:url(/MDB/images/contents/mypage_main_bn_img1.png)"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul class="grid s2">
+									<li><a href="#" class="btn bs1_2 fc7">자세히보기</a></li>
+									<li><a href="#" class="btn bs1_2 fc1">가입상담</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="item">
+							<div class="product_item bg_leaf">
+								<div class="inner">
+									<div class="mypage_main_info">
+										<div>
+											<div class="mypage_bn_item">
+												<div class="tit">One-stop프로미론</div>
+												<div class="txt">낮은금리,넉넉한 한도 증빙서류없이 빠르고 편리하게 이용해 보세요.</div>
+												<div class="img" aria-hidden="true" style="background-image:url(/MDB/images/contents/mypage_main_bn_img2.png)"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul class="grid s1">
+									<li><a href="#" class="btn bs1_2 fc1">신용등급 영향 없이 간편한도 조회</a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="ui_slick_wrap evt">
+					<div class="ui_slick">
+						<div class="item">
+							<a href="#" style="background-color:#f8ece6;">
+								<div class="cont offscreen">
+									<div class="tit"><strong>기부 & Take<br>사랑나눔이벤트</strong></div>
+									<div class="sub">희귀난치성질환 어린이에게<br>사랑의 마음을 나눠주세요.</div>
+									<div class="date"><span class="offscreen">이벤트 기간:</span>2019.12.19~2020.1.31</div>
+								</div>
+								<img src="../../images/main/@event_banner.png" alt="">
+							</a>
+						</div>
+						<div class="item">
+							<a href="#" style="background-color:#dbebe9;">
+								<div class="cont offscreen">
+									<div class="tit"><strong>보험상품 묻고<br>더블로 가!</strong></div>
+									<div class="sub">보험가입 신청 & 로그인<br>이벤트에 참여하세요.</div>
+									<div class="date"><span class="offscreen">이벤트 기간:</span>2019.12.10~2020.1.31</div>
+								</div>
+								<img src="../../images/main/@event_banner2.png" alt="더블로~">
+							</a>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="bn_link_item3">
+					<a href="#guideInfoDialog1" class="in bg1 ui_dialog_open">
+						<div classs="sub">더 간단하고 편리해진</div>
+						<div class="tit"><strong>모바일 보험금 청구 이용 방법</strong></div>
+					</a>
+				</div>
+
+				<div class="bn_link_item3">
+					<a href="#guideInfoDialog2" class="in bg1 ui_dialog_open">
+						<div class="tit"><strong>모바일 (자동차)보험금 청구 이용 방법</strong></div>
+					</a>
+				</div>
+
+				<div class="ui_slick_wrap ben_service_box same_h">
+					<div class="ui_slick">
+						<div class="item">
+							<div class="product_item t2">
+								<i aria-hidden="true" class="ico ico_health1_1"></i>
+								<div class="inner">
+									<h4 class="tit_h4">기본서비스</h4>
+									<div class="guide_txt">
+										<ul>
+											<li class="dot">전문 의료진 전화 상담</li>
+											<li class="dot">대형병원 진료 예약 및 명의안내</li>
+											<li class="dot">건강정보 제공</li>
+											<li class="dot">운동/영양/심리 상담</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="product_item t2">
+								<i aria-hidden="true" class="ico ico_health1_1"></i>
+								<div class="inner">
+									<h4 class="tit_h4">일상 건강관리</h4>
+									<div class="guide_txt">
+										<ul>
+											<li class="dot">정기적 문진 서비스</li>
+											<li class="dot">Big 5 병원 원스톱 당일진료 서비스</li>
+											<li class="dot">주요질환 Self 측정 서비스 (전용 앱) 이용
+												<ul>
+													<li class="dash">거북목/치매/당뇨 자가 진단 프로그램 제공</li>
+												</ul>
+											</li>
+											<li class="dot">AI 질병 위험도 예측 서비스</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="product_item t2">
+								<i aria-hidden="true" class="ico ico_health1_1"></i>
+								<div class="inner">
+									<h4 class="tit_h4">중대질환 진단 후 관리</h4>
+									<div class="guide_txt">
+										<ul>
+											<li class="dot">전담 케어 매니저 배정 /안심서비스
+												<ul>
+													<li class="dash">병원 진료 시 담당자 방문 동행</li>
+												</ul>
+											</li>
+											<li class="dot">병원이동 / 간병 지원(중대질병)
+												<ul>
+													<li class="dash">수술 입,퇴원/병원간 이송 시 이동지원</li>
+												</ul>
+											</li>
+											<li class="dot">진단 후 본인/가족 심리상담 서비스</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="client_info_swipe">
+					<div class="client_info_item">
+						<div class="in">
+							<strong class="name">김디비</strong>
+							<span class="ico_tag line1">보험자</span>
+							<span class="jumin">900302 - 2******</span>
+							<span class="tel">010-1111-****</span>
+							<span class="email">dbins***@db.co.kr</span>
+							<span class="addr">(18729)서울 강남구 테헤란로 432</span>
+						</div>
+					</div>
+					<div class="client_info_item">
+						<div class="in">
+							<strong class="name">김디비</strong>
+							<span class="ico_tag line1">피보험자</span>
+							<span class="jumin">900302 - 2******</span>
+							<span class="tel">010-1111-****</span>
+							<span class="email">dbins***@db.co.kr</span>
+							<span class="addr">(18729)서울 강남구 테헤란로 432</span>
+						</div>
+					</div>
+					<div class="client_info_item">
+						<div class="in">
+							<strong class="name">김디비</strong>
+							<span class="ico_tag line1">가입경력지정자</span>
+							<span class="jumin">900302 - 2******</span>
+							<span>피보험자의 관계 : 본인</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="social_media_list">
+					<div class="item">
+						<a href="#">
+							<div class="social_box border" aria-hidden="true">
+								<img src="../../images/contents/img_blog1.png" alt="">
+							</div>
+							<p class="name">공식블로그</p>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<div class="social_box" aria-hidden="true">
+								<img src="../../images/contents/img_blog2.png" alt="">
+							</div>
+							<p class="name">아이사랑블로그</p>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<div class="social_box" aria-hidden="true">
+								<img src="../../images/contents/img_blog3.png" alt="">
+							</div>
+							<p class="name">내차사랑블로그</p>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<div class="social_box" aria-hidden="true">
+								<img src="../../images/contents/img_blog4.png" alt="">
+							</div>
+							<p class="name">가족사랑블로그</p>
+						</a>
+					</div>
+				</div>
+
+				<div class="ui_slick_wrap main_square_bn">
+					<div class="ui_slick">
+						<div class="item">
+							<div class="bn_item">
+								<div class="img" aria-hidden="true"><img src="../../images/company/company_main_bn_img1.png" alt=""></div>
+								<div class="box">
+									<div>
+										<div class="sub">옐로카펫 설치</div>
+										<div class="tit">어린이 횡단보도도<br>안전을 책임집니다.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="bn_item">
+								<div class="img" aria-hidden="true"><img src="../../images/company/company_main_bn_img2.png" alt=""></div>
+								<div class="box">
+									<div>
+										<div class="sub">교통 환경 챌린지</div>
+										<div class="tit">사회적 문제를 새롭게<br>해결합니다.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="bn_item">
+								<div class="img" aria-hidden="true"><img src="../../images/company/company_main_bn_img3.png" alt=""></div>
+								<div class="box">
+									<div>
+										<div class="sub">소방공무원 후원</div>
+										<div class="tit">여러분의 숭고한 희생정신을<br>잊지 않겠습니다.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ui_slick_wrap main_square_bn">
+					<div class="ui_slick">
+						<div class="item">
+							<div class="bn_item">
+								<div class="img" aria-hidden="true"><img src="../../images/eng/eng_main_bn_img1.png" alt=""></div>
+								<div class="box">
+									<div>
+										<div class="sub">Company Hall</div>
+										<div class="tit">Pursue a happy society<br>with our customers.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="bn_item">
+								<div class="img" aria-hidden="true"><img src="../../images/eng/eng_main_bn_img2.png" alt=""></div>
+								<div class="box">
+									<div>
+										<div class="sub">Investment Information</div>
+										<div class="tit">Continue to be the<br>company with the best <br>competitiveness.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="bn_item">
+								<div class="img" aria-hidden="true"><img src="../../images/eng/eng_main_bn_img3.png" alt=""></div>
+								<div class="box">
+									<div>
+										<div class="sub">Sustainability Management</div>
+										<div class="tit">Positive and sustainable<br>growth with our customers</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="guideInfoDialog1" class="dialog modal t2" role="dialog"  aria-hidden="true">
+		<div class="dialog_wrap">
+			<div class="dialog_header">
+				<h2 class="offscreen">모바일 보험금 청구 이용방법</h2>
+				<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+			</div>
+			<div class="dialog_content">
+				<div class="guide_info_swipe_wrap">
+					<div class="guide_info_img" aria-hidden="true">
+						<div class="img on"><img src="../../images/contents/guide_info_img_1_1.png" alt="예시 이미지"></div>
+						<div class="img"><img src="../../images/contents/guide_info_img_1_2.png" alt="예시 이미지"></div>
+						<div class="img"><img src="../../images/contents/guide_info_img_1_3.png" alt="예시 이미지"></div>
+						<div class="img"><img src="../../images/contents/guide_info_img_1_4.png" alt="예시 이미지"></div>
+						<div class="img"><img src="../../images/contents/guide_info_img_1_5.png" alt="예시 이미지"></div>
+						<div class="img"><img src="../../images/contents/guide_info_img_1_6.png" alt="예시 이미지"></div>
+					</div>
+					<div class="guide_info_swipe">
+						<div>
+							<div class="info">
+								<div class="tit"><strong>접수 대상을 선택해주세요.</strong></div>
+								<div>미성년자의 친권자는 자녀 개인정보 입력 후 진행이 가능합니다.</div>
+							</div>
+						</div>
+						<div>
+							
+							<div class="info">
+								<div class="tit"><strong>접수 유형을 선택해주세요</strong></div>
+								<div class="box">
+									<ul>
+										<li>신규접수<div class="small">새로운 상해/질병으로<br>접수하는 경우</div></li>
+										<li>추가접수<div class="small">기존 청구와 동일한<br>사유로 접수하는 경우</div></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="info">
+								<div class="tit"><strong>개인(신용)정보 동의 후<br>‘다음’을 선택해주세요.</strong></div>
+							</div>
+						</div>
+						<div>
+							<div class="info">
+								<div class="tit"><strong>청구사항을 입력해주세요.</strong></div>
+								<div class="box">
+									<ul>
+										<li>계약정보</li>
+										<li>청구사항</li>
+										<li>보험금<br>지급계좌</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="info">
+								<div class="tit"><strong>사진촬영으로 청구서류를 제출해주세요.</strong></div>
+								<div>사진은 어두운 배경 위에<br>올려놓고 찍어주세요.</div>
+							</div>
+						</div>
+						<div>
+							<div class="info">
+								<div class="tit"><strong>보험금 청구가 완료되었습니다.</strong></div>
+								<div>접수 건은 보상처리내역 조회에서 가능하며, 이후 서류제출(처리 중), 추가접수(종결 시) 서비스를 이용하실 수 있습니다.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="guideInfoDialog2" class="dialog modal t2" role="dialog"  aria-hidden="true">
+		<div class="dialog_wrap">
+			<div class="dialog_header">
+				<h2 class="offscreen">모바일 보험금 청구 이용방법</h2>
+				<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+			</div>
+			<div class="dialog_content">
+				<div class="guide_info_swipe_wrap">
+					<div class="guide_info_img" aria-hidden="true">
+						<div class="img on"><img src="../../images/contents/guide_info_img_2_1.png" alt="예시 이미지"></div>
+						<div class="img"><img src="../../images/contents/guide_info_img_2_2.png" alt="예시 이미지"></div>
+						<div class="img"><img src="../../images/contents/guide_info_img_2_3.png" alt="예시 이미지"></div>
+						<div class="img"><img src="../../images/contents/guide_info_img_2_4.png" alt="예시 이미지"></div>
+					</div>
+					<div class="guide_info_swipe">
+						<div>
+							<div class="img"></div>
+							<div class="info">
+								<div class="tit"><strong>개인(신용)정보 동의 후 ‘다음’을 선택해주세요</strong></div>
+							</div>
+						</div>
+						<div>
+							<div class="img"></div>
+							<div class="info">
+								<div class="tit"><strong>청구사항을 입력해주세요</strong></div>
+								<div class="box">
+									<ul>
+										<li>계약정보</li>
+										<li>사고사항</li>
+										<li>피해자/피해물정보</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="img"></div>
+							<div class="info">
+								<div class="tit"><strong>사진촬영으로 사고사진을 제출해주세요</strong></div>
+								<div>사고위치가 정확하게 보이도록 촬영하세요.</div>
+							</div>
+						</div>
+						<div>
+							<div class="img"></div>
+							<div class="info">
+								<div class="tit"><strong>보험금 청구가 완료되었습니다.</strong></div>
+								<div>접수 건은 보상처리내역 조회에서 가능합니다.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-include-html="../inc/footer.html"></div>
+	<div data-include-html="../inc/footer_blog.html"></div>
+</div>
+</body>
+</html>

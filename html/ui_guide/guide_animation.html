@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<meta name="title" content="DB 손해보험 모바일">
+<meta name="keywords" content="자동차보험, 운전자보험, 조합보험, 연금, 여행보험, 레저보험, 건강보험, 자녀보험, 화재보험, 재해보험, 펫보험, 치아보험">
+<meta name="description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+<meta property="og:title" content="DB 손해보험 모바일">
+<meta property="og:url" content="https://m.idbins.com">
+<!-- <meta property="og:image" content="https://m.idbins.com/MDB/images/logo_1200x1200.png"> -->
+<meta property="og:image" content="http://localhost:8080/MDB/images/logo_1200x1200.png">
+<meta property="og:description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+
+<meta name="apple-mobile-web-app-title" content="DB 손해보험 모바일">
+<link rel="apple-touch-startup-image" href="../../images/icons/touch-icon-iphone-retina.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>DB 손해보험</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png"><!-- 196x196-->
+<link rel="apple-touch-icon" href="../../images/icons/touch-icon-iphone.png"><!-- 120x120-->
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="../../images/icons/touch-icon-ipad-retina.png">
+<link rel="manifest" href="../../manifest.json">
+
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/contents.css">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery-ui-1.12.1.min.js"></script>
+<script src="../../js/ui_plugins.js"></script>
+<script src="../../js/ui_common.js"></script>
+<script>
+	$(function(){
+		$('.ui_rl_num').rollingNumber();
+		//$('.ui_trans_num').transNumber();
+		$('.ui_tp_txt').typingText();
+	});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div data-include-html="../inc/top.html"></div>
+	<div data-include-html="../inc/gnb.html"></div>
+	<div id="container">
+		<div id="content">
+			<div class="tab_swipe_wrap">
+				<div class="tab_track">
+					<ul class="tab_nav tab_swiper">
+						<li class="tab"><a href="guide.html"><span>텍스트,아이콘</span></a></li>
+						<li class="tab"><a href="guide_btn.html"><span>버튼</span></a></li>
+						<li class="tab"><a href="guide_list.html"><span>리스트, item</span></a></li>
+						<li class="tab"><a href="guide_form.html"><span>form 요소</span></a></li>
+						<li class="tab"><a href="guide_box.html"><span>box 요소</span></a></li>
+						<li class="tab"><a href="guide_tbl.html"><span>테이블</span></a></li>
+						<li class="tab"><a href="guide_popup.html"><span>팝업</span></a></li>
+						<li class="tab"><a href="guide_map.html"><span>맵</span></a></li>
+						<li class="tab"><a href="guide_agree.html"><span>약관샘플</span></a></li>
+						<li class="tab"><a href="guide_service.html"><span>서비스안내</span></a></li>
+						<li class="tab"><a href="guide_process.html"><span>이용안내</span></a></li>
+						<li class="tab active"><a href="guide_animation.html"><span>애니메이션</span></a></li>
+						<li class="tab"><a href="guide_address.html"><span>우편번호</span></a></li>
+						<li class="tab"><a href="guide_etc.html"><span>기타</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<h2 class="gd__h1">rollingNumber</h2>
+				<div style="font-size:2.0rem;"><strong id="rol1" class="ui_rl_num">660,000</strong></div>
+				<a href="#" class="btn bs4 line1" onclick="$('#rol1').rollingNumber('456,789')">$('#rol1').rollingNumber('45,789')</a>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div style="font-size:2.0rem;"><strong id="rol2" class="ui_rl_num" data-animation="on">123,456</strong></div>
+				<a href="#" class="btn bs4 line1" onclick="$('#rol2').rollingNumber('321,654')">$('#rol2').rollingNumber('321,654')</a>
+
+				<h2 class="gd__h1">transNumber</h2>
+				<div style="font-size:2.0rem;"><strong id="trans1" class="ui_trans_num">660,000</strong></div>				
+				<a href="#" class="btn bs4 line1" onclick="$('#trans1').transNumber('45,789')">$('#rol1').transNumber('45,789')</a>
+				<a href="#" class="btn bs4 line1" onclick="$('#trans1').transNumber('123')">$('#rol1').transNumber('123')</a>
+				<a href="#" class="btn bs4 line1" onclick="$('#trans1').transNumber('8,900')">$('#rol1').transNumber('8,900')</a>
+
+				<h2 class="gd__h1">typingText</h2>
+				<h2 class="tit_h2 ui_tp_txt" data-animation="on">고객님 서울 32다7281을<br>변경해주세요.</h2>
+				<h2 class="tit_h2 ui_tp_txt" data-speed="150" data-cursor="true">고객님 서울 32다7281을<br>변경해주세요.</h2>
+				<h2 class="tit_h2 ui_tp_txt" data-animation="on" data-delay="300" data-cursor="true">고객님 서울 32다7281을<br>변경해주세요.</h2>
+
+				<h2 class="gd__h1">splitText</h2>
+				<h2 class="tit_h2 ui_spl_txt" data-animation="on">고객님 <strong class="fc1">서울 32다7281</strong>을<br>변경해주세요.</h2>
+				<h2 class="tit_h2 ui_spl_txt scale" data-animation="on">고객님 <strong class="fc1">서울 32다7281</strong>을<br>변경해주세요.</h2>
+				<h2 class="tit_h2 ui_spl_txt" data-animation="on" data-distance="20">고객님 <strong class="fc1">서울 32다7281</strong>을<br>변경해주세요.</h2>
+				
+				<h2 class="gd__h1">data-animation</h2>
+				<div class="gd__wrap">
+					<div class="gd__box" data-animation="fadeIn">fadeIn</div>
+					<div class="gd__box" data-animation="fadeInDown">fadeInDown</div>
+					<div class="gd__box" data-animation="fadeInLeft">fadeInLeft</div>
+					<div class="gd__box" data-animation="fadeInLeftBig">fadeInLeftBig</div>
+					<div class="gd__box" data-animation="fadeInRight">fadeInRight</div>
+					<div class="gd__box" data-animation="fadeInRightBig">fadeInRightBig</div>
+					<div class="gd__box" data-animation="fadeInUp">fadeInUp</div>
+
+					<div class="gd__box" data-animation="flash">flash</div>
+					<div class="gd__box" data-animation="pulse">pulse</div>
+					<div class="gd__box" data-animation="rubberBand">rubberBand</div>
+					<div class="gd__box" data-animation="shake">shake</div>
+					<div class="gd__box" data-animation="headShake">headShake</div>
+					<div class="gd__box" data-animation="swing">swing</div>
+					<div class="gd__box" data-animation="tada">tada</div>
+					<div class="gd__box" data-animation="tada2">tada2</div>
+					<div class="gd__box" data-animation="wobble">wobble</div>
+					<div class="gd__box" data-animation="jello">jello</div>
+					
+					<div class="gd__box" data-animation="bounce">bounce</div>
+					<div class="gd__box" data-animation="bounceUp">bounceUp</div>
+					<div class="gd__box" data-animation="bounceIn">bounceIn</div>
+					<div class="gd__box" data-animation="bounceInDown">bounceInDown</div>
+					<div class="gd__box" data-animation="bounceInLeft">bounceInLeft</div>
+					<div class="gd__box" data-animation="bounceInRight">bounceInRight</div>
+					<div class="gd__box" data-animation="bounceInUp">bounceInUp</div>
+
+					<div class="gd__box" data-animation="flip">flip</div>
+					<div class="gd__box" data-animation="flipInX">flipInX</div>
+					<div class="gd__box" data-animation="flipInY">flipInY</div>
+
+					<div class="gd__box" data-animation="lightSpeedIn">lightSpeedIn</div>
+					<div class="gd__box" data-animation="lightSpeedIn">rotateIn</div>
+
+					<div class="gd__box" data-animation="rotateInDownLeft">rotateInDownLeft</div>
+					<div class="gd__box" data-animation="rotateInDownRight">rotateInDownRight</div>
+					<div class="gd__box" data-animation="rotateInUpLeft">rotateInUpLeft</div>
+					<div class="gd__box" data-animation="rotateInUpRight">rotateInUpRight</div>
+
+					<div class="gd__box" data-animation="rollIn">rollIn</div>
+					<div class="gd__box" data-animation="zoomIn">zoomIn</div>
+					<div class="gd__box" data-animation="zoomInDown">zoomInDown</div>
+					<div class="gd__box" data-animation="zoomInLeft">zoomInLeft</div>
+					<div class="gd__box" data-animation="zoomInRight">zoomInRight</div>
+					<div class="gd__box" data-animation="zoomInUp">zoomInUp</div>
+
+					<div class="gd__box" data-animation="slideInDown">slideInDown</div>
+					<div class="gd__box" data-animation="slideInLeft">slideInLeft</div>
+					<div class="gd__box" data-animation="slideInRight">slideInRight</div>
+					<div class="gd__box" data-animation="slideInUp">slideInUp</div>
+
+					<div class="gd__box" data-animation="on">on</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-include-html="../inc/footer.html"></div>
+	<div data-include-html="../inc/footer_blog.html"></div>
+
+	<script>
+	$(function(){
+		$('.gd__box[data-animation]').click(function(){
+			var $this = $(this),
+				$animation = $this.data('animation');
+			$this.removeClass($animation).delay(100).queue(function(next){
+				$this.addClass($animation);
+				next();
+			});;
+			
+		});
+	});
+	</script>
+</div>
+</body>
+</html>

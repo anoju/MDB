@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<meta name="title" content="DB 손해보험 모바일">
+<meta name="keywords" content="자동차보험, 운전자보험, 조합보험, 연금, 여행보험, 레저보험, 건강보험, 자녀보험, 화재보험, 재해보험, 펫보험, 치아보험">
+<meta name="description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+<meta property="og:title" content="DB 손해보험 모바일">
+<meta property="og:url" content="https://m.idbins.com">
+<!-- <meta property="og:image" content="https://m.idbins.com/MDB/images/logo_1200x1200.png"> -->
+<meta property="og:image" content="http://localhost:8080/MDB/images/logo_1200x1200.png">
+<meta property="og:description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+
+<meta name="apple-mobile-web-app-title" content="DB 손해보험 모바일">
+<link rel="apple-touch-startup-image" href="../../images/icons/touch-icon-iphone-retina.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>DB 손해보험</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png"><!-- 196x196-->
+<link rel="apple-touch-icon" href="../../images/icons/touch-icon-iphone.png"><!-- 120x120-->
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="../../images/icons/touch-icon-ipad-retina.png">
+<link rel="manifest" href="../../manifest.json">
+
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/contents.css">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery-ui-1.12.1.min.js"></script>
+<script src="../../js/ui_plugins.js"></script>
+<script src="../../js/ui_common.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div data-include-html="../inc/top.html"></div>
+	<div data-include-html="../inc/gnb.html"></div>
+
+	<div id="container">
+		<div id="content">
+			<div class="tab_swipe_wrap">
+				<div class="tab_track">
+					<ul class="tab_nav tab_swiper">
+						<li class="tab"><a href="guide.html"><span>텍스트,아이콘</span></a></li>
+						<li class="tab"><a href="guide_btn.html"><span>버튼</span></a></li>
+						<li class="tab"><a href="guide_list.html"><span>리스트, item</span></a></li>
+						<li class="tab"><a href="guide_form.html"><span>form 요소</span></a></li>
+						<li class="tab"><a href="guide_box.html"><span>box 요소</span></a></li>
+						<li class="tab"><a href="guide_tbl.html"><span>테이블</span></a></li>
+						<li class="tab"><a href="guide_popup.html"><span>팝업</span></a></li>
+						<li class="tab"><a href="guide_map.html"><span>맵</span></a></li>
+						<li class="tab"><a href="guide_agree.html"><span>약관샘플</span></a></li>
+						<li class="tab"><a href="guide_service.html"><span>서비스안내</span></a></li>
+						<li class="tab"><a href="guide_process.html"><span>이용안내</span></a></li>
+						<li class="tab"><a href="guide_animation.html"><span>애니메이션</span></a></li>
+						<li class="tab active"><a href="guide_address.html"><span>우편번호</span></a></li>
+						<li class="tab"><a href="guide_etc.html"><span>기타</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<h2 class="gd__h1">우편번호</h2>
+				<h3 class="gd__h2">기본타입</h3>
+				<div class="form_item"><!-- 에러날때 invalid 클래스 -->
+					<label for="postcode" class="lb">주소</label>
+					<div class="input address">
+						<span class="dv"><input id="postcode" class="i_txt" name="" type="tel" title="우편번호 입력" placeholder="우편번호" readonly onclick="daumPostcode('postcode','baseAddress','detailAddress')"></span>
+						<span class="dv">
+							<a href="#" class="btn bs3 line2 fc7" onclick="daumPostcode('postcode','baseAddress','detailAddress')">주소찾기</a>
+						</span>
+					</div>
+					<div class="input">
+						<span class="dv"><input id="baseAddress" class="i_txt" name="" type="text" title="기본주소 입력" placeholder="기본주소" readonly onclick="daumPostcode('postcode','baseAddress','detailAddress')"></span>
+					</div>
+					<div class="input">
+						<span class="dv"><input id="detailAddress" class="i_txt" name="" type="text" title="상세주소 입력" placeholder="상세주소"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">주소를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+
+				<h3 class="gd__h2">상세주소까지 입력 타입</h3>
+				<div class="form_item"><!-- 에러날때 invalid 클래스 -->
+					<label for="postcode" class="lb">주소</label>
+					<div class="input address">
+						<span class="dv"><input id="postcode2" class="i_txt" name="" type="tel" title="우편번호 입력" placeholder="우편번호" readonly onclick="daumPostcode('postcode','baseAddress','detailAddress')"></span>
+						<span class="dv">
+							<a href="#" class="btn bs3 line2 fc7" onclick="daumPostcodeDetail()">주소찾기</a>
+						</span>
+					</div>
+					<div class="input">
+						<span class="dv"><input id="baseAddress2" class="i_txt" name="" type="text" title="기본주소 입력" placeholder="기본주소" readonly onclick="daumPostcode('postcode','baseAddress','detailAddress')"></span>
+					</div>
+					<div class="input">
+						<span class="dv"><input id="detailAddress2" class="i_txt" name="" type="text" title="상세주소 입력" placeholder="상세주소"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">주소를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-include-html="../inc/postcode.html"></div><!-- 우편번호팝업 -->
+	<div data-include-html="../inc/footer.html"></div>
+	<div data-include-html="../inc/footer_blog.html"></div>
+</div>
+</body>
+</html>

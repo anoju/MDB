@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<meta name="title" content="DB 손해보험 모바일">
+<meta name="keywords" content="자동차보험, 운전자보험, 조합보험, 연금, 여행보험, 레저보험, 건강보험, 자녀보험, 화재보험, 재해보험, 펫보험, 치아보험">
+<meta name="description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+<meta property="og:title" content="DB 손해보험 모바일">
+<meta property="og:url" content="https://m.idbins.com">
+<!-- <meta property="og:image" content="https://m.idbins.com/MDB/images/logo_1200x1200.png"> -->
+<meta property="og:image" content="http://localhost:8080/MDB/images/logo_1200x1200.png">
+<meta property="og:description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+
+<meta name="apple-mobile-web-app-title" content="DB 손해보험 모바일">
+<link rel="apple-touch-startup-image" href="../../images/icons/touch-icon-iphone-retina.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>DB 손해보험</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png"><!-- 196x196-->
+<link rel="apple-touch-icon" href="../../images/icons/touch-icon-iphone.png"><!-- 120x120-->
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="../../images/icons/touch-icon-ipad-retina.png">
+<link rel="manifest" href="../../manifest.json">
+
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/contents.css">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery-ui-1.12.1.min.js"></script>
+<script src="../../js/ui_plugins.js"></script>
+<script src="../../js/ui_common.js"></script>
+<!-- <script src="../../js/mk-component.js"></script>
+<script src="../../js/mk-datepicker.js"></script> -->
+<script src="../../js/comnUtil.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div data-include-html="../inc/top.html"></div>
+	<div data-include-html="../inc/gnb.html"></div>
+	<div id="container">
+		<div id="content">
+			<div class="tab_swipe_wrap">
+				<div class="tab_track">
+					<ul class="tab_nav tab_swiper">
+						<li class="tab"><a href="guide.html"><span>텍스트,아이콘</span></a></li>
+						<li class="tab"><a href="guide_btn.html"><span>버튼</span></a></li>
+						<li class="tab"><a href="guide_list.html"><span>리스트, item</span></a></li>
+						<li class="tab"><a href="guide_form.html"><span>form 요소</span></a></li>
+						<li class="tab"><a href="guide_box.html"><span>box 요소</span></a></li>
+						<li class="tab"><a href="guide_tbl.html"><span>테이블</span></a></li>
+						<li class="tab"><a href="guide_popup.html"><span>팝업</span></a></li>
+						<li class="tab"><a href="guide_map.html"><span>맵</span></a></li>
+						<li class="tab"><a href="guide_agree.html"><span>약관샘플</span></a></li>
+						<li class="tab"><a href="guide_service.html"><span>서비스안내</span></a></li>
+						<li class="tab"><a href="guide_process.html"><span>이용안내</span></a></li>
+						<li class="tab"><a href="guide_animation.html"><span>애니메이션</span></a></li>
+						<li class="tab"><a href="guide_address.html"><span>우편번호</span></a></li>
+						<li class="tab active"><a href="guide_etc.html"><span>기타</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<h2 class="gd__h1">팝업</h2>
+				<ul class="grid s2 mt_20">
+					<li><a href="#" class="btn bs1 bc2" onclick="Dialog.open('#fullDialog')">풀팝업</a></li>
+					<li><a href="#fullDialog" class="btn bs1 bc1 ui_dialog_open">풀팝업</a></li>
+				</ul>
+				<div class="form_item">
+					<label for="bank" class="lb">은행 선택할때</label>
+					<div class="input bank"><!-- 에러날때 invalid 클래스 -->
+						<div class="dv">
+							<div class="select">
+								<!-- <select id="bank" title="은행 선택">
+									<option value="">은행선택</option>
+									<option value="038">강원은행</option>
+									<option value="039">경남은행</option>
+									<option value="034">광주은행</option>
+									<option value="004">국민은행</option>
+									<option value="003">기업은행</option>
+									<option value="011">중앙농협</option>
+									<option value="012">단위농협</option>
+									<option value="031">대구은행</option>
+									<option value="032">부산은행</option>
+									<option value="002">산업은행</option>
+									<option value="050">상호저축은행</option>
+									<option value="045">새마을금고</option>
+									<option value="007">수협</option>
+									<option value="026">신한은행(구)</option>
+									<option value="048">신협</option>
+									<option value="027">씨티은행(구.한미)</option>
+									<option value="005">KEB하나은행(구외환)</option>
+									<option value="020">우리은행</option>
+									<option value="071">우체국</option>
+									<option value="037">전북은행</option>
+									<option value="023">제일은행</option>
+									<option value="035">제주은행</option>
+									<option value="021">조흥은행</option>
+									<option value="081">KEB하나은행(구하나)</option>
+									<option value="088">신한은행</option>
+								</select> -->
+								<select id="bank_nm" name="bank_nm" title="은행 선택" tabindex="-1" aria-hidden="true"><option value="">선택해주세요.</option><option value="002">산업은행</option><option value="003">기업은행</option><option value="004">국민은행</option><option value="081">KEB하나은행(구외환)</option><option value="007">수협중앙회</option><option value="011">농협</option><option value="020">우리은행</option><option value="023">SC제일은행</option><option value="027">씨티은행</option><option value="031">대구은행</option><option value="032">부산은행</option><option value="034">광주은행</option><option value="035">제주은행</option><option value="037">전북은행</option><option value="039">경남은행</option><option value="045">새마을금고</option><option value="048">신협</option><option value="050">상호저축은행</option><option value="071">우체국</option><option value="089">케이뱅크</option><option value="054">HSBC은행</option><option value="055">도이치은행</option><option value="057">JP모건체이스은행</option><option value="064">산림조합중앙회</option><option value="088">신한은행</option><option value="026">신한은행(구신한)</option><option value="209">유안타증권</option><option value="218">KB증권(구현대)</option><option value="230">미래에셋증권</option><option value="238">대우증권</option><option value="240">삼성증권</option><option value="243">한국투자증권</option><option value="247">NH투자증권(구우리투자)</option><option value="261">교보증권</option><option value="262">하이투자</option><option value="263">HMC증권</option><option value="265">이베스트투자증권(구이트레이드)</option><option value="266">SK증권</option><option value="267">대신증권</option><option value="268">메리츠종금증권(구아이엠투자)</option><option value="269">한화투자증권</option><option value="270">하나금융투자</option><option value="278">신한금융투자</option><option value="279">DB금융투자(구동부)</option><option value="280">유진투자증권</option><option value="287">메리츠종금증권</option><option value="289">NH농협증권</option><option value="290">부국증권</option><option value="291">신영증권</option><option value="292">케이프투자증권(구엘아이지)</option><option value="090">카카오뱅크</option></select>
+								<a href="#" class="select_btn ui_select_open" title="은행 팝업으로 선택하기">현재 선택한 은행은 <span>없습니다.</span></a>
+							</div>
+						</div>
+						<span class="dv"><input id="frm2" class="i_txt" name="" type="tel" titfle="계좌번호 입력" placeholder="-없이 숫자만 입력" maxlength="5"></span>
+					</div>
+					<strong class="invalid_txt" style="display:none">계좌번호를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				<h2 class="gd__h1">이메일</h2>
+				<div class="form_item">
+					<label for="mail1_1" class="lb">이메일</label>
+					<div class="input email_form"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv"><input id="mail1_1" class="i_txt" type="text" title="이메일 아이디 입력"></span>
+						<span class="sp">@</span>
+						<span class="dv email_sel">
+							<select title="이메일 도메인 선택">
+								<option value="0" selected="selected">이메일계정선택</option>
+								<option value="naver.com">naver.com</option>
+								<option value="nate.com">nate.com</option>
+								<option value="gmail.com">gmail.com</option>
+								<option value="etc">직접입력</option>
+							</select>
+						</span>
+						<span class="dv email_inp" style="display:none;">
+							<input class="i_txt" type="text" title="이메일 도메인 직접입력" placeholder="직접입력">
+							<a href="#" class="btn_sel"><span class="offscreen">이메일 도메인 직접입력 취소</span></a>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">에러메세지</strong>
+				</div>
+
+				<h2 class="gd__h1">얼럿</h2>
+				<div class="form_item">
+					<label for="inpName2" class="lb">이름</label>
+					<div class="input">
+						<span class="dv"><input id="inpName2" name="inpName2" class="i_txt" type="text"></span>
+					</div>
+					<strong id="tip_inpName2" class="invalid_txt" style="display:none">이름을 입력해주세요.</strong>
+				</div>
+				<div class="form_item">
+					<label for="inpBirth2" class="lb">생년월일</label>
+					<div class="input">
+						<span class="dv date">
+							<input id="inpBirth2" class="i_txt i_datepicker" data-max="today" name="inpBirth2" type="text" placeholder="예)19851101" title="예)19851101">
+						</span>
+					</div>
+					<strong id="tip_inpBirth2" class="invalid_txt" style="display:none">생년월일을 입력해주세요.</strong>
+				</div>
+				<div class="fixed_bottom_button">
+					<ul class="grid s1">
+						<li><a href="#" id="excute" class="btn bs1 bc1">동의</a></li>
+					</ul>
+				</div>
+				
+				<h2 class="gd__h1">보안키패드</h2>
+				<div class="form_item">
+					<label for="jumin1" class="lb">주민등록번호</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv"><input id="jumin1" class="i_txt" type="text" title="주민등록번호 앞6자리 입력"></span>
+						<span class="dash"></span>
+						<span class="dv">
+							<!-- <input id="jumin2" class="i_txt" type="text" title="주민등록번호 뒷7자리 입력" value="2●●●●●●"> -->
+							<button type="button" class="i_txt" title="주민등록번호 뒷7자리 입력" style="text-align:left;"></button>
+						</span>
+					</div>
+					<strong class="invalid_txt" style="display:none">주민등록번호를 입력해주세요.</strong><!-- 에러메세지: 긍정일때는 on클래스 추가 -->
+				</div>
+				
+				<h2 class="gd__h1">달력</h2>
+				<div>2020.11.25</div>
+				<div class="form_item">
+					<label for="jqDate1" class="lb">[type=text]</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="jqDate1" class="i_txt i_datepicker" type="text" placeholder="예)20201101" title="예)20201101">
+						</span>
+					</div>
+				</div>
+				<div class="form_item">
+					<label for="jqDate2" class="lb">[type=number]</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="jqDate2" class="i_txt i_datepicker" type="number" placeholder="예)20201101" title="예)20201101">
+						</span>
+					</div>
+				</div>
+				<div class="form_item">
+					<label for="jqDate3" class="lb">[type=tel]</label>
+					<div class="input"><!-- 에러날때 invalid 클래스 -->
+						<span class="dv date">
+							<input id="jqDate3" class="i_txt i_datepicker" type="tel" placeholder="예)20201101" title="예)20201101">
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fullDialog" class="dialog full" role="dialog"  aria-hidden="true">
+		<div class="dialog_wrap">
+			<div class="dialog_header">
+				<h2>전체팝업</h2>
+				<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+			</div>
+			<div class="dialog_content">
+				<div class="section">
+					<ul class="grid s1 mt_20">
+						<li><a href="#modalDialog" class="btn bs2 line1 ui_dialog_open">모달팝업</a></li>
+					</ul>
+					<br>
+					<!-- CMS 영역 -->
+					<div class="table tbl_scroll horizon max_height"><!-- 높이값 설정 -->
+						<table>
+							<caption>테이블제목</caption>
+							<colgroup>
+								<col style="width:60px">
+								<col style="width:135px">
+								<col style="width:205px">
+								<col style="width:135px">
+								<col style="width:205px">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="row">구분</th>
+									<th scope="col">폐차/수출말소</th>
+									<th scope="col">명의이전</th>
+									<th scope="col">폐차/수출말소</th>
+									<th scope="col">명의이전</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+								<tr>
+									<th scope="row">법인</th>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+								</tr>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+								<tr>
+									<th scope="row">법인</th>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+									<td>자동차등록증<br>
+									법인인감증명서<br>
+									법인등기부등본<br>
+									사업자등록증</td>
+									<td>자동차등록증(원본)<br>
+									법인인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)<br>
+									법인등기부등본, 사업자등록증<br>
+									차량매각 대금 세금계산서</td>
+								</tr>
+								<tr>
+									<th scope="row">개인</th>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+									<td>자동차등록증 초본 또는 신분증</td>
+									<td>자동차등록증(원본)<br>
+									인감증명서1부(매도용)<br>
+									양도증명서(인감 도장직인)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //CMS 영역 -->
+				</div>
+			</div>
+			<div class="fixed_bottom_button t1">
+				<ul class="grid s1">
+					<li><a href="#" class="btn bsr1 bc1 ui_dialog_close">확인</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="modalDialog" class="dialog modal" role="dialog"  aria-hidden="true">
+		<div class="dialog_wrap">
+			<div class="dialog_header">
+				<h2>보험계약정보 더보기 메뉴</h2>
+				<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+			</div>
+			<div class="dialog_content">
+				<div class="section">
+					<ul class="ico_util_wrap">
+						<li><a href="#" class="btn_ico_util i1">보험료납입현황</a></li>
+						<li><a href="#" class="btn_ico_util i2">보험료납입현황</a></li>
+						<li><a href="#" class="btn_ico_util i3">보험료납입현황</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="fixed_bottom_button t1">
+				<ul class="grid s1">
+					<li><a href="#" class="btn bsr1 bc1" onclick="Dialog.close('#modalDialog');">확인</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div data-include-html="../inc/footer.html"></div>
+	<div data-include-html="../inc/footer_blog.html"></div>
+
+	<script>
+	$(function(){
+		$('#excute').click(function(){
+			excute();			  // 판매상품정보조회
+		});
+
+		function excute() {
+			
+			if (isNull($('#inpName2').val())) {
+				LayerPop.alert("이름을 입력해 주시기 바랍니다.");
+				$('#inpName2').focus();
+				return false;
+			}
+
+			if (isNull($('#inpBirth2').val())) {
+				LayerPop.alert("생년월일을 입력해 주시기 바랍니다.");
+				$('#inpBirth2').focus();
+				return false;
+			}
+		}
+	});
+	
+	</script>
+</div>
+</body>
+</html>

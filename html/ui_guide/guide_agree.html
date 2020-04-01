@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+<meta name="title" content="DB 손해보험 모바일">
+<meta name="keywords" content="자동차보험, 운전자보험, 조합보험, 연금, 여행보험, 레저보험, 건강보험, 자녀보험, 화재보험, 재해보험, 펫보험, 치아보험">
+<meta name="description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+<meta property="og:title" content="DB 손해보험 모바일">
+<meta property="og:url" content="https://m.idbins.com">
+<!-- <meta property="og:image" content="https://m.idbins.com/MDB/images/logo_1200x1200.png"> -->
+<meta property="og:image" content="http://localhost:8080/MDB/images/logo_1200x1200.png">
+<meta property="og:description" content="화재보험 전문업체, 연말정산 보험료 납입증명서 발급, 보험상품, 설계, 보장 등 안내">
+
+<meta name="apple-mobile-web-app-title" content="DB 손해보험 모바일">
+<link rel="apple-touch-startup-image" href="../../images/icons/touch-icon-iphone-retina.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>DB 손해보험</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png"><!-- 196x196-->
+<link rel="apple-touch-icon" href="../../images/icons/touch-icon-iphone.png"><!-- 120x120-->
+<link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="../../images/icons/touch-icon-ipad-retina.png">
+<link rel="manifest" href="../../manifest.json">
+
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/contents.css">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/jquery-ui-1.12.1.min.js"></script>
+<script src="../../js/ui_plugins.js"></script>
+<script src="../../js/ui_common.js"></script>
+<script>
+function agreeChk(id){
+	$('#'+id).prop('checked',true).change();
+}
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div data-include-html="../inc/top.html"></div>
+	<div data-include-html="../inc/gnb.html"></div>
+	<div id="container">
+		<div id="content">
+			<div class="tab_swipe_wrap">
+				<div class="tab_track">
+					<ul class="tab_nav tab_swiper">
+						<li class="tab"><a href="guide.html"><span>텍스트,아이콘</span></a></li>
+						<li class="tab"><a href="guide_btn.html"><span>버튼</span></a></li>
+						<li class="tab"><a href="guide_list.html"><span>리스트, item</span></a></li>
+						<li class="tab"><a href="guide_form.html"><span>form 요소</span></a></li>
+						<li class="tab"><a href="guide_box.html"><span>box 요소</span></a></li>
+						<li class="tab"><a href="guide_tbl.html"><span>테이블</span></a></li>
+						<li class="tab"><a href="guide_popup.html"><span>팝업</span></a></li>
+						<li class="tab"><a href="guide_map.html"><span>맵</span></a></li>
+						<li class="tab active"><a href="guide_agree.html"><span>약관샘플</span></a></li>
+						<li class="tab"><a href="guide_service.html"><span>서비스안내</span></a></li>
+						<li class="tab"><a href="guide_process.html"><span>이용안내</span></a></li>
+						<li class="tab"><a href="guide_animation.html"><span>애니메이션</span></a></li>
+						<li class="tab"><a href="guide_address.html"><span>우편번호</span></a></li>
+						<li class="tab"><a href="guide_etc.html"><span>기타</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<h2 class="gd__h1">약관 체크박스 샘플</h2>
+
+				<h3 class="gd__h2">예시 1(안씀)</h3>
+				<h3 class="tit_h3">전자금융거래 및 홈페이지 이용약관. 텍스트 길때를 비교하기 위하여 일부러 텍스트를 더 넣었습니다.</h3>
+
+				<div class="agree_item agree_tit">
+					<div class="checkbox">
+						<input id="agree1" type="checkbox"><i aria-hidden="true"></i>
+						<label for="agree1" class="lbl">전체동의</label>
+						<a href="#" class="bt pop_all_agree" onclick="Dialog.open('#ruleDialog1');$('#ruleDialog1 .rule_swipe').slick('slickGoTo',0);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+					</div>
+				</div>
+				<div class="agree_list">
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree1_1" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree1_1" class="lbl">홈페이지 이용약관</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog1');$('#ruleDialog1 .rule_swipe').slick('slickGoTo',0);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree1_2" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree1_2" class="lbl">고객용 앱 이용약관</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog1');$('#ruleDialog1 .rule_swipe').slick('slickGoTo',1);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree1_3" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree1_3" class="lbl">전자금융거래 이용약관</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog1');$('#ruleDialog1 .rule_swipe').slick('slickGoTo',2);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree1_4" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree1_4" class="lbl">개인정보 수집 및 이용에 관한 사항</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog1');$('#ruleDialog1 .rule_swipe').slick('slickGoTo',3);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+						<div class="agree_child">
+							<div class="agree_item">
+								<div class="checkbox small">
+									<input id="agree1_4_1" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree1_4_1" class="lbl">개인정보 처리방침 동의여부</label>
+									<a href="#" class="bt" onclick="Dialog.open('#ruleDialog1');$('#ruleDialog1 .rule_swipe').slick('slickGoTo',3);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+								</div>
+							</div>
+							<div class="agree_item">
+								<div class="checkbox small">
+									<input id="agree1_4_2" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree1_4_2" class="lbl">고유식별정보(주민등록번호) 수집 및 이용 동의여부</label>
+									<a href="#" class="bt" onclick="Dialog.open('#ruleDialog1');$('#ruleDialog1 .rule_swipe').slick('slickGoTo',4);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<br><br>
+				<h3 class="gd__h2">예시 2(최종)</h3>
+				<div class="tit_h3 agree_tit">
+					<div><h3>[선택] 마케팅 활용 동의서. 텍스트 길때를 비교하기 위하여 일부러 텍스트를 더 넣었습니다.</h3></div>
+					<div>
+						<span class="checkbox btn_type large c3">
+							<input id="agree2" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree2">전체동의</label>
+							<a href="#" class="bt pop_all_agree" onclick="Dialog.open('#ruleDialog2');$('#ruleDialog2 .rule_swipe').slick('slickGoTo',0);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</span>
+					</div>
+				</div>
+				<div class="agree_list">
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree2_1" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree2_1" class="lbl">소비자권익보호에관한 사항</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog2');$('#ruleDialog2 .rule_swipe').slick('slickGoTo',0);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree2_2" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree2_2" class="lbl">개인신용정보 수집 및 이용 동의</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog2');$('#ruleDialog2 .rule_swipe').slick('slickGoTo',1);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+						<div class="agree_child">
+							<p><strong>개인신용정보 보유&middot;이용기간</strong></p>
+							<div class="guide_txt">
+								<ul>
+									<li class="dash">당사와 보험&middot;대출계약 체결실적이 있는 고객
+										<div class="form_item">
+											<div class="input"><!-- 에러날때 invalid 클래스 -->
+												<select title="개인신용정보 보유&middot;이용기간">
+													<option value="">선택</option>
+												</select>
+											</div>
+										</div>
+										<strong class="invalid_txt" style="display:none;">에러메세지</strong>
+									</li>
+									<li class="dash">당사와 보험&middot;대출계약 체결실적이 없는 고객 : 동의일로부터 2년(단, 비대면채널은 동의일로부터 3년 이내)</li>
+								</ul>
+							</div>
+
+							<hr class="hr_line3">
+							<p><strong>상품소개등을 위한 연락방법 안내수단</strong></p>
+							<div class="chk_wrap">
+								<div class="checkbox small t2">
+									<input id="agree6_1" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree6_1">전화상담</label>
+								</div>
+								<div class="checkbox small t2">
+									<input id="agree6_2" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree6_2">방문상담</label>
+								</div>
+								<div class="checkbox small t2">
+									<input id="agree6_3" type="checkbox"><i aria-hidden="true"></i>
+									<label for="agree6_3">전화/방문상담</label>
+								</div>
+							</div>
+							<hr class="hr_line3">
+							<div class="form_item">
+								<label for="local1" class="lb">상담지역</label>
+								<div class="input"><!-- 에러날때 invalid 클래스 -->
+									<span class="dv">
+										<select id="local1" title="지역 시/도 선택">
+											<option value="">시/도</option>
+										</select>
+									</span>
+									<span class="sp t2" aria-hidden="true"></span>
+									<span class="dv">
+										<select title="지역 시/군 선택">
+											<option value="">시/군</option>
+										</select>
+									</span>
+								</div>
+								<strong class="invalid_txt" style="display:none;">에러메세지</strong>
+							</div>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree2_3" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree2_3" class="lbl">개인신용정보 제공 동의</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog2');$('#ruleDialog2 .rule_swipe').slick('slickGoTo',2);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+						<div class="agree_child">
+							<p><strong>개인신용정보 보유&middot;이용기간</strong></p>
+							<div class="guide_txt">
+								<ul>
+									<li class="dash">당사와 보험&middot;대출계약 체결실적이 있는 고객
+										<div class="form_item">
+											<div class="input"><!-- 에러날때 invalid 클래스 -->
+												<select title="개인신용정보 보유&middot;이용기간">
+													<option value="">선택</option>
+												</select>
+											</div>
+											<strong class="invalid_txt" style="display:none;">에러메세지</strong>
+										</div>
+									</li>
+									<li class="dash">당사와 보험&middot;대출계약 체결실적이 없는 고객 : 동의일로부터 2년(단, 비대면채널은 동의일로부터 3년 이내)</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree2_4" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree2_4" class="lbl">개인(신용)정보의 조회에 관한 사항</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog2');$('#ruleDialog2 .rule_swipe').slick('slickGoTo',3);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+						</div>
+					</div>
+				</div>
+
+				<br><br>
+				<h3 class="gd__h2">예시 3(안씀)</h3>
+				<div class="tit_h3 agree_tit">
+					<div class="checkbox large c2">
+						<input id="agree3" type="checkbox"><i aria-hidden="true"></i>
+						<label for="agree3" class="lbl">개인신용정보에 관한 동의서.텍스트 길때를 비교하기 위하여 일부러 텍스트를 더 넣었습니다.</label>
+						<a href="#" class="bt pop_all_agree" onclick="Dialog.open('#ruleDialog3');$('#ruleDialog3 .rule_swipe').slick('slickGoTo',0);"><span class="offscreen">약관상세 팝업으로 보기</span></a>
+					</div>
+				</div>
+				<div class="agree_list">
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree3_1" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree3_1" class="lbl">보험계약대출의 체결&middot;이행 등을 위한 개인(신용)정보 수집&middot;이용 및 제3자 제공동의서</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog3');$('#ruleDialog3 .rule_swipe').slick('slickGoTo',0);"><span class="offscreen">약관상세보기</span></a>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree3_2" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree3_2" class="lbl">개인(신용)정보의 수집&middot;이용에 관한 사항</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog3');$('#ruleDialog3 .rule_swipe').slick('slickGoTo',1);"><span class="offscreen">약관상세보기</span></a>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree3_3" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree3_3" class="lbl">개인(신용)정보의 제공에 관한 사항</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog3');$('#ruleDialog3 .rule_swipe').slick('slickGoTo',2);"><span class="offscreen">약관상세보기</span></a>
+						</div>
+					</div>
+					<div class="agree_item">
+						<div class="checkbox">
+							<input id="agree3_4" type="checkbox"><i aria-hidden="true"></i>
+							<label for="agree3_4" class="lbl">고유식별정보의 처리에 관한 사항</label>
+							<a href="#" class="bt" onclick="Dialog.open('#ruleDialog3');$('#ruleDialog3 .rule_swipe').slick('slickGoTo',3);"><span class="offscreen">약관상세보기</span></a>
+						</div>
+					</div>
+				</div>
+
+				<h2 class="gd__h1">약관 상세 샘플</h2>
+				<h3 class="gd__h2">샘플 1</h3>
+				<div class="terms_section">
+					<div class="terms_head">
+						<p class="txt1">DB손해보험(주) (이하 &lt;갑&gt; 이라 칭함) 와 계약자 (이하 &lt;을&gt; 이라 칭함)간에 보험약관에 의한 보험계약대출거래를 함에 있어 상호간에 아래와 같이
+							약정한다.</p>
+					</div>
+					<ol>
+						<li><h4 class="list_tit">제 1조 대출기간</h4>
+							<ol>
+								<li class="dot">대출기간은 대출일로부터 최장 보험계약의 소멸 시 까지로 합니다.</li>
+								<li class="dot">추가 약정 등 별도의 대출기간 약정이 있은 경우에는 그 약정에 따릅니다.</li>
+							</ol>
+						</li>
+						<li><h4 class="list_tit">제 2조 이자의 납입 및 방법</h4>
+							<ol>
+								<li class="dot">다음 각호의 경우 &lt;갑&gt;이 보험계약을 해지하여 원리금에 충당합니다. 다만 &lt;갑&gt;이 연장을 승인한 경우에는 그러하지
+									<ol>
+										<li class="num"><i>1.</i>지 중인 보험계약의 대출원리합계액이 해지환급금을 초과하게 되는 경우, 계약자에게 초과분에 대한 상환의무가 발생합니다. 대출원리금 초과분에 대한 상환의무는 실효, 해지 이루에도 계약자에게 귀속됩니다.(특히 컨버전스보험 등 보장성 보험의 경우 보장 부분의 해지환급금 감소로 대출원리금의 담보 초과가 발생할 수 있습니다.)</li>
+									</ol>
+								</li>
+								<li class="dot">다음 각호의 경우 &lt;갑&gt;이 보험계약을 해지하여 원리금에 충당합니다. 다만 &lt;갑&gt;이 연장을 승인한 경우에는 그러하지
+									<ol>
+										<li class="num"><i>1.</i>지 중인 보험계약의 대출원리합계액이 해지환급금을 초과하게 되는 경우, 계약자에게 초과분에 대한 상환의무가 발생합니다. 대출원리금 초과분에 대한 상환의무는 실효, 해지 이루에도 계약자에게 귀속됩니다.(특히 컨버전스보험 등 보장성 보험의 경우 보장 부분의 해지환급금 감소로 대출원리금의 담보 초과가 발생할 수 있습니다.)</li>
+										<li class="num"><i>2.</i>실효 등의 사유로 보험계약이 유지되지 않는 경우, 보험계약대출 원리금 합계액이 해지환급금을 초과하면 보험계약을 상계/해지 처리 할 수 있습니다.(보험계약을 해지하며 원리금에 충당하는 경우에는, &lt;갑&gt;이 알고 있는 &lt;을&gt;의 최종주소지로 해지 사유와 함께 서면으로 통지해야 합니다.)</li>
+										<li class="dash">보험계약을 해지하여 원리금에 충당합니다</li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+
+				<h3 class="gd__h2">샘플 2</h3>
+				<!-- dot TYPE S -->
+				<div class="terms_section">
+					<h3 class="in_tit">[필수] 개인(신용)정보의 수집&middot;이용에 관한 사항</h3>
+					<div class="terms_head">
+						<p class="txt1">당사 및 당사 업무수탁자는「개인정보보호법」및「신용정보의 이용 및 보호에 관한 법률」에 따라 본 계약과 관련하여 귀하의 개인(신용)정보를 다음과 같이 <strong class="fc2">수집&middot;이용</strong>하고자 합니다. 이에 대하여 동의하십니까?</p>
+					</div>
+					<ol>
+						<li class="dot">
+							<p>개인(신용)정보의 수집&middot;이용 목적 보험계약의 인수심사&middot;체결&middot;유지&middot;관리(부활 및 갱신 포함), 보험금 등 지급&middot;심사</p>
+							<p>순보험요율의 산출&middot;검증, 민원처리 및 분쟁 대응, 적부 및 사고조사(보험사기 조사 포함), 보험모집질서 유지, 기존 계약자에 대한 보험계약상담(당사 및 당사 설계사에 한함), 금융거래 관련 업무(금융거래 신청, 자동이체 등)</p>
+						</li>
+						<li class="dot">
+							<p>수집 &middot; 이용할 개인(신용)정보의 내용 개인식별정보(성명, 주민등록번호, 외국인등록번호, 주소, 성별, 직업, 전화번호, 휴대전화번호, 전자우편주소)</p>
+							<p>공공기관 등 : 보험업법 및 자동차손해배상보장법 등 법령에 따른 업무수행(위탁업무 포함)</p>
+							<p>보험회사 등 : 중복보험 확인 및 비례보상, 재보험 가입 및 재보험금 청구, 보험계약 공동인수, 금융거래 업무(보험료 및 보험금 등 출 &middot; 수납)</p>
+							<ol>
+								<li class="dash">중복보험 확인 및 비례보상, 재보험 가입 및 재보험금 청구, 보험계약 공동인수, </li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+				<!-- dot TYPE E -->
+
+				<h3 class="gd__h2">샘플 3</h3>
+				<!-- dash TYPE S -->
+				<div class="terms_section">
+					<h3 class="in_tit">[필수] 개인(신용)정보의 수집&middot;이용에 관한 사항</h3>
+					<div class="terms_head">
+						<p class="txt1">당사 및 당사 업무수탁자는「개인정보보호법」및「신용정보의 이용 및 보호에 관한 법률」에 따라 본 계약과 관련하여 귀하의 개인(신용)정보를 다음과 같이 <strong class="fc2">수집&middot;이용</strong>하고자 합니다. 이에 대하여 동의하십니까?</p>
+					</div>
+					<ol>
+						<li class="dash">
+							<p>수집 &middot; 이용할 개인(신용)정보의 내용 개인식별정보(성명, 주민등록번호, 외국인등록번호, 주소, 성별, 직업, 전화번호, 휴대전화번호, 전자우편주소)</p>
+							<p>당사, 신용정보집중기관(생명 &middot; 손해보험협회) 및 보험요율산출기관에서 수집 &middot; 관리하는 보험계약정보, 피보험자의 질병 및 상해에 관한 정보, 보험금지급 관련 정보(사고정보, 본인의 위임을 받아 취득한 각종 조사서, 판결문, 확인서, 진료기록 등)</p>
+							<p>계약전 알릴의무 사항, 소득 및 재산사항</p>
+							<p>법률 및 국제협약 등의 의무이행을 위한 정보</p>
+							<p>금융거래 업무(보험료 및 보험금 등 출 &middot; 수납) 관련 정보</p>
+						</li>
+					</ol>
+					<p class="txt2">※ 각 제공대상기관 및 이용목적의 구체적인 정보는 당사 홈페이지[www.idbins.com]에서 확인할 수 있습니다.</p>
+				</div>
+				<!-- dash TYPE E -->
+
+				<h3 class="gd__h2">샘플 4</h3>
+				<!-- input TYPE S -->
+				<div class="terms_section">
+					<h3 class="in_tit">[선택] 개인(신용)정보의 수집 &middot; 이용에 관한 사항</h3>
+					<div class="terms_head">
+						<p class="txt1">당사는「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 보험상품 소개 및 홍보 등을 위하여 귀하의 개인(신용)정보를 다음과 같이 수집 &middot; 이용하고자 합니다. </p>
+					</div>
+					<div class="ipt_wrap_1">
+						개인(신용)정보 수집 이용
+						<ul class="form_flex grid">
+							<li>
+								<span class="radio c2">
+									<input id="agreeType1" type="radio" name="agreechk" checked="checked"><i aria-hidden="true"></i>
+									<label for="agreeType1">동의함</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio c2">
+									<input id="agreeType2" type="radio" name="agreechk"><i aria-hidden="true"></i>
+									<label for="agreeType2">동의하지 않음</label>
+								</span>
+							</li>
+						</ul>
+					</div>
+					<ol>
+						<li class="dot">
+							<p>가입권유방식 선택</p>
+							<ol>
+								<li>
+									<strong class="fb">수신거부할 연락방식</strong>
+									<ul class="form_flex grid">
+										<li>
+											<span class="checkbox t2 c2">
+												<input id="allCheck" name="choicechk" type="checkbox"><i aria-hidden="true"></i>
+												<label for="allCheck">전체</label>
+											</span>
+										</li>
+										<li>
+											<span class="checkbox t2 c2">
+												<input id="checkType1" name="choicechk" type="checkbox"><i aria-hidden="true"></i>
+												<label for="checkType1">문자메세지</label>
+											</span>
+										</li>
+										<li>
+											<span class="checkbox t2 c2">
+												<input id="checkType2" name="choicechk" type="checkbox"><i aria-hidden="true"></i>
+												<label for="checkType2">이메일</label>
+											</span>
+										</li>
+										<li>
+											<span class="checkbox t2 c2">
+												<input id="checkType3" name="choicechk" type="checkbox"><i aria-hidden="true"></i>
+												<label for="checkType3">전화</label>
+											</span>
+										</li>
+										<li>
+											<span class="checkbox t2 c2">
+												<input id="checkType4" name="choicechk" type="checkbox"><i aria-hidden="true"></i>
+												<label for="checkType4">우편</label>
+											</span>
+										</li>
+									</ul>
+									<p class="txt2">※ 각 제공대상기관 및 이용목적의 구체적인 정보는 당사 홈페이지[www.idbins.com]에서 확인할 수 있습니다.</p>
+								</li>
+							</ol>
+						</li>
+						<li class="dot">개인(신용)정보의 수집 &middot; 이용 목적 상품 &middot; 서비스 소개 및 판매, 사은 &middot; 판촉행사 안내, 시장조사</li>
+					</ol>
+				</div>
+				<!-- input TYPE E -->
+
+				<h3 class="gd__h2">샘플 5</h3>
+				<!-- input table TYPE S -->
+				<div class="terms_section">
+					<h3 class="in_tit">[선택] 개인(신용)정보의 수집 &middot; 이용에 관한 사항</h3>
+					<div class="terms_head">
+						<p class="txt1">당사는「개인정보보호법」및「신용정보의 이용 및 보호에 관한 법률」에 따라 귀하의 개인(신용)정보를 다음과 같이 제3자에게 상품소개 및 홍보 등 영업목적으로 제공하고자 합니다. 이에 동의하십니까?</p>
+					</div>
+					<div class="ipt_wrap_1">
+						<p class="dot">개인(신용)정보 수집 이용</p>
+						<ul class="form_flex grid">
+							<li>
+								<span class="radio c2">
+									<input id="agreeType3" type="radio" name="agcheck1" checked="checked"><i aria-hidden="true"></i>
+									<label for="agreeType3">동의함</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio c2">
+									<input id="agreeType4" type="radio" name="agcheck1"><i aria-hidden="true"></i>
+									<label for="agreeType4">동의하지 않음</label>
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="ipt_wrap_1">
+						<p class="dot">개인(신용)정보를 제공받는 자</p>
+						<ul class="form_flex grid">
+							<li>
+								<span class="radio c2">
+									<input id="agreeType5" type="radio" name="agcheck2" checked="checked"><i aria-hidden="true"></i>
+									<label for="agreeType5">동의함</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio c2">
+									<input id="agreeType6" type="radio" name="agcheck2"><i aria-hidden="true"></i>
+									<label for="agreeType6">동의하지 않음</label>
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="tbl row">
+						<div class="inner">
+							<table>
+								<caption>
+									<strong>개인정보 제공처 양식(표) 입니다.</strong>
+									<span>이 표는 상품 서비스 소개 및 판매를 위한 제공 목적별 개인정보 제공처, 목적, 제공받는자에 대한 정보를 확인할 수 있습니다.</span>
+								</caption>
+								<colgroup>
+									<col style="width:100px">
+									<col style="width:auto">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="ft" colspan="2">품 서비스 소개 및 판매를 위한 제공 목적별 개인정보 제공처</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" class="lt ft">목적</th>
+										<td class="lt">당사 상품 서비스 소개 및 판매</td>
+									</tr>
+									<tr>
+										<th scope="row" class="lt ft">제공받는자</th>
+										<td class="lt">당사와 모집위탁계약을 체결한 자(설계자 대리점)<br>
+											(단, 비전속대리점의 경우 동 계약을 모집한 대리점에 한함)
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<p class="txt2">※ 각 제공대상기관 및 이용목적의 구체적인 정보는 당사 홈페이지[www.idbins.com]에서 확인할 수 있습니다.</p>
+					<ol>
+						<li class="dot">개인정보를 제공받는 자의 이용목적 모집수탁자:당사의 서비스 판매</li>
+						<li class="dot">
+							<p>제공할 개인정보의 내용 모집수탁자:당사의 서비스 판매</p>
+							<p>당사와 보함계약 체결실적이 없는 고객: 동의일로부터 2년이내</p>
+						</li>
+					</ol>
+				</div>
+				<!-- input table TYPE E -->
+
+				<h3 class="gd__h2">샘플 6</h3>
+				<!-- list TYPE S -->
+				<div class="terms_section">
+					<h3 class="in_tit">[선택] 개인(신용)정보의 수집 &middot; 이용에 관한 사항</h3>
+					<div class="terms_head">
+						<p class="txt1">당사는「개인정보보호법」 및 「신용정보의 이용 및 보호에 관한 법률」에 따라 보험상품 소개 및 홍보 등을 위하여 귀하의 개인(신용)정보를 다음과 같이 수집 &middot; 이용하고자 합니다. </p>
+					</div>
+					<ol>
+						<li>개인(신용) 정보의 수집&middot;이용 목적
+							<ol>
+								<li>보험계약 상담, 보험계약 인수여부 결정을 위한 판단</li>
+							</ol>
+						</li>
+						<li>수집 이용할 개인(신용)정보의 내용
+							<ol>
+								<li>개인식별정보(성명, 주민등록번호, 주소, 직업)</li>
+							</ol>
+						</li>
+						<li>질병 및 상해에 관한 정보
+							<ol>
+								<li>당사, 신용정보 집중기관 (한국신용정보원) 및 보험요율산출기관에서 교통법규위반 개인정보</li>
+							</ol>
+						</li>
+						<li>개인정보 보유 이용기간
+							<ol>
+								<li>이용기간: 수집 이용 동의일로부터 3개월까지</li>
+							</ol>
+						</li>
+					</ol>
+					<p class="txt3">본 동의를 거부하시는 경우에는 보험계약 상담 등 정상적인 서비스제공이 불가능하며 본 동의서에 의한 요청하실수 있습니다.<br>본 동의를 거부하시는 경우에는 보험계약 상담 등 정상적인 서비스제공이 불가능하며 본 동의서에 의한 요청하실수 있습니다.</p>
+				</div>
+				<!-- list TYPE E -->
+
+				<h3 class="gd__h2">샘플 7</h3>
+				<!-- 고객센터 S -->
+				<div class="terms_section">
+					<h3 class="in_tit">[필수] 개인정보 수집&middot;이용 동의</h3>
+					<div class="terms_head">
+						<p class="txt1">신고인은 손해보험협회[귀사]가 하기 개인(신용)정보를 보험범죄신고 처리업무, 보험사기 신고포상금 지급 및 증빙서류 보존 목적으로 수집 및 이용하며 동 목적을 달성할 때까지 보유 및 이용하는 것에 동의합니다.</p>
+					</div>
+
+					<p class="txt3">* 귀하는 상기 동의를 거부할 수 있습니다. 다만, 이에 대한 동의를 하시지 않을 경우에는 정상적인 보험범죄신고 처리업무가 불가능할 수 있음을 알려 드립니다.</p>
+					<div class="ipt_wrap_2">
+						<span>위 고지내용을 충분히 이해하고</span>
+						<ul class="form_flex grid">
+							<li>
+								<span class="radio c2">
+									<input id="agreeTypechk1" type="radio" name="agrchk" checked="checked"><i aria-hidden="true"></i>
+									<label for="agreeTypechk1">동의함</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio c2">
+									<input id="agreeTypechk2" type="radio" name="agrchk"><i aria-hidden="true"></i>
+									<label for="agreeTypechk2">동의하지 않음</label>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+					<h3 class="in_tit">고유식별정보 처리 동의</h3>
+					<div class="terms_head">
+						<p class="txt1">손해보험협회[귀사]가 하기 고유식별정보를 처리(수집, 이용)하기 위해서는 상기 개인(신용)정보에 대한 각 동의와 별도의 동의를 얻어야 합니다. 이에 본인은 손해보험협회가 상기 본인의 고유식별정보를 상기의 목적으로 위와 같이 처리하는 것에 동의합니다.</p>
+					</div>
+					<p class="txt3">* 귀하는 상기 동의를 거부할 수 있습니다. 다만, 이에 대한 동의를 하시지 않을 경우에는 정상적인 보험범죄신고 처리업무가 불가능할 수 있음을 알려 드립니다.</p>
+					<div class="ipt_wrap_2">
+						위 고지내용을 충분히 이해하고
+						<ul class="form_flex grid">
+							<li>
+								<span class="radio c2">
+									<input id="agreeTypechk3" type="radio" name="agrchk2" checked="checked"><i aria-hidden="true"></i>
+									<label for="agreeTypechk3">동의함</label>
+								</span>
+							</li>
+							<li>
+								<span class="radio c2">
+									<input id="agreeTypechk4" type="radio" name="agrchk2"><i aria-hidden="true"></i>
+									<label for="agreeTypechk4">동의하지 않음</label>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 고객센터 E -->
+
+				<h3 class="gd__h2">샘플 8</h3>
+				<!-- 대출 1 S -->
+				<div class="terms_section">
+					<h3 class="in_tit">[필수] 고객권리안내문</h3>
+					<ol>
+						<li><h4 class="list_tit">1. 금융서비스 이용 범위</h4>
+							<ol>
+								<li>가. 고객님의 개인신용정보는 금융거래의 설정 유지여부 판단 목적 및 고객이 동의한 목적만으로 이용됩니다.</li>
+								<li>나. 고객님은 영업장 인터넷 등 다양한 채널을 통해 금융거래를 체결하거나 금융서비스를 제공받는 과정에서
+									<ol>
+										<li>1) 금융회사가 본인의 개인신용정보(이하 &quot;본인정보&quot;)를 제휴 부가서비스 등을 위해 제휴회사 등에 제공하는 것 및</li>
+										<li>2) 당해 금융회사가 금융상품 소개 및 구매권유(이하 &quot;마케팅&quot;)목적으로 이용하는 것에 동의를 하지 않는 경우에도 금융거래를 체결하거나 금융서비스를 이용하실 수 있습니다.<br>
+										다만, 이러한 동의를 하지 않으신 경우에는 제휴 부가서비스 및 신상품 서비스 등을 제공받지 못할 수도 있습니다. </li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+						<li><h4 class="list_tit">2. 「신용정보의 이용 및 보호에 관한 법률」 상의 고객 권리</h4>
+							<ol>
+								<li>가. 고객님의 개인신용정보는 금융거래의 설정 유지여부 판단 목적 및 고객이 동의한 목적만으로 이용됩니다.
+									<p class="txt2">고객은 「신용정보의 이용 및 보호에 관한 법률」 제 35조에 따라 금융회사가 본인정보를 전국은행연합회, 신용조회회사, 타 금융회사 등 제 3자에게 제공한 경우 제공한 본인정보의 주요 내용 등을 알려주도록 금융회사에 요구할 수 있습니다.</p>
+									<p>신청방법 : 신용정보 주체자는 당사의 인터넷 홈페이지(www.idbins.com), 전화(080-323-0100), 서면(FAX 0505-181-0036)를 통해 본인 확인절차를 거쳐 신청할 수 있습니다.</p>
+								</li>
+								<li>나. 본인정보의 열람 및 정정 요구권리
+									<p class="txt2">고객은『신용정보의 이용 및 보호에 관한 법률』제38조에 따라 전국은행연합회, 신용조회회사, 금융회사 등이 보유한 본인정보에 대해 열람청구가 가능하며, 본인정보가 사실과 다를 경우에는 금융위원회에 시정을 요청할 수 있습니다.</p>
+									<p>신청방법 : 신용정보 주체자는 당사의 인터넷 홈페이지(www.idbins.com), 전화(080-323-0100), 서면(FAX 0505-181-0036)를 통해 본인 확인절차를 거쳐 신청할 수 있습니다.</p>
+								</li>
+								<li>다. 본인정보의 무료 열람요구권리
+									<p  class="txt2">고객은『신용정보의 이용 및 보호에 관한 법률』제39조에 따라 금융회사가 본인정보를 신용조회회사를 통하여 연간 일정 범위 내에서 무료로 열람할 수 있습니다. 자세한 사항은 각 신용조회회사에 문의하시기 바랍니다.</p>
+									<ol>
+										<li class="dash">한국신용정보㈜ (02)2122-4400 (www.nice.co.kr)</li>
+										<li class="dash">한국신용평가정보㈜ (02)3771-1000 (www.kisinfo.com)</li>
+										<li class="dash">서울신용평가정보㈜ 1577-1006 (www.sci.co.kr)</li>
+										<li class="dash">코리아크레딧뷰로㈜ (02) 708-1000 (www.koreacb.com)</li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+						<li>
+							<h4 class="list_tit">3. 위의 권리 행사와 관련하여 불편함을 느끼시거나 애로가 있으신 경우 아래의 담당자에게 연락하여 주시기 바랍니다.</h4>
+							<div class="tbl row">
+								<div class="inner">
+									<table>
+										<caption>
+											<strong>담당자연락처 안내 양식(표) 입니다.</strong>
+											<span>이 표는 상품 서비스 소개 및 판매를 위한 제공 목적별 개인정보 제공처, 목적, 제공받는자에 대한 정보를 확인할 수 있습니다.</span>
+										</caption>
+										<colgroup>
+											<col>
+											<col style="width:28%">
+											<col style="width:28%">
+											<col style="width:28%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="ft">구분</th>
+												<th scope="col">당사 개인신용정보고충처리 담당자</th>
+												<th scope="col">대한손보협회 정보보호 담당자</th>
+												<th scope="col">금융감독원 정보보호 담당자</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row" class="ft">전화</th>
+												<td>(02)000-0000</td>
+												<td>(02)000-0000</td>
+												<td>(02)000-0000</td>
+											</tr>
+											<tr>
+												<th scope="row" class="ft">주소</th>
+												<td class="lt">서울시 강남구 테헤란로 432, 4층 소비자보호파트</td>
+												<td class="lt">서울시 강남구 테헤란로 432, 4층 소비자보호파트</td>
+												<td class="lt">서울시 강남구 테헤란로 432, 4층 소비자보호파트</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</li>
+					</ol>
+				</div>
+				<!-- 대출 1 E -->
+
+				<h3 class="gd__h2">샘플 9</h3>
+				<!-- 대출 2 S -->
+				<div class="terms_section">
+					<h3 class="in_tit">[필수] 대출상품설명서</h3>
+					<div class="terms_head">
+						<p class="txt1">이 설명서는 상품에 대한 이해를 돕고 약관의 중요내용을 알려드리기 위한 참고자료이며, 실제 계약은 대출거래약정서(가계용), 여신거래기본약관(가계용)이 적용됩니다. 계약을 신청하는 경우 약관이, 계약을 체결하는 경우 계약서류가 교부됩니다.</p>
+					</div>
+					<ol>
+						<li><h4 class="list_tit">1. 상품 개요 및 상품의 특징</h4>
+							<div class="tbf">
+								<div class="inner">
+									<table>
+										<caption>
+											<strong>상품 개요 및 상품의 특징 안내 양식(표) 입니다.</strong>
+											<span>이 표는 대출상품명, 대출신청금액, 적용예정금리, 금리적용방식, 대출기간, 채권보전 에 대한 정보를 확인할 수 있습니다.</span>
+										</caption>
+										<colgroup>
+											<col style="width:20%">
+											<col style="width:30%">
+											<col style="width:20%">
+											<col style="width:30%">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row" class="ft">대출상품명</th>
+												<td>프로미카개인용자동차보험</td>
+												<th scope="row">대출신청금액</th>
+												<td>200원</td>
+											</tr>
+											<tr>
+												<th scope="row" class="ft">적용예정금리</th>
+												<td>7.8% / 고정금리</td>
+												<th scope="row">금전적용ㅂㅇ식</th>
+												<td>고정</td>
+											</tr>
+											<tr>
+												<th scope="row" class="ft">대출기간</th>
+												<td>2019-07-24 ~ 2019-08-05</td>
+												<th scope="row">채권보전</th>
+												<td>신용</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</li>
+						<li><h4 class="list_tit">2. 대출이율</h4>
+							<ol>
+								<li class="dot">
+									고정금리 : 여신실행시 결정한 금리가 약정기간동안 동일하게 적용되는 금리입니다. 다만, 여신실행일 현재 당사에서 고시하는 기준금리의 변동에 따라 금리차이가 발생할 수 있습니다.
+								</li>
+								<li class="dot">
+									변동금리 : 대출약정 기간내에 기준금리가 변경될 경우 당해 대출금리가 변경되는 금리로서 기준금리가 인상될 경우 고객의 이자 부담이 증가될 수 있습니다
+								</li>
+							</ol>
+							<strong class="fb txt2">※ 변동금리 예시</strong>
+							<p class="txt2">COFIX연동금리 : 전국은행연합회에서 공시하는 직전월 신규취급액기준 COFIX금리 또는 잔액기준 COFIX금리에 가산금리를 적용하여 금리변동주기에 따라 변동됩니다.</p>
+							<ol class="sp1">
+								<li class="dot">대출금리 결정(변동) 요인
+									<ol>
+										<li class="dash">대출금리는 원가요소와 마진을 반영하여 결정됩니다.</li>
+										<li class="dash">원가요소는
+											<ol>
+												<li>① 당사의 자금조달비용</li>
+												<li>② 고객 신용도에 따른 신용원가</li>
+												<li>③ 교육세 등 법적비용 등을 고려하여 당사가 결정하며, 결정된 대출금리는 개별약정에 의해 별도로 정한 항목(변동금리대출의 기준금리, 거래실적에 따른 우대금리 등) 이외에는 대출만기일까지 동일하게 적용됩니다.</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+							</ol>
+							<strong class="fb txt2">※ 원가요소</strong>
+							<ol class="sp1">
+								<li>① 자금조달비용 : 자금조달에 소요되는 비용을 말하며 현재 당사의 경우 현재 유지중인 당사 보험고객의 보험계약 적립금에 부리하는 부리이율 등을 감안한 비용(준비금부담이율)을 의미합니다. </li>
+								<li>① 신용원가 : 자금조달에 소요되는 비용을 말하며 현재 당사의 경우 현재 유지중인 당사 보험고객의 보험계약 적립금에 부리하는 부리이율 등을 감안한 비용(준비금부담이율)을 의미합니다.
+									<p class="txt2">* 고객의 신용도가 연체 발생 또는 대출금 증가 등으로 악화되는 경우 예상손실 증가에 따른 신용원가 상승으로 대출금리가 큰 폭으로 상승할 수 있습니다.</p>
+								</li>
+							</ol>
+						</li>
+						<li><h4 class="list_tit">3. 연체이율</h4>
+							<ol>
+								<li class="dot">연체이자율은 [대출이자율 + 연체기간별 연체가산이자율]로 적용합니다
+									<strong class="fb txt2">연체가산이자율은 연체기간별로 다음과 같이 적용하며, 연체기간에 따라 구분하여 부과하는 방식(계단방식)을 적용합니다.</strong>
+									<ol class="sp1">
+										<li class="dash">연체기간이 1개월 이하 : 연 8%</li>
+										<li class="dash">연체기간이 1개월 초과 3개월 이하 : 연 9%</li>
+									</ol>
+									<strong class="fb txt2">연체이자율은 최고 연 19%로 합니다.</strong>
+									<p class="txt2">이자를 납입하여야 할 날의 다음날부터 1개월까지는 내셔야 할 약정이자에 대해 연체이자가 적용되고, 1개월이 경과하면 기한이익상실로 인하여 대출원금에 연체이율을 곱한 연체이자를 내셔야 합니다.</p>
+									<ol>
+										<li class="dash">대출계약 철회권을 행사한 경우에는 중도상환수수료가 면제되며 해당 대출과 관련한 대출정보가 삭제됩니다.</li>
+										<li class="dash">대출계약 철회권의 효력이 발생한 이후에는 이를 취소할 수 없습니다.</li>
+									</ol>
+									<p class="txt2">(단, 한국주택금융공사 유동화 대상 대출 등 당사가 별도로 정하는 대출은 행사대상 대출에 포함)</p>
+								</li>
+								 <li class="dot">이 설명서는 여신거래기본약관(가계용)의 이자&middot;지연배상금 및 비용 (약정이자, 중도상환수수료, 부대비용 등) 등에 대한 이해를 돕기 위하여 약정 전에 제공되는 자료로서, 상담일 이후 신청금액, 신용도,설정금액 등 변경에 의하여 일부 내용이 달라질 수 있습니다.</li>
+							</ol>
+						</li>
+					</ol>
+					<p class="txt4 bold">본인은 DB손해보험과 대출거래를 함에 있어 회사직원 또는 대출상담사와 상담하여 위에서 설명한 내용을 포함하여 대출거래의 주요 내용 및 고객부담 비용에 대하여 충분히 설명을 듣고 이해하였음을 확인합니다.</p>
+					<p class="txt4 bold rt">2019년 8월 2일 신청인: 홍길동</p>
+				</div>
+				<!-- 대출 2 E -->
+			</div>
+		</div>
+	</div>
+
+	<!-- 팝업 종류들 -->
+	<div id="ruleDialog1" class="dialog full" role="dialog"  aria-hidden="true">
+		<div class="dialog_wrap">
+			<div class="dialog_header">
+				<h2>약관확인<span class="slick_page"></span></h2>
+				<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+			</div>
+			<div class="dialog_content">
+				<div class="rule_swipe">
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">홈페이지 이용약관</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s1">
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree1_1').prop('checked',true).change();$('#ruleDialog1 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">고객용 앱 이용약관</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s1">
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree1_2').prop('checked',true).change();$('#ruleDialog1 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">전자금융거래 이용약관</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s1">
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree1_3').prop('checked',true).change();$('#ruleDialog1 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">개인정보 처리방침 동의여부</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s1">
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree1_4_1').prop('checked',true).change();$('#ruleDialog1 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">고유식별정보(주민등록번호) 수집 및 이용 동의여부</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s1">
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree1_4_2').prop('checked',true).change();Dialog.close('#ruleDialog1');" title="동의 후 약관팝업 닫기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="all_agree fixed_bottom_button t1">
+				<ul class="grid s1">
+					<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree1').prop('checked',true).change();Dialog.close('#ruleDialog1');" title="전체동의 후 약관팝업 닫기">전체동의</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="ruleDialog2" class="dialog full" role="dialog"  aria-hidden="true">
+		<div class="dialog_wrap">
+			<div class="dialog_header">
+				<h2>약관확인<span class="slick_page"></span></h2>
+				<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+			</div>
+			<div class="dialog_content">
+				<div class="rule_swipe">
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">소비자권익보호에관한 사항</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s2">
+								<li><a href="#" class="btn bsr1 bc2" onclick="$('#agree2_1').prop('checked',false).change();$('#ruleDialog2 .rule_swipe').slick('slickNext');" title="비동의 후 다음약관 보기">비동의</a></li>
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree2_1').prop('checked',true).change();$('#ruleDialog2 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">개인신용정보 수집 및 이용 동의</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s2">
+								<li><a href="#" class="btn bsr1 bc2" onclick="$('#agree2_2').prop('checked',false).change();$('#ruleDialog2 .rule_swipe').slick('slickNext');" title="비동의 후 다음약관 보기">비동의</a></li>
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree2_2').prop('checked',true).change();$('#ruleDialog2 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">개인신용정보 제공 동의</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s2">
+								<li><a href="#" class="btn bsr1 bc2" onclick="$('#agree2_3').prop('checked',false).change();$('#ruleDialog2 .rule_swipe').slick('slickNext');" title="비동의 후 다음약관 보기">비동의</a></li>
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree2_3').prop('checked',true).change();$('#ruleDialog2 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">개인(신용)정보의 조회에 관한 사항</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s2">
+								<li><a href="#" class="btn bsr1 bc2" onclick="$('#agree2_4').prop('checked',false).change();Dialog.close('#ruleDialog2');" title="비동의 후 약관팝업 닫기">비동의</a></li>
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree2_4').prop('checked',true).change();Dialog.close('#ruleDialog2');" title="동의 후 약관팝업 닫기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="all_agree fixed_bottom_button t1">
+				<ul class="grid s1">
+					<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree2').prop('checked',true).change();Dialog.close('#ruleDialog2');" title="전체동의 후 약관팝업 닫기">전체동의</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="ruleDialog3" class="dialog full" role="dialog"  aria-hidden="true">
+		<div class="dialog_wrap">
+			<div class="dialog_header">
+				<h2>약관확인<span class="slick_page"></span></h2>
+				<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+			</div>
+			<div class="dialog_content">
+				<div class="rule_swipe">
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">보험계약대출의 체결&middot;이행 등을 위한 개인(신용)정보 수집&middot;이용 및 제3자 제공동의서</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s1">
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree3_1').prop('checked',true).change();$('#ruleDialog3 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">개인(신용)정보의 수집&middot;이용에 관한 사항</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s1">
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree3_2').prop('checked',true).change();$('#ruleDialog3 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">개인(신용)정보의 제공에 관한 사항</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s1">
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree3_3').prop('checked',true).change();$('#ruleDialog3 .rule_swipe').slick('slickNext');" title="동의 후 다음약관 보기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="rule_section">
+						<div class="section terms_section">
+							<!-- CMS 영역 -->
+							<h3 class="tit_h3">고유식별정보의 처리에 관한 사항</h3>
+							<div class="cms_box mt_20">약관 상세 영역</div>
+							<!-- //CMS 영역 -->
+						</div>
+						<div class="fixed_bottom_button t1">
+							<ul class="grid s1">
+								<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree3_4').prop('checked',true).change();Dialog.close('#ruleDialog3');" title="동의 후 약관팝업 닫기">동의</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="all_agree fixed_bottom_button t1">
+				<ul class="grid s1">
+					<li><a href="#" class="btn bsr1 bc1" onclick="$('#agree3').prop('checked',true).change();Dialog.close('#ruleDialog3');" title="전체동의 후 약관팝업 닫기">전체동의</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div data-include-html="../inc/footer.html"></div>
+	<div data-include-html="../inc/footer_blog.html"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* 오픈이벤트:꽃길만걸어요 */
+.open_evt .event_top>img {width:100%;}
+.open_evt .guide_txt {padding:0 20px;}
+.open_evt .guide_txt .tit_h3 {font-size:1.5rem; color:#252525; font-weight:700;}
+.open_evt .guide_txt li.evt_num {position:relative; padding-left:13px;}
+.open_evt .guide_txt li+li {margin-top:2px;}
+.open_evt .guide_txt li.evt_num span {position:absolute; top:0; left:0;}		 
+.open_evt .event_mission_step1 {padding-bottom:35px; margin-top:35px; background:#fee9e4;}
+.open_evt .event_mission_step1 {content:'';display:block;clear:both;}
+.open_evt .event_mission_step1 .tit_mission {padding-top:55px; font-size:23px; font-weight:900; color:#604640; text-align:center; line-height:23px;}
+.open_evt .event_mission_step1 .tit_mission strong {color:#f75f4a;}
+.open_evt .event_mission_step1 .mission {padding:0 17px;}
+.open_evt .event_mission_step1 .mission:after{content:'';clear:both;display:block;}
+.open_evt .event_mission_step1 .mission li{width:25%;display:block;padding:5px 3px;float:left; margin-bottom:10px;}
+.open_evt .event_mission_step1 .mission li:nth-child(4n+1){clear:both;}
+.open_evt .event_mission_step1 .mission li span,
+.open_evt .event_mission_step1 .mission li a{position:relative;display:block;max-width:160px;margin:0 auto;}
+.open_evt .event_mission_step1 .mission li span{display:none;}
+.open_evt .event_mission_step1 .mission li img{width:100%;}
+.open_evt .event_mission_step1 .mission li.complete a{display:none;}
+.open_evt .event_mission_step1 .mission li.complete span{display:block;}
+.open_evt .event_mission_step1 .mission li.complete span:after {content:''; display:block; position:absolute; top:-4.62%; right:-8%; background:url(../images/event/img_mission_complete02.png) no-repeat center center; background-size:contain; width:43.12%; padding-bottom:43.12%;}
+.open_evt .event_mission_step2{position:relative;}
+.open_evt .event_mission_step2 img{width:100%;}
+.open_evt .event_mission_step2 ul li{position:absolute;width:16.66%;padding-bottom:16.66%;background:url(../images/event/img_mission_noncomplete.png) no-repeat center center;background-size:contain;}
+.open_evt .event_mission_step2 ul li img{display:none;}
+.open_evt .event_mission_step2 ul li.on{background-image:url(../images/event/img_mission_complete.png);}
+.open_evt .event_mission_step2 ul li.on img{display:block;}
+.open_evt .event_mission_step2 ul li.li1{left:20%; top:8.58%;}
+.open_evt .event_mission_step2 ul li.li2{left:40.26%; top:8.04%;}
+.open_evt .event_mission_step2 ul li.li3{left:60%; top:5.63%;}
+.open_evt .event_mission_step2 ul li.li4{left:58.26%; top:20.82%;}
+.open_evt .event_mission_step2 ul li.li5{left:40.53%; top:33.83%;}
+.open_evt .event_mission_step2 ul li.li6{left:20%; top:35.90%;}
+.open_evt .event_mission_step2 ul li.li7{left:4.66%; top:45.11%;}
+.open_evt .event_mission_step2 ul li.li8{left:7.99%; top:60.73%;}
+.open_evt .event_mission_step2 ul li.li9{left:32.26%; top:75.92%;}
+.open_evt .event_mission_step2 ul li.li10{left:52.93%; top:79.60%;}
+.open_evt .event_mission_step2 ul li.li11{left:68.93%; top:70.60%;}
+.open_evt .event_mission_step2 ul li.li12{left:65.59%; top:49.22%;}
+.open_evt .event_mission_step2 ul li.product{width:24.54%;background:none;padding-bottom:0;}
+.open_evt .event_mission_step2 ul li.product img{display:block;}
+.open_evt .event_mission_step2 ul li.product a{position:relative;display:block;border-radius:50%;border:2px solid #e0c1ba;}
+/*.open_evt .event_mission_step2 ul li.product a>img{filter:gray;-webkit-filter:grayscale(1);}*/
+.open_evt .event_mission_step2 ul li.product div{position:absolute;top:-23.40%;right:-36.17%;width:63.82%;}
+.open_evt .event_mission_step2 ul li.product.on a{border-color:#745750;}
+/*.open_evt .event_mission_step2 ul li.product.on a>img{filter:none;-webkit-filter:none;}*/
+.open_evt .event_mission_step2 ul li.product.on div{animation:bounce 1s infinite;}
+.open_evt .event_mission_step2 ul li.product.other div{top:-33.40%;right:-22.17%;}
+
