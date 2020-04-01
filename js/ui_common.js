@@ -2282,25 +2282,26 @@ var formUI = {
 	delBtn:function(){
 		//input 삭제버튼
 		$(document).on('keyup focus','.i_txt',function(){
-			var $val = $(this).val();
-			if($(this).prop('readonly') || $(this).prop('disabled') || $(this).hasClass('no_del') || $(this).hasClass('i_datepicker')){
+			var $this = $(this),
+				$val = $this.val();
+			if($this.prop('readonly') || $this.prop('disabled') || $this.hasClass('no_del') || $this.hasClass('i_datepicker')){
 				return false;
 			}
 			if($val != ''){
-				if(!$(this).next('.inp_del').length && !$(this).next('.datepicker').length){
-					$(this).after('<a href="#" class="inp_del" role="button">입력내용삭제</a>');
+				if(!$this.next('.inp_del').length && !$this.next('.datepicker').length){
+					$this.after('<a href="#" class="inp_del" role="button">입력내용삭제</a>');
 				}
 			}else{
-				if($(this).closest('.inp_price').length){
-					if($(this).parent().next().find('.inp_del').length){
+				if($this.closest('.inp_price').length){
+					if($this.parent().next().find('.inp_del').length){
 						setTimeout(function(){
-							$(this).parent().next().find('.inp_del').remove();
+							$this.parent().next().find('.inp_del').remove();
 						},10);
 					}
 				}else{
-					if($(this).next('.inp_del').length){
+					if($this.next('.inp_del').length){
 						setTimeout(function(){
-							$(this).next('.inp_del').remove();
+							$this.next('.inp_del').remove();
 						},10);
 					}
 				}
