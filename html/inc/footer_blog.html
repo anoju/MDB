@@ -1,0 +1,33 @@
+<!-- 푸터블로그 팝업 -->
+<div id="footSnsDialog" class="dialog bottom foot_blog" role="dialog"  aria-hidden="true">
+	<div class="dialog_wrap">
+		<div class="dialog_header">
+			<h2>DB손해보험 기업블로그</h2>
+			<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+		</div>
+		<div class="dialog_content">
+			<div class="section">
+				<div class="link_item"><a href="#" target="_blank" title="새창열림">DB손해보험 기업공식블로그</a></div>
+				<div class="link_item"><a href="#" target="_blank" title="새창열림">아이사랑블로그</a></div>
+				<div class="link_item"><a href="#" target="_blank" title="새창열림">내차사랑블로그</a></div>
+				<div class="link_item"><a href="#" class="btn_device_chk">디바이스 정보 확인</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+	$('.btn_device_chk').click(function(e){
+		e.preventDefault();
+		var $html = '<strong class="fc0 bold">userAgent :</strong> '+navigator.userAgent;
+			$html += '<br><br><strong class="fc0 bold">screen :</strong> width- '+window.screen.width+' , height-' + window.screen.height;
+			$html += '<br><br><strong class="fc0 bold">window :</strong> width- '+$(window).width()+' , height-' + $(window).height();
+			$html += '<br><br><strong class="fc0 bold">viewport :</strong> '+$('meta[name=viewport]').attr('content');
+		if(typeof _isDevice != 'undefined'){
+			$html += '<br><br><strong class="fc0 bold">_isDevice :</strong> '+_isDevice;
+		}
+		Dialog.alert($html);
+	});
+})
+</script>
+<!-- //푸터블로그 팝업 -->

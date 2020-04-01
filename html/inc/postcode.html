@@ -1,0 +1,133 @@
+
+<!-- 인터넷이 안되서 임시주석처리 사용할땐 주석해제 -->
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+<!-- 기본 주소찾기 팝업 -->
+<div id="postcodeDialog" class="dialog full" role="dialog"  aria-hidden="true">
+	<div class="dialog_wrap">
+		<div class="dialog_header">
+			<h2>주소찾기</h2>
+			<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+		</div>
+		<div class="dialog_content daum_zipcode_bg">
+			<div class="section">
+				<div id="daumZipcode" class="daum_zipcode"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+function daumPostcode(postcodId,baseAddressId,detailAddressId){
+	var $popup = $('#postcodeDialog');
+	var postcode_wrap = document.getElementById('daumZipcode');
+
+	Dialog.open($popup);	//팝업 열림
+
+	//다음 주소 실행
+	new daum.Postcode({
+		oncomplete: function(data) {
+			// 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+			// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+			// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+			var addr = ''; // 주소 변수
+
+			//사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+			if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+				addr = data.roadAddress;
+			} else { // 사용자가 지번 주소를 선택했을 경우(J)
+				addr = data.jibunAddress;
+			}
+
+			if($('#'+postcodId).length)document.getElementById(postcodId).value = data.zonecode;	//우편번호
+			if($('#'+baseAddressId).length)document.getElementById(baseAddressId).value = addr;		//기본주소
+			// 커서를 상세주소 필드로 이동한다.
+			if(!!detailAddressId && $('#'+detailAddressId).length){
+				setTimeout(function(){
+					document.getElementById(detailAddressId).focus();
+				},400);
+			}
+
+			Dialog.close($popup);	//팝업 닫기
+		},
+		// 우편번호 찾기 화면 크기가 조정되었을때 실행할 코드를 작성하는 부분. iframe을 넣은 element의 높이값을 조정한다.
+		onresize : function(size) {
+			postcode_wrap.style.height = size.height+'px';
+		},
+		width : '100%',
+		height : '100%'
+	}).embed(postcode_wrap);
+	
+	
+}
+</script>
+<!-- //기본 주소찾기 팝업 -->
+
+
+
+
+<!-- 상세포함 주소찾기 팝업 -->
+<div id="postcodeDetailDialog" class="dialog full" role="dialog"  aria-hidden="true">
+	<div class="dialog_wrap">
+		<div class="dialog_header">
+			<h2>주소찾기</h2>
+			<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+		</div>
+		<div class="dialog_content daum_zipcode_bg">
+			<div class="section">
+				<div id="daumZipcode2" class="daum_zipcode">
+				</div>
+				<div class="daum_zipcode_txt" style="display:none;">
+					<div class="form_item"><!-- 에러날때 invalid 클래스 -->
+						<label for="postcode" class="lb">상세주소 입력</label>
+						<div class="input zipcode">
+							<span class="dv"><span class="ico_tag t4 c4">도로명</span><input class="i_txt i_road" type="text" title="도로명주소" readonly></span>
+						</div>
+						<div class="input zipcode">
+							<span class="dv"><span class="ico_tag t4 c4">지번</span><input class="i_txt i_jibun" type="text" title="지번주소" readonly></span>
+						</div>
+						<div class="input zipcode">
+							<span class="dv"><span class="ico_tag t4 c4">상세</span><input class="i_txt i_detail" type="text" title="상세주소 입력"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fixed_bottom_button t1" style="display:none;">
+			<ul class="grid s1">
+				<li><a href="#" class="btn bsr1 bc1" onclick="Dialog.close('#postcodeDetailDialog');">확인</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+function daumPostcodeDetail(){
+	var $popup = $('#postcodeDetailDialog');
+	var postcode_wrap = document.getElementById('daumZipcode2');
+
+	Dialog.open($popup);//팝업 열림
+
+	//다음 주소 실행
+	new daum.Postcode({
+		oncomplete: function(data) {
+			// 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분
+			$popup.find('.daum_zipcode_txt').show();	//상세입력영역 노출
+			$popup.find('.fixed_bottom_button').show();	//확인버튼 노출
+
+			//document.getElementById(postcodId).value = data.zonecode; // 우편번호
+			$popup.find('.i_road').val(data.roadAddress); //도로명주소
+			$popup.find('.i_jibun').val(data.jibunAddress); //지번주소
+			$popup.find('.i_detail').focus(); //상세주소로 커서이동
+		},
+		// 우편번호 찾기 화면 크기가 조정되었을때 실행할 코드를 작성하는 부분. iframe을 넣은 element의 높이값을 조정한다.
+		onresize : function(size) {
+			postcode_wrap.style.height = size.height+'px';
+		},
+		width : '100%',
+		height : '100%'
+	}).embed(postcode_wrap,{
+		autoClose: false
+	});
+}
+</script>
+<!-- //상세포함 주소찾기 팝업 -->

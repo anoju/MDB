@@ -1,0 +1,76 @@
+
+<div id="floatingNav">
+	<div class="ft_wrap"></div>
+	<div class="icon_btn">
+		<h2 class="offscreen">앱전용 바로가기 링크</h2>
+		<ul class="btn_flex">
+			<li data-active-link="FM-MAI-V0001"><a href="/moweb/html/main/FM-MAI-V0001.html" class="btn"><i class="ic_1"></i><span>홈</span></a></li>
+			<li data-active-link="FM-MAL"><a href="/moweb/html/product/FM-MAL-V5490.html" class="btn"><i class="ic_2"></i><span>상품</span></a></li>
+			<li data-active-link="FM-LOA"><a href="#" class="btn"><i class="ic_3"></i><span>대출</span></a></li>
+			<li data-active-link="FM-CLA"><a href="#" class="btn"><i class="ic_4"></i><span>보상</span></a></li>
+			<li data-active-link="FM-MYC"><a href="#" class="btn"><i class="ic_5"></i><span>MY</span></a></li>
+		</ul>
+	</div>
+</div>
+
+<footer id="footer">
+	<div class="section">
+		<!-- 2020-02-17 고객요청으로 삭제 <div class="foot_contact">
+			<a href="tel:1588-0100" class="tel"><i class="i_icon" aria-hidden="true"></i></a>
+			<span>고객상담센터</span><strong>1588-0100</strong>
+		</div>-->
+		<ul class="foot_link">
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">공시실</a></li>
+			<li><a href="#"><strong class="bold fc1">개인정보처리방침</strong></a></li>
+			<li><a href="#">PC버전</a></li>
+		</ul>
+		<div class="foot_info">
+			<div><span>DB손해보험주식회사</span> <span>대표이사 사장 . 김정남</span></div>
+			<div>서울특별시 강남구 테헤란로 432 (대치동, DB금융센터)</div>
+			<div class="copy">COPYRIGHT DB INSURANCE CO., LTD. ALL RIGHTS RESERVED.</div>
+		</div>
+		<ul class="foot_btn">
+			<li><a href="#" class="btn bs3_2 foot_sns facebook" target="_blank" title="새창열림"><span class="offscreen">DB손해보험 페이스북</span></a></li>
+			<li><a href="#" class="btn bs3_2 foot_sns youtube" target="_blank" title="새창열림"><span class="offscreen">DB손해보험 유튜브채널</span></a></li>
+			<li><a href="#" class="btn bs3_2 foot_sns insta" target="_blank" title="새창열림"><span class="offscreen">DB손해보험 인스타</span></a></li>
+			<li><a href="#" class="btn bs3_2 foot_sns kakao" target="_blank" title="새창열림"><span class="offscreen">DB손해보험 카카오스토리</span></a></li>
+			<li><a href="#footSnsDialog" class="btn bs3_2 foot_sns blog ui_dialog_open"><span class="offscreen">DB손해보험 블로그</span></a></li>
+			<li><a href="#" class="btn bs3_2 line2" target="_blank" title="새창열림">다이렉트 홈페이지</a></li><!-- 2020-02-26 -->
+		</ul>
+	</div>
+</footer>
+
+<!-- 푸터블로그 팝업 -->
+<div id="footSnsDialog" class="dialog bottom foot_blog" role="dialog"  aria-hidden="true">
+	<div class="dialog_wrap">
+		<div class="dialog_header">
+			<h2>DB손해보험 기업블로그</h2>
+			<a href="#" class="dialog_close ui_dialog_close"><span class="offscreen">팝업창 닫기</span></a>
+		</div>
+		<div class="dialog_content">
+			<div class="section">
+				<div class="link_item"><a href="#" target="_blank" title="새창열림">DB손해보험 기업공식블로그</a></div>
+				<div class="link_item"><a href="#" target="_blank" title="새창열림">아이사랑블로그</a></div>
+				<div class="link_item"><a href="#" target="_blank" title="새창열림">내차사랑블로그</a></div>
+				<div class="link_item"><a href="#" class="btn_device_chk">디바이스 정보 확인</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+	$('.btn_device_chk').click(function(e){
+		e.preventDefault();
+		var $html = '<strong class="fc0 bold">userAgent :</strong> '+navigator.userAgent;
+			$html += '<br><br><strong class="fc0 bold">screen :</strong> width- '+window.screen.width+' , height-' + window.screen.height;
+			$html += '<br><br><strong class="fc0 bold">window :</strong> width- '+$(window).width()+' , height-' + $(window).height();
+			$html += '<br><br><strong class="fc0 bold">viewport :</strong> '+$('meta[name=viewport]').attr('content');
+		if(typeof _isDevice != 'undefined'){
+			$html += '<br><br><strong class="fc0 bold">_isDevice :</strong> '+_isDevice;
+		}
+		Dialog.alert($html);
+	});
+})
+</script>
+<!-- //푸터블로그 팝업 -->
