@@ -2955,8 +2955,8 @@ var sclCalendar = {
 					$thisValAry = '',
 					$getDay = '',
 					$range = $this.data('range'),
-					$rangeS = '',
-					$rangeE = '',
+					$rangeS = '',$rangeE = '',
+					$yearS = '',$yearE = '',
 					$val = '',
 					$item = '',
 					$groupEl = '';
@@ -2993,8 +2993,12 @@ var sclCalendar = {
 						$groupEl = $group.eq(i);
 						if($groupEl.hasClass('scl_year')){
 							//년
-							$item = sclCalendar.dateHtml('Y',($val-$rangeS),($val+$rangeE),$val);
-							if($groupEl.find('.scl_cal_item').length != (($val+$rangeE)-($val-$rangeS)+1))$groupEl.find('dd').html($item);
+							$yearS = $val-$rangeS;
+							$yearE = $val+$rangeE;
+							if($val < $yearS)$yearS = $val;
+							if($val > $yearE)$yearE = $val;
+							$item = sclCalendar.dateHtml('Y',$yearS,$yearE,$val);
+							if($groupEl.find('.scl_cal_item').length != ($yearE-$yearS+1))$groupEl.find('dd').html($item);
 						}else if($groupEl.hasClass('scl_month')){
 							//월
 							$item = sclCalendar.dateHtml('M',1,12,$val);
