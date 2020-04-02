@@ -136,6 +136,10 @@
 .scl_cal_group{display:table-cell;}
 .scl_cal_group.scl_month,
 .scl_cal_group.scl_day{width:25%;}
+.scl_cal_wrap.full .scl_cal_group.scl_month,
+.scl_cal_wrap.full .scl_cal_group.scl_day,
+.scl_cal_wrap.full .scl_cal_group.scl_hour,
+.scl_cal_wrap.full .scl_cal_group.scl_min{width:18%;}
 .scl_cal_group dt{padding:5px 0;}
 .scl_cal_group dd{position:relative;border-top:1px solid #c2c4c6;height:171px;overflow-x:hidden;overflow-y:auto;}
 .scl_cal_item{display:block;width:100%;padding:5px 0;color:#888;}

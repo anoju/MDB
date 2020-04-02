@@ -205,7 +205,7 @@ var Body = {
 			Body.scrollTop = '';
 		}, 0);
 	}
-}
+};
 
 //PC 디바이스 체크
 var isPC = {
@@ -349,7 +349,7 @@ var isAppChk = function(os){
 	}else{
 		return false;
 	}
-}
+};
 
 //디바이스체크 실행
 var deviceCheck = function(){
@@ -411,7 +411,7 @@ var common = {
 		if(typeof _isDevice != 'undefined'){
 			if(_isDevice == 'A')$('html').addClass('isApp');
 		}else{
-			console.log('_isDevice 없음')
+			console.log('_isDevice 없음');
 		}
 	},
 	winLoad:function(){
@@ -620,7 +620,7 @@ var common = {
 				}else{
 					$(this).removeClass('fixed');
 				}
-			})
+			});
 		});
 	},
 	layout:function(){
@@ -684,7 +684,7 @@ var common = {
 					$('.floating_btn').each(function(){
 						var $this = $(this);
 						$navi.find('.ft_wrap').append($this);
-					})
+					});
 				}
 			}
 
@@ -725,7 +725,7 @@ var common = {
 		if($('.tab_swipe_wrap').length){
 			$('.tab_swipe_wrap').each(function(){
 				if(!$(this).closest('.dialog').length)common.fixed(this);
-			})
+			});
 		}
 		
 		//버튼없는 헤더 쓸때(타이틀만 있는 헤더:완전판매모니터링 메뉴)
@@ -967,8 +967,8 @@ var Dialog = {
 		var $target = $(target),
 			$targetVal = $target.val(),
 			$title = $target.attr('title'),
-			$length = $('.' +Dialog.selectClass).length,
-			$popId = Dialog.selectId+$length,
+			$popLength = $('.' +Dialog.selectClass).length,
+			$popId = Dialog.selectId+$popLength,
 			$length = $target.children().length,
 			$opTxt = '',
 			$opVal = '',
@@ -1043,7 +1043,7 @@ var Dialog = {
 			$('#'+$popId+' .user_info_item_wrap.bank>li').each(function(){
 				if($(this).hasClass('ty2')){
 					isType2 = true;
-					var $wrap = $(this).closest('.tab_panel').next().find('.user_info_item_wrap')
+					var $wrap = $(this).closest('.tab_panel').next().find('.user_info_item_wrap');
 					//if($wrap.find('.none').length)$wrap.find('.none').remove();
 					$(this).appendTo($wrap);
 				}
@@ -1175,7 +1175,7 @@ var Dialog = {
 		//열릴때 플루팅 버튼
 		if($('.floating_btn').is(':visible') && $(tar).hasClass('t3')){
 			$('.floating_btn').hide();
-			if($('.floating_btn').hasClass('is_fixed_btn'))$(tar).addClass('is_fixed_btn')
+			if($('.floating_btn').hasClass('is_fixed_btn'))$(tar).addClass('is_fixed_btn');
 		}
 		if(isAppChk() && !$('#floatingNav').hasClass('off')){
 			$(tar).addClass('is_floating');
@@ -1414,7 +1414,7 @@ var Dialog = {
 		if($(tar).data('focusMove') == true)return false;
 		$(tar).data('focusMove',true);
 		var $tar = $(tar),
-			$focusaEl = '[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"])'
+			$focusaEl = '[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"])';
 			$focusaEls = $tar.find($focusaEl);
 
 		//약관 개별팝업 시
@@ -1436,16 +1436,16 @@ var Dialog = {
 					if(!e.shiftKey){
 						$firstFocus.focus();
 						e.preventDefault();
-					};
-				};
+					}
+				}
 			}else if($index == 0){	//first
 				if($keyCode == 9){
 					if(e.shiftKey){
 						$isFirstBackTab = true;
 						$lastFocus.focus();
 						e.preventDefault();
-					};
-				};
+					}
+				}
 			}
 		});
 
@@ -1458,7 +1458,7 @@ var Dialog = {
 				if(e.shiftKey){
 					$lastFocus.focus();
 					e.preventDefault();
-				};
+				}
 			}
 		});
 
@@ -1616,10 +1616,10 @@ var buttonUI ={
 			var position = $(window).scrollTop();
 			if (position > settings.min){
 				$(settings.button).parent().addClass(settings.onClass);
-				$('.floating_btn').not('.btn_top').stop(true,false).animate({'margin-bottom':60},300)
+				$('.floating_btn').not('.btn_top').stop(true,false).animate({'margin-bottom':60},300);
 			}else{
 				$(settings.button).parent().removeClass(settings.onClass);
-				$('.floating_btn').not('.btn_top').stop(true,false).animate({'margin-bottom':0},300)
+				$('.floating_btn').not('.btn_top').stop(true,false).animate({'margin-bottom':0},300);
 			}
 		});
 	},
@@ -1808,7 +1808,7 @@ var tabUI = function(){
 			}
 
 			if($target == undefined){
-				$($href).addClass('active').attr('aria-expanded',true).siblings('.tab_panel').attr('aria-expanded',false).removeClass('active');;
+				$($href).addClass('active').attr('aria-expanded',true).siblings('.tab_panel').attr('aria-expanded',false).removeClass('active');
 			}else{
 				$($target).attr('aria-expanded',false).removeClass('active');
 				$($href).addClass('active').attr('aria-expanded',true);
@@ -1844,7 +1844,7 @@ var tabUI = function(){
 		}else{
 			console.error('대상 지정 오류! href값에 해당 id값을 넣어 주세요~');
 		}
-		var $arr = $closest.children('.arr')
+		var $arr = $closest.children('.arr');
 		if($arr.length){
 			var $liLength = $closest.find('>ul>li').length,
 				$liWidth = 100/$liLength,
@@ -1992,8 +1992,7 @@ var tabNavi = function(){
 			}else{
 				$tabNavi.slideTo(0,speed);
 			}
-
-		}
+		};
 
 		var $activeCheckNum = 0;
 		var $activeCheck = setInterval(function(e){
@@ -2028,11 +2027,11 @@ var tabNavi = function(){
 			if($jstab.length){
 				e.preventDefault();
 				var $liIdx = Math.max($(this).closest('li').index());
-				activeMove($liIdx)
+				activeMove($liIdx);
 			}
 		});
 	});
-}
+};
 
 //스크롤 관련
 var scrollUI = {
@@ -2105,7 +2104,7 @@ var scrollUI = {
 		$(window).scroll(function(){
 			$('.loading_area').each(function(){
 				var $this = $(this),
-					$href = $this.data('href')
+					$href = $this.data('href');
 				if(isScreenIn(this)){
 					$this.load($href,function(res,sta,xhr){
 						if(sta == "success"){
@@ -2309,7 +2308,7 @@ var formUI = {
 		});
 		$(document).on('click','.inp_del',function(){
 			var $inp = $(this).prev('.i_txt');
-			if($(this).closest('.inp_price').length)$inp = $(this).closest('.inp_price').find('.i_txt')
+			if($(this).closest('.inp_price').length)$inp = $(this).closest('.inp_price').find('.i_txt');
 			//$(this).remove();
 			if($(this).closest('.accout_total_guide').length)$(this).closest('.accout_total_guide').removeClass('bl_line');
 			$inp.val('').change().focus();
@@ -2568,21 +2567,30 @@ var formUI = {
 		var $closest = $this.closest('.date_range');
 		if($closest.length && $closest.find(className).length == 2){
 			var $idx = $closest.find(className).index(target),
-				$range = $this.data('range');
+				$range = $this.data('range'),
+				$getDate = '',
+				$rangeAry = '',
+				$getDateYear = '',
+				$getDateMonth = '',
+				$getDateDay = '',
+				$setDateYear = '',
+				$setDateMonth = '',
+				$setDateDay = '',
+				$setDateTxt = '';
 			if(!!$range){
-				var $getDate = $this.datepicker('getDate');
+				$getDate = $this.datepicker('getDate');
 				if(className == '.i_date'){
 					dateVal = autoDateFormet(dateVal,'-');
 					$getDate = new Date(dateVal);
 				}
-				var $rangeAry = $range.split(' '),
-					$getDateYear = $getDate.getFullYear(),
-					$getDateMonth = $getDate.getMonth(),
-					$getDateDay = $getDate.getDate(),
-					$setDateYear = 0,
-					$setDateMonth = 0,
-					$setDateDay = 0,
-					$setDateTxt = '';
+				$rangeAry = $range.split(' ');
+				$getDateYear = $getDate.getFullYear();
+				$getDateMonth = $getDate.getMonth();
+				$getDateDay = $getDate.getDate();
+				$setDateYear = 0;
+				$setDateMonth = 0;
+				$setDateDay = 0;
+				$setDateTxt = '';
 				//for(var i in $rangeAry){
 				for(var i=0; i<$rangeAry.length; i++){
 					var $yIdx = $rangeAry[i].indexOf('y');
@@ -2690,7 +2698,7 @@ var formUI = {
 		$('.ui_img_upload input[type=file]').on('change',function(e){
 			var $target = $(this).siblings('label');
 			if(window.FileReader){
-				var $file = $(this)[0].files[0]
+				var $file = $(this)[0].files[0];
 				if(!$file.type.match(/image\//)) return;
 				var reader = new FileReader();
 				reader.onload = function(e){
@@ -2836,7 +2844,7 @@ var formUI = {
 		var $focusEl = 'input:not(:checkbox):not(:radio):not(:hidden),select, textarea';
 		formUI.focusChk($focusEl);
 	}
-}
+};
 $.fn.emailFormEdit = function(val){
 	var $this = $(this);
 	if(val ==  false){
@@ -2849,24 +2857,28 @@ $.fn.emailFormEdit = function(val){
 };
 var sclCalendar = {
 	dateHtml:function(type,start,end,val){
-		var unit = '',
-			Html = '';
+		var $unit = '',
+			$Html = '';
 		if(type == 'Y'){
-			unit = '년';
+			$unit = '년';
 		}else if(type == 'M'){
-			unit = '월';
+			$unit = '월';
 		}else if(type == 'D'){
-			unit = '일';
+			$unit = '일';
+		}else if(type == 'h'){
+			$unit = '시';
+		}else if(type == 'm'){
+			$unit = '분';
 		}
 		for(var i = start; i<=end;i++){
-			Html += '<button type="button" class="scl_cal_item'+(i==val?' active" title="현재선택':'')+'"><span class="val">'+(i<10?'0'+i:i)+'</span></button>';
+			$Html += '<button type="button" class="scl_cal_item'+(i==val?' active" title="현재선택':'')+'"><span class="val">'+(i<10?'0'+i:i)+'</span></button>';
 		}
-		return Html;
+		return $Html;
 	},
 	getMonthlyDay:function(year,month){
-		var day = 30;
-		if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12){
-			day = 31;
+		var day = 31;
+		if(month == 4 || month == 6 || month == 9 || month == 11){
+			day = 30;
 		}else if(month==2){
 			if(year%4 == 0 && (year%100 != 0 || year%400 ==  0)){
 				day = 29;
@@ -2877,40 +2889,59 @@ var sclCalendar = {
 		return day;
 	},
 	HTML:function(element){
-		$(element).each(function(i){
-			var $this = $(this),
-				$thisId = $this.attr('id');
-			if($thisId == undefined || $thisId == ''){
-				$thisId = 'sclCal_'+i;
-				$this.attr('id',$thisId);
-			}
-			if(!$this.closest('.scl_calrender').length)$this.wrap('<div class="scl_calrender"><div class="scl_cal_btn"></div></div>');
-			if(!$this.siblings('.btn_select').length)$this.after('<a href="#" class="btn_select ui-date-open" role="button"><span class="offscreen">날짜선택</span></a>');
-			var $wrap = $this.closest('.scl_calrender'),
-				$calender = $wrap.find('.scl_cal_wrap');
-			if(!$calender.length){
-				var $html = '';
-				$html += '<div class="scl_cal_wrap">';
-					$html += '<div>';
-						$html += '<dl class="scl_cal_group scl_year">';
-							$html += '<dt>년</dt>';
-							$html += '<dd></dd>';
-						$html += '</dl>';
-						$html += '<dl class="scl_cal_group scl_month">';
-							$html += '<dt>월</dt>';
-							$html += '<dd></dd>';
-						$html += '</dl>';
-						$html += '<dl class="scl_cal_group scl_day">';
-							$html += '<dt>일</dt>';
-							$html += '<dd></dd>';
-						$html += '</dl>';
+		if($(element).length){
+			$(element).each(function(i){
+				var $this = $(this),
+					$thisId = $this.attr('id'),
+					$type = $this.data('type'),
+					$btnTxt = '날짜 선택',
+					$html = '';
+				if($thisId == undefined || $thisId == ''){
+					$thisId = 'sclCal_'+i;
+					$this.attr('id',$thisId);
+				}
+				if($type == undefined)$type = 'date';
+				if($type == 'full')$btnTxt = '날짜 및 시간 선택';
+				if($type == 'time')$btnTxt = '시간 선택';
+				if(!$this.closest('.scl_calrender').length)$this.wrap('<div class="scl_calrender"><div class="scl_cal_btn"></div></div>');
+				if(!$this.siblings('.btn_select').length)$this.after('<a href="#'+$thisId+'" class="btn_select ui-date-open" role="button"><span class="offscreen">'+$btnTxt+'</span></a>');
+				var $wrap = $this.closest('.scl_calrender'),
+					$calender = $wrap.find('.scl_cal_wrap');
+				if(!$calender.length){
+					$html += '<div class="scl_cal_wrap">';
+						$html += '<div>';
+						if($type == 'full' || $type == 'date'){
+							$html += '<dl class="scl_cal_group scl_year">';
+								$html += '<dt>년</dt>';
+								$html += '<dd></dd>';
+							$html += '</dl>';
+							$html += '<dl class="scl_cal_group scl_month">';
+								$html += '<dt>월</dt>';
+								$html += '<dd></dd>';
+							$html += '</dl>';
+							$html += '<dl class="scl_cal_group scl_day">';
+								$html += '<dt>일</dt>';
+								$html += '<dd></dd>';
+							$html += '</dl>';
+						}
+						if($type == 'full' || $type == 'time'){
+							$html += '<dl class="scl_cal_group scl_hour">';
+								$html += '<dt>시</dt>';
+								$html += '<dd></dd>';
+							$html += '</dl>';
+							$html += '<dl class="scl_cal_group scl_min">';
+								$html += '<dt>분</dt>';
+								$html += '<dd></dd>';
+							$html += '</dl>';
+						}
+						$html += '</div>';
 					$html += '</div>';
-				$html += '</div>';
-				$html += '<div class="scl_cal_close"><a href="#">달력닫기</a></div>';
-
-				$wrap.append($html);
-			}
-		});
+					$html += '<div class="scl_cal_close"><a href="#">달력닫기</a></div>';
+					$wrap.append($html);
+					if($type == 'full')$wrap.find('.scl_cal_wrap').addClass('full');
+				}
+			});
+		}
 	},
 	UI:function(element){
 		$(element).each(function(){
@@ -2918,50 +2949,73 @@ var sclCalendar = {
 			$el.change(function(){
 				var $this = $(this),
 					$wrap = $this.closest('.scl_calrender'),
+					$group = $wrap.find('.scl_cal_group'),
+					$type = $this.data('type'),
 					$thisVal = $this.val(),
-					$thisValAry = $thisVal.split('.'),
-					$getDay = sclCalendar.getMonthlyDay($thisValAry[0],$thisValAry[1]),
+					$thisValAry = '',
+					$getDay = '',
 					$range = $this.data('range'),
 					$rangeS = '',
 					$rangeE = '',
 					$val = '',
-					$item ='';
+					$item = '',
+					$groupEl = '';
 
-				//range
-				if($range == undefined){
-					$rangeS = 10;
-					$rangeE = 10;
-				}else{
-					if($range.toString().indexOf(':') >= 0){
-						$range = $range.split(':');
-						$rangeS = parseInt($range[0]);
-						$rangeE = parseInt($range[1]);
-					}else{
-						$rangeS = $range;
-						$rangeE = $range;
+				if($thisVal != ''){
+					if($type == undefined)$type = 'date';
+					if($type == 'date')$thisValAry = $thisVal.split('.');
+					if($type == 'time')$thisValAry = $thisVal.split(':');
+					if($type == 'full'){
+						var $thisVal2 = $thisVal.split(' ');
+						$thisValAry = $thisVal2[0].split('.');
+						$thisValAry = $thisValAry.concat($thisVal2[1].split(':'));
 					}
-				}
-				
-			
-				//달력 넣기
-				for(var i = 0;i<$thisValAry.length;i++){
-					$val = parseInt($thisValAry[i]);
-					if(i==0){
-						//년
-						$item = sclCalendar.dateHtml('Y',($val-$rangeS),($val+$rangeE),$val);
-						if($wrap.find('.scl_year .scl_cal_item').length != (($val+$rangeE)-($val-$rangeS)+1))$wrap.find('.scl_year dd').html($item);
-					}else if(i==1){
-						//월
-						$item = sclCalendar.dateHtml('M',1,12,$val);
-						if($wrap.find('.scl_month .scl_cal_item').length != 12)$wrap.find('.scl_month dd').html($item);
-					}else if(i==2){
-						//일
-						if($getDay < $val){
-							$this.val($thisVal.replace($val,$getDay));
-							$val = $getDay;
+					if($type == 'full' || $type == 'date')$getDay = sclCalendar.getMonthlyDay($thisValAry[0],$thisValAry[1]);
+
+					//range
+					if($range == undefined){
+						$rangeS = 10;
+						$rangeE = 10;
+					}else{
+						if($range.toString().indexOf(':') >= 0){
+							$range = $range.split(':');
+							$rangeS = parseInt($range[0]);
+							$rangeE = parseInt($range[1]);
+						}else{
+							$rangeS = $range;
+							$rangeE = $range;
 						}
-						$item = sclCalendar.dateHtml('D',1,$getDay,$val);
-						if($wrap.find('.scl_day .scl_cal_item').length != $getDay)$wrap.find('.scl_day dd').html($item);
+					}
+				
+					//달력 넣기
+					for(var i = 0;i<$thisValAry.length;i++){
+						$val = parseInt($thisValAry[i]);
+						$groupEl = $group.eq(i);
+						if($groupEl.hasClass('scl_year')){
+							//년
+							$item = sclCalendar.dateHtml('Y',($val-$rangeS),($val+$rangeE),$val);
+							if($groupEl.find('.scl_cal_item').length != (($val+$rangeE)-($val-$rangeS)+1))$groupEl.find('dd').html($item);
+						}else if($groupEl.hasClass('scl_month')){
+							//월
+							$item = sclCalendar.dateHtml('M',1,12,$val);
+							if($groupEl.find('.scl_cal_item').length != 12)$groupEl.find('dd').html($item);
+						}else if($groupEl.hasClass('scl_day')){
+							//일
+							if($getDay < $val){
+								$this.val($thisVal.replace($val,$getDay));
+								$val = $getDay;
+							}
+							$item = sclCalendar.dateHtml('D',1,$getDay,$val);
+							if($groupEl.find('.scl_cal_item').length != $getDay)$groupEl.find('dd').html($item);
+						}else if($groupEl.hasClass('scl_hour')){
+							//시
+							$item = sclCalendar.dateHtml('h',0,23,$val);
+							if($groupEl.find('.scl_cal_item').length != 24)$groupEl.find('dd').html($item);
+						}else if($groupEl.hasClass('scl_min')){
+							//분
+							$item = sclCalendar.dateHtml('m',0,59,$val);
+							if($groupEl.find('.scl_cal_item').length != 60)$groupEl.find('dd').html($item);
+						}
 					}
 				}
 			});
@@ -2969,16 +3023,25 @@ var sclCalendar = {
 
 		$(document).on('click','.scl_calrender .ui-date-open',function(e){
 			e.preventDefault();
-			var $wrap = $(this).closest('.scl_calrender'),
+			var $this = $(this),
+				$wrap = $this.closest('.scl_calrender'),
 				$group = $wrap.find('.scl_cal_group'),
 				$input = $wrap.find('.scl_cal_btn input'),
+				$type = $input.data('type'),
 				$todatDate = autoDateFormet($nowDateDay.toString(),'.');
-			if($(this).hasClass('on')){
-				$wrap.removeClass('expend');
-				$(this).removeClass('on');
+			if($type == undefined)$type = 'date';
+			if($type == 'full')$todatDate = $todatDate +' '+autoTimeFormet($nowDateOnlyTime.toString(),':');
+			if($type == 'time')$todatDate = autoTimeFormet($nowDateOnlyTime.toString(),':');
+			if($this.hasClass('on')){
+				//$wrap.removeClass('expend');
+				$wrap.find('.scl_cal_wrap').stop(true,false).slideUp(200);
+				$this.removeClass('on');
 			}else{
-				$wrap.addClass('expend');
-				$(this).addClass('on');
+				//$wrap.addClass('expend');
+				$wrap.find('.scl_cal_wrap').stop(true,false).slideDown(200,function(){
+					toggleScroll($this,this);
+				});
+				$this.addClass('on');
 				if($input.val() == ''){
 					$input.val($todatDate).change().keyup();
 				}else{
@@ -2988,24 +3051,18 @@ var sclCalendar = {
 				$group.each(function(){
 					var $active = $(this).find('.active');
 					if($active.length)scrollUI.center($active,100,'vertical');
-				})
+				});
 			}
 		});
 
-		$(document).on('click','.scl_calrender .scl_cal_close a',function(e){
+		$(document).on('click','.scl_calrender .scl_cal_close a,.scl_calrender .inp_del',function(e){
 			e.preventDefault();
 			var $wrap = $(this).closest('.scl_calrender'),
 				$btn = $wrap.find('.ui-date-open');
-			$wrap.removeClass('expend');
-			$btn.removeClass('on').focus();
-		});
-
-		$(document).on('click','.scl_calrender .inp_del',function(e){
-			e.preventDefault();
-			var $wrap = $(this).closest('.scl_calrender'),
-				$btn = $wrap.find('.ui-date-open');
-			$wrap.removeClass('expend');
+			//$wrap.removeClass('expend');
+			$wrap.find('.scl_cal_wrap').stop(true,false).slideUp(200);
 			$btn.removeClass('on');
+			if($(this).closest('.scl_cal_close').length)$btn.focus();
 		});
 
 		$(document).on('click','.scl_calrender .scl_cal_item',function(e){
@@ -3013,15 +3070,19 @@ var sclCalendar = {
 			var $wrap = $(this).closest('.scl_calrender'),
 				$group = $wrap.find('.scl_cal_group'),
 				$input = $wrap.find('.scl_cal_btn input'),
+				$type = $input.data('type'),
 				$valAry = [],
-				$val = '';
-
+				$val = ''.
+				$active = '';
+			if($type == undefined)$type = 'date';
 			$(this).addClass('active').attr('title','현재선택').siblings().removeClass('active').removeAttr('title');
 			$group.each(function(){
-				var $active = $(this).find('.active .val');
+				$active = $(this).find('.active .val');
 				$valAry.push($active.text());
 			});
-			$val = $valAry.join('.');
+			if($type == 'date')$val = $valAry.join('.');
+			if($type == 'time')$val = $valAry.join(':');
+			if($type == 'full')$val = $valAry[0]+'.'+$valAry[1]+'.'+$valAry[2]+' '+$valAry[3]+':'+$valAry[4];
 			$input.val($val).change().keyup();
 		});
 
@@ -3030,12 +3091,15 @@ var sclCalendar = {
 				$this = $(this),
 				$group = $this.closest('.scl_cal_group');
 			if($keyCode == 38 && $this.prev().length){
+				//up
 				e.preventDefault();
 				$this.prev().focus();
 			}else if($keyCode == 40 && $this.next().length){
+				//down
 				e.preventDefault();
 				$this.next().focus();
 			}else if($keyCode == 9){
+				//tab
 				if(e.shiftKey){
 					if($group.prev().length){
 						e.preventDefault();
@@ -3367,7 +3431,7 @@ var toggleList = function(list,btn,panel,addClass){
 			$(list).find('.'+addClass).each(function(){
 				$(this).find(btn).attr('aria-expanded',true).changeTxt('열기','닫기');
 				$(this).find(panel).attr('aria-hidden',false).show();
-			})
+			});
 		}
 	}
 };
@@ -3414,7 +3478,7 @@ var toggleBtn = function(btn,className){
 				$(this).removeClass(className).attr('aria-expanded',false).find('.offscreen').changeTxt('닫기','열기');
 				$($panel).attr('aria-hidden',true).hide();
 			}
-		})
+		});
 	}
 };
 
@@ -3653,7 +3717,7 @@ var slickUI = {
 					var $dataTit = '';
 					if($title.length){
 						$dataTit = $this.find('.rule_section.slick-active').data('title');
-						if($dataTit == undefined)$dataTit = '약관확인'
+						if($dataTit == undefined)$dataTit = '약관확인';
 					}
 					$title.text($dataTit);
 
@@ -3662,7 +3726,7 @@ var slickUI = {
 						if($page.length)$page.text('('+i+'/'+slick.slideCount+')');
 						if($title.length){
 							$dataTit = $this.find('.rule_section.slick-active').data('title');
-							if($dataTit == undefined)$dataTit = '약관확인'
+							if($dataTit == undefined)$dataTit = '약관확인';
 						}
 						$title.text($dataTit);
 						
@@ -3741,6 +3805,11 @@ var slickUI = {
 							var $activeClass = '.swiper-slide-active';
 							if($(window).width() >= 760)$activeClass = '.swiper-slide-active, .swiper-slide-next';
 							if($this.closest('.section_box_in').length && $this.closest('.section_box_in').prev('.loading_dimmed').length)$activeClass = '';
+							//focus 제어
+							var focusAria = function(){
+								if($activeClass != '')$this.find($activeClass).removeAttr('aria-hidden').find(':focusable').removeAttr('tabindex');
+								$this.find('.swiper-slide').not($activeClass).attr('aria-hidden','true').find(':focusable').attr('tabindex',-1);
+							};
 							var $option = {
 								slidesPerView: 'auto',
 								slideClass:'item',
@@ -3762,7 +3831,7 @@ var slickUI = {
 											}
 
 											focusAria();
-										},10)
+										},10);
 									},
 									resize:function(){
 										if($swiper.pagination.bullets.length == 1 && $swiper.slides.length == 2){
@@ -3790,11 +3859,7 @@ var slickUI = {
 							var $swiper = new Swiper($this,$option);
 							$uiSwipers.push($swiper);
 
-							//focus 제어
-							function focusAria(){
-								if($activeClass != '')$this.find($activeClass).removeAttr('aria-hidden').find(':focusable').removeAttr('tabindex');
-								$this.find('.swiper-slide').not($activeClass).attr('aria-hidden','true').find(':focusable').attr('tabindex',-1);
-							}
+							
 						}
 					}else{
 						//slick
@@ -3884,6 +3949,11 @@ var slickUI = {
 						$this.find('.client_info_item').addClass('swiper-slide');
 						$this.wrapInner('<div class="swiper-wrapper"></div>');
 						$this.addClass('swipe-container').append('<div class="swiper-pagination"></div>');
+						//focus 제어
+						var focusAria = function(first,last){
+							$this.find('.swiper-slide').attr('aria-hidden','true').find(':focusable').attr('tabindex',-1);
+							$this.find('.swiper-slide').slice(first,first+last+1).removeAttr('aria-hidden').find(':focusable').removeAttr('tabindex');							
+						};
 						var $clientInfoSwipe = new Swiper($this,{
 							slidesPerView: 'auto',
 							slideClass:'client_info_item',
@@ -3900,7 +3970,7 @@ var slickUI = {
 									setTimeout(function(){
 										var $length = $clientInfoSwipe.pagination.bullets.length;
 										focusAria($clientInfoSwipe.snapIndex,$itemLength-$length);
-									},10)
+									},10);
 								},
 								resize:function(){
 									var $length = $clientInfoSwipe.pagination.bullets.length;
@@ -3913,11 +3983,7 @@ var slickUI = {
 							}
 						});
 
-						//focus 제어
-						function focusAria(first,last){
-							$this.find('.swiper-slide').attr('aria-hidden','true').find(':focusable').attr('tabindex',-1);
-							$this.find('.swiper-slide').slice(first,first+last+1).removeAttr('aria-hidden').find(':focusable').removeAttr('tabindex');							
-						}
+						
 					}
 				}
 			});
@@ -3933,7 +3999,7 @@ var slickUI = {
 
 		if($('.ui-swiper').length > 0)multiSwiper('.ui-swiper');
 	}
-}
+};
 
 //다중 swiper
 var $swipers = [];
@@ -4201,7 +4267,7 @@ var totalSearchUI = function(){
 			$($contClass).hide();
 			$target.show();
 		}
-	}
+	};
 
 //	$($searchWrap).find($inpClass).focus(function(){
 //		listShow(this);
@@ -4269,7 +4335,7 @@ var totalSearchUI = function(){
 					$("#akc_list").empty().addClass('off');
 					if(akc_list_0 != '')$("#akc_list").removeClass('off');
 					$(akc_list_0).appendTo("#akc_list");
-					if(akc_list_1 != '')$("#akc_list").removeClass('off')
+					if(akc_list_1 != '')$("#akc_list").removeClass('off');
 					$(akc_list_1).appendTo("#akc_list");
 				}, error : function(request, status, error) {
 					if(typeof url == 'undefined') return;
@@ -4321,11 +4387,11 @@ var totalSearchUI = function(){
 
 //스크린안에 있는지 확인
 var isScreenIn = function(target){
-	var $window = $(window);
+	var $window = $(window),
 		$wHeight = $window.height(),
 		$scrollTop = $window.scrollTop(),
-		$winBottom = ($scrollTop + $wHeight);
-	var $el = $(target),
+		$winBottom = ($scrollTop + $wHeight),
+		$el = $(target),
 		$elHeight = $($el).outerHeight(),
 		$elTop = $($el).offset().top,
 		$elCenter = $elTop + ($elHeight/2),
@@ -4336,25 +4402,25 @@ var isScreenIn = function(target){
 	}else{
 		return false;
 	}
-}
+};
 
 //ie에서 startsWith,endsWith 작동되게
 if(isPC.msie()){
 	String.prototype.startsWith = function(str){
 		if(this.length < str.length) return false;
 		return this.indexOf(str) == 0;
-	}
+	};
 	String.prototype.endsWith = function(str){
 		if(this.length < str.length) return false;
 		return this.lastIndexOf(str) + str.length == this.length;
-	}
+	};
 }
 
 /*** 애니메이션 ***/
 //data-animation
 var scrollItem ={
 	checkInView: function(target){
-		var $window = $(window);
+		var $window = $(window),
 			$wHeight = $window.height(),
 			$scrollTop = $window.scrollTop(),
 			$winBottom = ($scrollTop + $wHeight);
@@ -4436,7 +4502,7 @@ var scrollItem ={
 					$Start = $el.parent().offset().top - $el.parent().outerHeight();
 				break;
 				default:
-					$Start = parseInt($Start)
+					$Start = parseInt($Start);
 				break;
 			}
 
@@ -4524,7 +4590,7 @@ var completeEffect = function(wrap){
 	$(wrap).each(function(){
 		var $this = $(this),
 			$itemLength = 10,
-			rdLeft, rdTop, rdDelay, rdSpeed,childAry,rdType,rdChild,rdRotate
+			rdLeft, rdTop, rdDelay, rdSpeed,childAry,rdType,rdChild,rdRotate,
 			$html ='',
 			rdLeftAry = [],
 			animationName1 = 'comAniDot',
@@ -4665,8 +4731,8 @@ var chartUI = function(target,speed){
 						}else{
 							if($slick.hasClass('is_slick')){
 								//슬릭 안에 막대 차트
-								var $slick = $target.closest('.slick-slider');
-								$slick.on('init, afterChange',function(event, slick){
+								var $slickSlider = $target.closest('.slick-slider');
+								$slickSlider.on('init, afterChange',function(event, slick){
 									if($target.closest('.slick-slide').hasClass('slick-active')){
 										barInit();
 									}
@@ -4727,7 +4793,7 @@ var chartUI = function(target,speed){
 		var barInit = function(){
 			$barTotal = $target.find('.total').not('.clone');
 			if($target.hasClass('type2')){
-				if(!$mark.find('.perc').length){$mark.append('<strong class="perc">('+$perc+'%)</strong>')}
+				if(!$mark.find('.perc').length)$mark.append('<strong class="perc">('+$perc+'%)</strong>');
 				if($perc >= 60)$target.addClass('is_good');
 			}
 			if($bar.width() == 0){
@@ -4750,8 +4816,8 @@ var chartUI = function(target,speed){
 					$target.find('.total strong').animateNumber($totalNum,$speed,true);
 				}
 			}
-		}
-	})
+		};
+	});
 };
 
 
@@ -4877,7 +4943,7 @@ $.fn.animateNumber = function(number,speed,isComma,useScroll){
 				}
 			});
 			$this.data('first',false);
-		}
+		};
 		if(useScroll){
 			$this.data('first',true);
 			$(window).scroll(function(){
@@ -5189,7 +5255,7 @@ var autoPhoneFormet = function(str,mark){
 		$phoneAry.push($phone.substr(7));
 	}
 	return $phoneAry.join(mark);
-}
+};
 
 //Input date
 var autoDateFormet = function(str,mark){
@@ -5207,7 +5273,24 @@ var autoDateFormet = function(str,mark){
 		$dateAry.push($date.substr(6));
 	}
 	return $dateAry.join(mark);
-}
+};
+var autoTimeFormet = function(str,mark){
+	var $time = str.replace(/[^0-9]/g, ''),
+		$timeAry = [];
+	if(!mark)mark = '.';
+	if($time.length <= 2){
+		$timeAry.push($time);
+	}else if(str.length == 3 || str.length == 5){
+		$timeAry.push($time.substr(0,1));
+		$timeAry.push($time.substr(1,2));
+		if($time.length == 5)$timeAry.push($time.substr(3));
+	}else if($time.length >= 4){
+		$timeAry.push($time.substr(0,2));
+		$timeAry.push($time.substr(2,2));
+		if($time.length > 4)$timeAry.push($time.substr(4));
+	}
+	return $timeAry.join(mark);
+};
 
 //파라미터 값 갖고오기
 var getUnlParams = function(){
