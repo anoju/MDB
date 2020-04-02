@@ -2993,8 +2993,8 @@ var sclCalendar = {
 						$groupEl = $group.eq(i);
 						if($groupEl.hasClass('scl_year')){
 							//년
-							$yearS = $val-$rangeS;
-							$yearE = $val+$rangeE;
+							$yearS = $nowDateOnlyYear-$rangeS;
+							$yearE = $nowDateOnlyYear+$rangeE;
 							if($val < $yearS)$yearS = $val;
 							if($val > $yearE)$yearE = $val;
 							$item = sclCalendar.dateHtml('Y',$yearS,$yearE,$val);
