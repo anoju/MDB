@@ -60,8 +60,10 @@
 .ui-datepicker .ui-datepicker-next-y,
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next{display:block;position:absolute;top:36px;width:25px;height:25px;background:none !important;border-radius:0;overflow:hidden;}
-/* .ui-datepicker .ui-datepicker-prev.ui-state-disabled,
-.ui-datepicker .ui-datepicker-next.ui-state-disabled{opacity:0.5;} */
+.ui-datepicker .ui-datepicker-prev-y.ui-state-disabled,
+.ui-datepicker .ui-datepicker-next-y.ui-state-disabled,
+.ui-datepicker .ui-datepicker-prev.ui-state-disabled,
+.ui-datepicker .ui-datepicker-next.ui-state-disabled{opacity:0.5;}
 .ui-datepicker .ui-datepicker-prev{left:65px;}
 .ui-datepicker .ui-datepicker-next{right:65px;}
 .ui-datepicker .ui-datepicker-prev-y{left:36px;}

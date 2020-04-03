@@ -2439,6 +2439,46 @@ var formUI = {
 	//jquery UI datepicker
 		var prevYrBtn = $('<button type="button" class="ui-datepicker-prev-y" title="이전년도"><span>이전년도</span></button>');
 		var nextYrBtn = $('<button type="button" class="ui-datepicker-next-y" title="다음년도"><span>다음년도</span></button>');
+		var calendarOpen = function(target,ob){
+			var $calendar = '#'+ob.dpDiv[0].id,
+				$header = $($calendar).find('.ui-datepicker-header'),
+				$min = $.datepicker._getMinMaxDate(target.data('datepicker'),'min'),
+				$minY = $min.getFullYear(),
+				$max = $.datepicker._getMinMaxDate(target.data('datepicker'),'max'),
+				$maxY = $max.getFullYear(),
+				$selectedYear = ob.selectedYear;
+			$header.find('.ui-datepicker-prev').before(prevYrBtn);
+			if($selectedYear <= $minY){
+				$header.find('.ui-datepicker-prev-y').addClass('ui-state-disabled');
+			}else{
+				$header.find('.ui-datepicker-prev-y').removeClass('ui-state-disabled');
+			}
+			$header.find('.ui-datepicker-next').after(nextYrBtn);
+			if($selectedYear >= $maxY){
+				$header.find('.ui-datepicker-next-y').addClass('ui-state-disabled');
+			}else{
+				$header.find('.ui-datepicker-next-y').removeClass('ui-state-disabled');
+			}
+			prevYrBtn.unbind('click').bind('click',function(){
+				if(!$(this).hasClass('ui-state-disabled'))$.datepicker._adjustDate(target,-1,'Y');
+			});
+			nextYrBtn.unbind('click').bind('click',function(){
+				if(!$(this).hasClass('ui-state-disabled'))$.datepicker._adjustDate(target,+1,'Y');
+			});
+
+			$header.find('.ui-datepicker-prev, .ui-datepicker-next').attr('href','#');
+			$($calendar).attr('tabindex',0).focus();
+			Dialog.focusMove($calendar);
+		};
+		var calendarClose = function(tar,ob){
+			Body.unlock();
+			$(ob.input).change();
+			var $cal = $('#'+ob.dpDiv[0].id);
+			$cal.removeAttr('tabindex');
+			$('.datepicker-dimmed').remove();
+			$(tar).next('.ui-datepicker-trigger').focus();
+			$(tar).prop('readonly',false);
+		};
 
 		if($(element).length){
 			$(element).each(function(){
@@ -2471,54 +2511,21 @@ var formUI = {
 					beforeShow: function(el,ob){
 						//열때
 						Body.lock();
-						var $cal = $('#'+ob.dpDiv[0].id);
 						$('body').append('<div class="datepicker-dimmed"></div>');
 						$(this).prop('readonly',true);
-
 						setTimeout(function(){
-							var $header = $cal.find('.ui-datepicker-header');
-							$header.find('.ui-datepicker-prev').before(prevYrBtn);
-							$header.find('.ui-datepicker-next').after(nextYrBtn);
-							prevYrBtn.unbind('click').bind('click',function(){
-								$.datepicker._adjustDate($this,-1,'Y');
-							});
-							nextYrBtn.unbind('click').bind('click',function(){
-								$.datepicker._adjustDate($this,+1,'Y');
-							});
-
-							$('.ui-datepicker-prev, .ui-datepicker-next').attr('href','#');
-							$cal.attr('tabindex',0).focus();
-							Dialog.focusMove($cal);
+							calendarOpen($this,ob);
 						},5);
 					},
 					onChangeMonthYear: function(y,m,ob){
 						//달력 바뀔때
-						var $cal = $('#'+ob.dpDiv[0].id);
 						setTimeout(function(){
-							var $header = $cal.find('.ui-datepicker-header');
-							$header.find('.ui-datepicker-prev').before(prevYrBtn);
-							$header.find('.ui-datepicker-next').after(nextYrBtn);
-							prevYrBtn.unbind('click').bind('click',function(){
-								$.datepicker._adjustDate($this,-1,'Y');
-							});
-							nextYrBtn.unbind('click').bind('click',function(){
-								$.datepicker._adjustDate($this,+1,'Y');
-							});
-
-							$('.ui-datepicker-prev, .ui-datepicker-next').attr('href','#');
-							$cal.focus();
-							Dialog.focusMove($cal);
+							calendarOpen($this,ob);
 						},5);
 					},
 					onSelect: function(d,ob){
 						//선택할때
-						Body.unlock();
-						$(ob.input).change();
-						var $cal = $('#'+ob.dpDiv[0].id);
-						$cal.removeAttr('tabindex');
-						$('.datepicker-dimmed').remove();
-						$(this).next('.ui-datepicker-trigger').focus();
-						$(this).prop('readonly',false);
+						calendarClose(this,ob);
 
 						if($(this).hasClass('i_date')){
 							formUI.dateValue(this,'.i_date',d);
@@ -2528,12 +2535,7 @@ var formUI = {
 					},
 					onClose: function(d,ob){
 						//닫을때
-						Body.unlock();
-						var $cal = $('#'+ob.dpDiv[0].id);
-						$('.datepicker-dimmed').remove();
-						$cal.removeAttr('tabindex');
-						$(this).next('.ui-datepicker-trigger').focus();
-						$(this).prop('readonly',false);
+						calendarClose(this,ob);
 					}
 				});
 
@@ -2906,8 +2908,8 @@ var sclCalendar = {
 				if(!$this.closest('.scl_calrender').length)$this.wrap('<div class="scl_calrender"><div class="scl_cal_btn"></div></div>');
 				if(!$this.siblings('.btn_select').length)$this.after('<a href="#'+$thisId+'" class="btn_select ui-date-open" role="button"><span class="offscreen">'+$btnTxt+'</span></a>');
 				var $wrap = $this.closest('.scl_calrender'),
-					$calender = $wrap.find('.scl_cal_wrap');
-				if(!$calender.length){
+					$calendar = $wrap.find('.scl_cal_wrap');
+				if(!$calendar.length){
 					$html += '<div class="scl_cal_wrap">';
 						$html += '<div>';
 						if($type == 'full' || $type == 'date'){
