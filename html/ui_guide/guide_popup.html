@@ -38,31 +38,31 @@
 <script>
 	$(function(){
 		$('#btnAlert').click(function(){
-			/*Dialog.alert('얼럿창입니다.',function(){
+			Dialog.alert('얼럿창입니다.',function(){
 				alert('얼럿 확인');
-			});*/
-			LayerPop.alert('얼럿창입니다.',function(){
-				//alert('얼럿 확인22');
-				$('#bank_nm').focus();
 			});
+			// LayerPop.alert('얼럿창입니다.',function(){
+			// 	//alert('얼럿 확인22');
+			// 	$('#bank_nm').focus();
+			// });
 		})
 		$('#btnConfirm').click(function(){
-			// Dialog.confirm('컨펌창입니다.',function(e){
-			//	if(e){
-			//		alert('컨펌 확인');
-			//	}else{
-			//		alert('컨펌 취소');
-			//	}
-			// });
-			LayerPop.confirm('컨펌창입니다.',function(e){
+			Dialog.confirm('컨펌창입니다.',function(e){
 				if(e){
-					//alert('컨펌 확인');
-					$('#bank_nm').focus();
+					alert('컨펌 확인');
 				}else{
-					//alert('컨펌 취소');
-					$('#frm2').focus();
+					alert('컨펌 취소');
 				}
 			});
+			// LayerPop.confirm('컨펌창입니다.',function(e){
+			// 	if(e){
+			// 		//alert('컨펌 확인');
+			// 		$('#bank_nm').focus();
+			// 	}else{
+			// 		//alert('컨펌 취소');
+			// 		$('#frm2').focus();
+			// 	}
+			// });
 		})
 
 		var msg = '신청하신 보험계약대출 300만원이 정상적으로 접수되었습니다.<br>3분 이내에 신청하신 계좌로 대출금이 지급됩니다.'
